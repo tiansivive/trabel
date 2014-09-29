@@ -15,7 +15,10 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.min.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
 				'public/lib/famous/famous-global.js',
-				'public/lib/famous-angular/dist/famous-angular.js'
+				'public/lib/famous-angular/dist/famous-angular.js',
+				'public/lib/lodash/dist/lodash.underscore.js',
+				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
+				'public/lib/angular-google-maps/dist/angular-google-maps.js'
 			]
 		},
 		css: 'public/dist/application.min.css',

@@ -15,7 +15,7 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 apt-get update
 apt-get install -y mongodb-org
 
-
+npm install -g node-gyp
 npm install -g bower
 npm install -g grunt-cli
 npm install -g cordova
@@ -24,8 +24,9 @@ npm install -g ionic
 npm install -g generator-meanjs
 npm install -g generator-ionic
 npm install -g generator-famous
+npm install -g forever
+npm update
 
-#cd /vagrant
 #npm install
 #bower install
 

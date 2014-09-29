@@ -18,6 +18,8 @@ module.exports = {
 				'public/lib/famous-angular/dist/famous-angular.css'
 			],
 			js: [
+
+				'public/lib/lodash/dist/lodash.underscore.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
@@ -25,7 +27,10 @@ module.exports = {
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/famous/famous-global.js',
 				'public/lib/famous-angular/dist/famous-angular.js',
-				'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js'
+				'public/lib/angular-google-maps/dist/angular-google-maps.min.js'
+				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
+				
+				
 			]
 		},
 		css: [

@@ -37,9 +37,21 @@
   <script src="bower_components/famous-angular/dist/famous-angular.js"></script>
   <!-- end famous-angular scripts-->
 
+  <!--google maps API -->
+	<script src='//maps.googleapis.com/maps/api/js?key=AIzaSyDmTgQBcjGfj9ZnlBFTjdFm6fcWREcIPbc&sensor=false'></script>
+	<!--
+	<script type="text/javascript" src='lib/lodash/dist/lodash.underscore.js'></script>
+	<script type="text/javascript" src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
+-->
+
+
 	<!--Application CSS Files-->
 	{% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">
 	{% endfor %}
+
+	<!--Application JavaScript Files-->
+
+
 
 	<!-- HTML5 Shim -->
 	<!--[if lt IE 9]>
@@ -60,8 +72,9 @@
 		var user = {{ user | json | safe }};
 	</script>
 
-	<!--Application JavaScript Files-->
+
 	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>
+	<!--	<p data="{{jsFile}}">jsfile</p> -->
 	{% endfor %} 
 
 	{% if process.env.NODE_ENV === 'development' %}
