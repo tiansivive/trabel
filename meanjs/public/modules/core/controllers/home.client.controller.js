@@ -19,7 +19,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
       longitude: position.coords.longitude
     };
     $scope.$apply();
-  }
+  };
   function onError(error) {
     console.log('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
   }
