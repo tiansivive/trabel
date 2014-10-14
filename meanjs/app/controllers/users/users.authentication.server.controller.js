@@ -22,11 +22,13 @@ exports.signup = function(req, res) {
 
 	// Add missing user fields
 	user.provider = 'local';
-	user.displayName = user.firstName + ' ' + user.lastName;
+	//user.displayName = user.firstName + ' ' + user.lastName;
+	user.displayName = 'Anonymous';
 
-	// Then save the user 
+	// Then save the user
 	user.save(function(err) {
 		if (err) {
+			console.log('AQUI', user);
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
