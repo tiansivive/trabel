@@ -78,9 +78,16 @@ var UserSchema = new Schema({
 	resetPasswordToken: {
 		type: String
 	},
-  	resetPasswordExpires: {
-  		type: Date
-  	}
+	resetPasswordExpires: {
+		type: Date
+	},
+	/* Email verification token */
+	emailToken: {
+		type: String
+	},
+	verified: {
+		type: Boolean
+	}
 });
 
 /**
