@@ -31,12 +31,12 @@ module.exports = {
 		callbackURL: 'http://localhost:3000/auth/github/callback'
 	},
 	mailer: {
-		from: process.env.MAILER_FROM || 'MAILER_FROM',
+		from: process.env.MAILER_FROM || 'noreply@trabel.heroku.com',
 		options: {
-			service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
+			service: process.env.MAILER_SERVICE_PROVIDER || 'mailgun',
 			auth: {
-				user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
-				pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
+				user: process.env.MAILER_EMAIL_ID || 'postmaster@sandbox9dea6a6f05f04adbbbb76c2cb99642e6.mailgun.org',
+				pass: process.env.MAILER_PASSWORD || 'dac0c91dec29492be6e2162a34997eb7'
 			}
 		}
 	}

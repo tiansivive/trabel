@@ -49,7 +49,6 @@ exports.signup = function(req, res, next) {
 				appName: config.app.title,
 				url: 'http://' + req.headers.host + '/auth/confirm/' + token
 			}, function(err, emailHTML) {
-				console.log('USER:', user);
 				done(err, emailHTML);
 			});
 		},
@@ -82,7 +81,7 @@ exports.signup = function(req, res, next) {
 					user.password = undefined;
 					user.salt = undefined;
 
-					req.login(user, function(err) {
+					/*req.login(user, function(err) {
 						if (err) {
 							res.status(400).send(err);
 						} else {
@@ -90,7 +89,7 @@ exports.signup = function(req, res, next) {
 
 							done(err);
 						}
-					});
+					});*/
 				}
 			});
 		}
@@ -128,6 +127,7 @@ exports.confirm = function(req, res, next) {
 					} else {
 						// Return authenticated user
 						res.jsonp(user);
+						return res.redirect('/#!');
 					}
 				});
 			}
