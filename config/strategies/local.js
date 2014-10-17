@@ -33,7 +33,7 @@ module.exports = function() {
 				if (!user.verified) {
 					return done(null, false, {
 						message:'Account not verified'
-					})
+					});
 				}
 
 				return done(null, user);

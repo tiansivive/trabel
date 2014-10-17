@@ -34,7 +34,6 @@ exports.signup = function(req, res, next) {
 	user.verified = false;
 
 	async.waterfall([
-
 		// Generate random token
 		function(done) {
 			crypto.randomBytes(20, function(err, buffer) {
@@ -43,9 +42,34 @@ exports.signup = function(req, res, next) {
 				done(err, token);
 			});
 		},
+		function(token,done) {
+			// Then save the user
+			user.save(function(err) {
+				if (err) {
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				} else {
+					// Remove sensitive data before login
+					user.password = undefined;
+					user.salt = undefined;
+
+					done(err, token);
+
+					/*req.login(user, function(err) {
+						if (err) {
+							res.status(400).send(err);
+						} else {
+							res.jsonp(user);
+
+							done(err);
+						}
+					});*/
+				}
+			});
+		},
 		function(token, done) {
 			res.render('templates/confirm-email', {
-				name: displayName,
 				appName: config.app.title,
 				url: 'http://' + req.headers.host + '/auth/confirm/' + token
 			}, function(err, emailHTML) {
@@ -68,30 +92,6 @@ exports.signup = function(req, res, next) {
 				}
 				done(err);
 			});
-		},
-		function(done) {
-			// Then save the user
-			user.save(function(err) {
-				if (err) {
-					return res.status(400).send({
-						message: errorHandler.getErrorMessage(err)
-					});
-				} else {
-					// Remove sensitive data before login
-					user.password = undefined;
-					user.salt = undefined;
-
-					/*req.login(user, function(err) {
-						if (err) {
-							res.status(400).send(err);
-						} else {
-							res.jsonp(user);
-
-							done(err);
-						}
-					});*/
-				}
-			});
 		}
 	], function(err) {
 		if (err) return next(err);
@@ -113,24 +113,29 @@ exports.confirm = function(req, res, next) {
 			//TODO: error page
 			console.log('Invalid token');
 		}
-		user.emailToken = undefined;
-		user.verified = true;
-		user.save(function(err) {
-			if (err) {
-				return res.status(400).send({
-					message: errorHandler.getErrorMessage(err)
-				});
-			} else {
-				req.login(user, function(err) {
-					if (err) {
-						res.status(400).send(err);
-					} else {
-						// Return authenticated user
-						res.jsonp(user);
-					}
-				});
-			}
-		});
+		else {
+			user.emailToken = undefined;
+			user.verified = true;
+			user.save(function(err) {
+				user.password = undefined;
+				user.salt = undefined;
+				if (err) {
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				} else {
+					req.login(user, function(err) {
+						if (err) {
+							res.status(400).send(err);
+						} else {
+							// Return authenticated user
+							//res.jsonp(user);
+							res.redirect('/#!/settings/profile');
+						}
+					});
+				}
+			});
+		}
 	});
 };
 
