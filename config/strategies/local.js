@@ -30,6 +30,11 @@ module.exports = function() {
 						message: 'Invalid password'
 					});
 				}
+				if (!user.verified) {
+					return done(null, false, {
+						message:'Account not verified'
+					})
+				}
 
 				return done(null, user);
 			});

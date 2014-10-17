@@ -127,7 +127,6 @@ exports.confirm = function(req, res, next) {
 					} else {
 						// Return authenticated user
 						res.jsonp(user);
-						return res.redirect('/#!');
 					}
 				});
 			}
