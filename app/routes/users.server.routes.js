@@ -20,6 +20,9 @@ module.exports = function(app) {
 	app.route('/auth/reset/:token').get(users.validateResetToken);
 	app.route('/auth/reset/:token').post(users.reset);
 
+	// Email verification
+	app.route('/auth/confirm/:token').get(users.confirm);
+
 	// Setting up the users authentication api
 	app.route('/auth/signup').post(users.signup);
 	app.route('/auth/signin').post(users.signin);
@@ -47,7 +50,7 @@ module.exports = function(app) {
 	// Setting the linkedin oauth routes
 	app.route('/auth/linkedin').get(passport.authenticate('linkedin'));
 	app.route('/auth/linkedin/callback').get(users.oauthCallback('linkedin'));
-	
+
 	// Setting the github oauth routes
 	app.route('/auth/github').get(passport.authenticate('github'));
 	app.route('/auth/github/callback').get(users.oauthCallback('github'));

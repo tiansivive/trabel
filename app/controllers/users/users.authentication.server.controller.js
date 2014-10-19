@@ -4,15 +4,20 @@
  * Module dependencies.
  */
 var _ = require('lodash'),
-	errorHandler = require('../errors'),
-	mongoose = require('mongoose'),
-	passport = require('passport'),
-	User = mongoose.model('User');
+		errorHandler = require('../errors'),
+		mongoose = require('mongoose'),
+		passport = require('passport'),
+		User = mongoose.model('User'),
+		config = require('../../../config/config'),
+		nodemailer = require('nodemailer'),
+		crypto = require('crypto'),
+		async = require('async'),
+		crypto = require('crypto');
 
 /**
  * Signup
  */
-exports.signup = function(req, res) {
+exports.signup = function(req, res, next) {
 	// For security measurement we remove the roles from the req.body object
 	delete req.body.roles;
 
@@ -23,24 +28,111 @@ exports.signup = function(req, res) {
 	// Add missing user fields
 	user.provider = 'local';
 	//user.displayName = user.firstName + ' ' + user.lastName;
-	user.displayName = 'Anonymous';
+	var displayName = 'Anonymous';
+	user.displayName = displayName;
 
-	// Then save the user
-	user.save(function(err) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
+	user.verified = false;
+
+	async.waterfall([
+		// Generate random token
+		function(done) {
+			crypto.randomBytes(20, function(err, buffer) {
+				var token = buffer.toString('hex');
+				user.emailToken = token;
+				done(err, token);
 			});
-		} else {
-			// Remove sensitive data before login
-			user.password = undefined;
-			user.salt = undefined;
-
-			req.login(user, function(err) {
+		},
+		function(token,done) {
+			// Then save the user
+			user.save(function(err) {
 				if (err) {
-					res.status(400).send(err);
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
 				} else {
-					res.jsonp(user);
+					// Remove sensitive data before login
+					user.password = undefined;
+					user.salt = undefined;
+
+					done(err, token);
+
+					/*req.login(user, function(err) {
+						if (err) {
+							res.status(400).send(err);
+						} else {
+							res.jsonp(user);
+
+							done(err);
+						}
+					});*/
+				}
+			});
+		},
+		function(token, done) {
+			res.render('templates/confirm-email', {
+				appName: config.app.title,
+				url: 'http://' + req.headers.host + '/auth/confirm/' + token
+			}, function(err, emailHTML) {
+				done(err, emailHTML);
+			});
+		},
+		function(emailHTML, done) {
+			var smtpTransport = nodemailer.createTransport(config.mailer.options);
+			var mailOptions = {
+				to: user.email,
+				from: config.mailer.from,
+				subject: 'Email Confirmation',
+				html: emailHTML
+			};
+			smtpTransport.sendMail(mailOptions, function(err) {
+				if (!err) {
+					res.send({
+						message: 'An email has been sent to ' + user.email + ' with further instructions.'
+					});
+				}
+				done(err);
+			});
+		}
+	], function(err) {
+		if (err) return next(err);
+	});
+};
+
+/**
+ * Confirm account registration
+ */
+exports.confirm = function(req, res, next) {
+	User.findOne({
+		emailToken: req.params.token,
+		//resetPasswordExpires: {
+		//	$gt: Date.now()
+		//}
+	}, function(err, user) {
+		if (!user) {
+			//return res.redirect('/#!/password/reset/invalid');
+			//TODO: error page
+			console.log('Invalid token');
+		}
+		else {
+			user.emailToken = undefined;
+			user.verified = true;
+			user.save(function(err) {
+				user.password = undefined;
+				user.salt = undefined;
+				if (err) {
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				} else {
+					req.login(user, function(err) {
+						if (err) {
+							res.status(400).send(err);
+						} else {
+							// Return authenticated user
+							//res.jsonp(user);
+							res.redirect('/#!/settings/profile');
+						}
+					});
 				}
 			});
 		}
