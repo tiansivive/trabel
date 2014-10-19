@@ -1,8 +1,8 @@
 'use strict';
 
 // Trips controller
-angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips',
-	function($scope, $stateParams, $location, Authentication, Trips ) {
+angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(),
+	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi) {
 		$scope.authentication = Authentication;
 
 		// Create new Trip
@@ -57,9 +57,51 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 		// Find existing Trip
 		$scope.findOne = function() {
-			$scope.trip = Trips.get({ 
+			$scope.trip = Trips.get({
 				tripId: $stateParams.tripId
 			});
 		};
+
+		$scope.map = {
+			//TODO: Center map on trip markers
+			center: {
+				latitude: 45,
+				longitude: -73
+			},
+			zoom: 8,
+			events: {
+				/*center_changed: function(maps, eventName, args){
+					console.log('ALOOO');
+				}*/
+			}
+		};
+
+		$scope.searchbox = {
+			template:'searchbox.tpl.html',
+			position:'top-left',
+			events:
+				{
+					places_changed: function(box, eventName, args){
+						var place = box.getPlaces()[0];
+						var marker = {
+							id: $scope.trip.markers.length,
+							latitude:place.geometry.location.lat(),
+							longitude: place.geometry.location.lng()
+						};
+						//TODO: zoom level
+						$scope.map.center = {
+							latitude: place.geometry.location.lat(),
+							longitude: place.geometry.location.lng()
+						};
+						$scope.map.zoom = 10;
+						//TODO: save in different collection
+						//TODO: dont allow duplicates
+						$scope.trip.markers.push(marker);
+						$scope.trip.$update();
+						//$scope.map.zoom = place.geometry.viewport
+
+					}
+				}
+			};
 	}
 ]);

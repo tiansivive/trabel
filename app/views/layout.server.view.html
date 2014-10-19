@@ -31,19 +31,6 @@
 
 	<!-- Fav Icon -->
 	<link href="/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
-	
-	<!-- famous-angular scripts
-  <script src="../famous/famous-global.js"></script>
-  <script src="bower_components/famous-angular/dist/famous-angular.js"></script>
-  <!-- end famous-angular scripts-->
-
-  <!--google maps API -->
-	<script src='//maps.googleapis.com/maps/api/js?key=AIzaSyDmTgQBcjGfj9ZnlBFTjdFm6fcWREcIPbc&sensor=false'></script>
-	<!--
-	<script type="text/javascript" src='lib/lodash/dist/lodash.underscore.js'></script>
-	<script type="text/javascript" src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
--->
-
 
 	<!--Application CSS Files-->
 	{% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">
@@ -75,7 +62,7 @@
 
 	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>
 	<!--	<p data="{{jsFile}}">jsfile</p> -->
-	{% endfor %} 
+	{% endfor %}
 
 	{% if process.env.NODE_ENV === 'development' %}
 	<!--Livereload script rendered -->

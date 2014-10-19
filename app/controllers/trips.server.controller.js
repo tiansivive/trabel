@@ -72,15 +72,20 @@ exports.delete = function(req, res) {
 /**
  * List of Trips
  */
-exports.list = function(req, res) { Trip.find().sort('-created').populate('user', 'displayName').exec(function(err, trips) {
-		if (err) {
-			return res.status(400).send({
-				message: errorHandler.getErrorMessage(err)
-			});
-		} else {
-			res.jsonp(trips);
-		}
-	});
+exports.list = function(req, res) {
+	Trip.find({$or:
+		[
+			{'user': req.user._id},
+			{'privacy': 1}
+		]}).sort('-created').populate('user', 'displayName').exec(function(err, trips) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			} else {
+				res.jsonp(trips);
+			}
+		});
 };
 
 /**

@@ -23,6 +23,14 @@ var TripSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
+	},
+	//0-private,1-public
+	privacy: {
+		type: Number,
+		default: 0
+	},
+	markers: {
+		type: Array
 	}
 });
 
