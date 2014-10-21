@@ -175,12 +175,18 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			};
 
 			$scope.updateTrip = function() {
-				$scope.inputsDisabled = true;
 				$scope.isLoading = true;
+				$scope.sortableOptions.disabled = true;
 				$scope.trip.$update().then(function (response) {
-					$scope.inputsDisabled = false;
 					$scope.isLoading = false;
+					$scope.sortableOptions.disabled = false;
 				});
+			};
+
+			$scope.sortableOptions = {
+				update: function(e, ui) {
+					$scope.updateTrip();
+				}
 			};
 
 		});

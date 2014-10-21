@@ -3,8 +3,8 @@
     <em>Loading...</em>
   </p>
   <div class="page-header">
-    <h1 class="editable" onhide="isLoading=false" onbeforesave="isLoading=true" onaftersave="trip.$update()" editable-text="trip.name">{{trip.name}}</h1>
-    <div class="privacyToggle" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: inputsDisabled}">
+    <h1 class="editable" onaftersave="trip.$update()" editable-text="trip.name">{{trip.name}}</h1>
+    <div class="privacyToggle" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}">
       <p ng-switch-when="1" class="text-muted">Public Trip</p>
       <p ng-switch-when="0" class="text-muted">Private Trip</p>
     </div>
@@ -17,12 +17,12 @@
   <div class="trip-container">
     <div class="col-md-3 markers-list">
       <h2 ng-show="trip.markers.length===0" class="marker-placeholder text-muted">No markers yet</h2>
-      <div ui-sortable ng-model="trip.markers">
+      <div ui-sortable="sortableOptions" ng-model="trip.markers">
         <div class="markeritem" ng-repeat="marker in trip.markers">
           <a href ng-click="centerMap($index)">
             <span>{{marker.place_name}}</span>
           </a>
-          <a href ng-click="deleteMarker($index)" ng-class="{disabled: inputsDisabled}">
+          <a href ng-click="deleteMarker($index)" ng-class="{disabled: isLoading}">
             <span class="markerdelete glyphicon glyphicon-remove"></span>
           </a>
         </div>
