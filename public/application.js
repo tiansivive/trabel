@@ -8,7 +8,10 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 	function($locationProvider) {
 		$locationProvider.hashPrefix('!');
 	}
-]);
+
+]).run(function(editableOptions) {
+	editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+});
 
 //Then define the init function for starting up the application
 angular.element(document).ready(function() {

@@ -5,7 +5,7 @@ angular.module('trips').config(['uiGmapGoogleMapApiProvider',
 function (GoogleMapApi) {
 				GoogleMapApi.configure({
 						key: 'AIzaSyDmTgQBcjGfj9ZnlBFTjdFm6fcWREcIPbc',
-						v: '3.17',
+						v: '3.18',
 						libraries: 'weather,geometry,visualization,places'
 					});
 			}]).run(['Menus',

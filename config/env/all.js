@@ -15,7 +15,8 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/lib/famous-angular/dist/famous-angular.css'
+				'public/lib/famous-angular/dist/famous-angular.css',
+				'public/lib/angular-xeditable/dist/css/xeditable.css',
 			],
 			js: [
 				'public/lib/lodash/dist/lodash.underscore.js',
@@ -28,14 +29,17 @@ module.exports = {
 				'public/lib/famous-angular/dist/famous-angular.js',
 				'public/lib/bluebird/js/browser/bluebird.js',
 				'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
-				'public/lib/jquery/dist/jquery.min.js'
+				'public/lib/jquery/dist/jquery.min.js',
+				'public/lib/angular-xeditable/dist/js/xeditable.min.js'
+
 				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
 
 
 			]
 		},
 		css: [
-			'public/modules/**/css/*.css'
+			'public/modules/**/css/*.css',
+			'public/css/*.css'
 		],
 		js: [
 			'public/config.js',

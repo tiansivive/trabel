@@ -65,15 +65,16 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 		$scope.map = {
 			//TODO: Center map on trip markers
 			center: {
-				latitude: 45,
-				longitude: -73
+				latitude: 20,
+				longitude: 0
 			},
-			zoom: 8,
+			zoom: 2,
 			events: {
 				/*center_changed: function(maps, eventName, args){
 					console.log('ALOOO');
 				}*/
-			}
+			},
+			object: {}
 		};
 
 		$scope.searchbox = {
@@ -82,26 +83,82 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			events:
 				{
 					places_changed: function(box, eventName, args){
+						var map = $scope.map.object.getGMap();
 						var place = box.getPlaces()[0];
+						var id = 0;
+						if($scope.trip.markers.length>0)
+							id = $scope.trip.markers[$scope.trip.markers.length-1].id+1;
 						var marker = {
-							id: $scope.trip.markers.length,
-							latitude:place.geometry.location.lat(),
-							longitude: place.geometry.location.lng()
+							id: id,
+							place_name: place.name,
+							place_id: place.place_id,
+							location: {
+								latitude: place.geometry.location.lat(),
+								longitude: place.geometry.location.lng()
+							}
 						};
-						//TODO: zoom level
-						$scope.map.center = {
-							latitude: place.geometry.location.lat(),
-							longitude: place.geometry.location.lng()
-						};
-						$scope.map.zoom = 10;
+
+						if(place.geometry.viewport)
+						{
+							marker.viewport = place.geometry.viewport;
+							map.fitBounds(place.geometry.viewport);
+						}
+						else {
+							map.setCenter(place.geometry.location);
+							map.setZoom(17);
+						}
 						//TODO: save in different collection
 						//TODO: dont allow duplicates
-						$scope.trip.markers.push(marker);
-						$scope.trip.$update();
+						var exists = false;
+						$scope.trip.markers.forEach(function(marker) {
+							if(marker.place_id === place.place_id)
+								exists = true;
+						});
+						if(!exists) {
+							$scope.trip.markers.push(marker);
+							$scope.trip.$update();
+						}
 						//$scope.map.zoom = place.geometry.viewport
 
 					}
 				}
 			};
+
+		$scope.togglePrivacy = function() {
+			$scope.trip.privacy = $scope.trip.privacy?0:1;
+			$scope.trip.$update();
+		};
+
+		GoogleMapApi.then(function(maps) {
+
+			//TODO: complete this
+			/*var bounds = new maps.LatLngBounds();
+
+			$scope.trip.markers.forEach(function(marker)
+			{
+				bounds.extend(new maps.LatLng(marker.location.latitude, marker.location.longitude));
+				var map = $scope.map.object.getGMap();
+				map.fitBounds(bounds);
+			});*/
+
+			$scope.centerMap = function(id) {
+				var map = $scope.map.object.getGMap();
+				var marker = $scope.trip.markers[id];
+				//TODO: fix this stupid bug
+				if(marker.viewport)
+				{
+					map.fitBounds(marker.viewport);
+				}
+				else {
+					map.setCenter(new maps.LatLng(marker.location.latitude, marker.location.longitude));
+					map.setZoom(17);
+				}
+			};
+
+			$scope.deleteMarker = function(id) {
+				$scope.trip.markers.splice(id, 1);
+				$scope.trip.$update();
+			};
+		});
 	}
 ]);

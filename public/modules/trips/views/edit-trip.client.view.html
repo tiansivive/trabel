@@ -1,40 +1,32 @@
 <section data-ng-controller="TripsController" data-ng-init="findOne()">
     <div class="page-header">
-        <h1>Edit Trip</h1>
+        <h1 class="editable" onaftersave="trip.$update()" editable-text="trip.name">{{trip.name}}</h1>
+        <div style="cursor:pointer" ng-switch on="trip.privacy" ng-click="togglePrivacy()">
+          <p ng-switch-when="1" class="text-muted">Public Trip</p>
+          <p ng-switch-when="0" class="text-muted">Private Trip</p>
+        </div>
     </div>
     <script type="text/ng-template" id="searchbox.tpl.html">
         <input type="text" placeholder="Search Box">
     </script>
-    <div class="page-content">
-      <ui-gmap-google-map center="map.center" zoom="map.zoom" events="map.events">
-        <ui-gmap-search-box template="searchbox.template" position="searchbox.position" events="searchbox.events"/>
-        <ui-gmap-markers models="trip.markers" coords="'self'" />
-      </ui-gmap-google-map>
+    <div class="trip-container">
+      <div class="col-md-3 markers-list">
+        <h2 ng-show="trip.markers.length===0" class="marker-placeholder text-muted">No markers yet</h2>
+        <div class="markeritem" data-ng-repeat="marker in trip.markers">
+          <a href ng-click="centerMap(marker.id)">
+            <span>{{marker.place_name}}</span>
+          </a>
+          <a href ng-click="deleteMarker(marker.id)">
+            <span class="markerdelete glyphicon glyphicon-remove"></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" events="map.events" control="map.object">
+          <ui-gmap-search-box template="searchbox.template" position="searchbox.position" events="searchbox.events"/>
+          <ui-gmap-markers models="trip.markers" coords="'location'" />
+        </ui-gmap-google-map>
+      </div>
     </div>
-    <div class="col-md-12">
-        <form class="form-horizontal" data-ng-submit="update()" novalidate>
-            <fieldset>
-                <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
-                    <div class="controls">
-                        <input type="text" data-ng-model="trip.name" id="name" class="form-control" placeholder="Name" required>
-                    </div>
-
-                    <label class="control-label" for="privacy">Privacy</label>
-                    <div class="controls">
-                        <select id="privacy" data-ng-model="trip.privacy" class="form-control" required>
-                          <option value="0">Private</option>
-                          <option value="1">Public</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Update" class="btn btn-default">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
-            </fieldset>
-        </form>
-    </div>
+  </div>
 </section>
