@@ -13,10 +13,10 @@
       <div class="col-md-3 markers-list">
         <h2 ng-show="trip.markers.length===0" class="marker-placeholder text-muted">No markers yet</h2>
         <div class="markeritem" data-ng-repeat="marker in trip.markers">
-          <a href ng-click="centerMap(marker.id)">
+          <a href ng-click="centerMap($index)">
             <span>{{marker.place_name}}</span>
           </a>
-          <a href ng-click="deleteMarker(marker.id)">
+          <a href ng-click="deleteMarker($index)">
             <span class="markerdelete glyphicon glyphicon-remove"></span>
           </a>
         </div>

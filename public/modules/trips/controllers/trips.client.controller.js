@@ -141,22 +141,22 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 				map.fitBounds(bounds);
 			});*/
 
-			$scope.centerMap = function(id) {
+			$scope.centerMap = function(index) {
 				var map = $scope.map.object.getGMap();
-				var marker = $scope.trip.markers[id];
+				var marker = $scope.trip.markers[index];
 				//TODO: fix this stupid bug
-				if(marker.viewport)
-				{
-					map.fitBounds(marker.viewport);
-				}
-				else {
-					map.setCenter(new maps.LatLng(marker.location.latitude, marker.location.longitude));
-					map.setZoom(17);
-				}
+				//if(marker.viewport)
+				//{
+					//map.fitBounds(marker.viewport);
+				//}
+				//else {
+				map.setCenter(new maps.LatLng(marker.location.latitude, marker.location.longitude));
+				map.setZoom(17);
+				//}
 			};
 
-			$scope.deleteMarker = function(id) {
-				$scope.trip.markers.splice(id, 1);
+			$scope.deleteMarker = function(index) {
+				$scope.trip.markers.splice(index, 1);
 				$scope.trip.$update();
 			};
 		});
