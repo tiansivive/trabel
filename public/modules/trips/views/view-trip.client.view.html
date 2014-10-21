@@ -11,6 +11,12 @@
 			<ui-gmap-markers models="trip.markers" coords="'location'" />
 		</ui-gmap-google-map>
 	</div>
+	<div
+	  class="fb-like"
+	  data-share="true"
+	  data-width="450"
+	  data-show-faces="true">
+	</div>
 	<div class="pull-right" data-ng-show="authentication.user._id == trip.user._id">
 		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
