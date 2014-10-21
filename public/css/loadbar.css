@@ -1,0 +1,15 @@
+p.loadBar {
+  position:fixed;
+  top:60px;
+  left:0;
+  width:100%;
+  text-align:center;
+  margin:0;
+}
+
+p.loadBar em {
+  padding:0 25px;
+  border:1px solid #c87413;
+  border-radius:5px;
+  background-color:rgba(225, 195, 109, 0.6);
+}

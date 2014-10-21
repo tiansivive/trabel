@@ -116,7 +116,7 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 						});
 						if(!exists) {
 							$scope.trip.markers.push(marker);
-							$scope.trip.$update();
+							$scope.updateTrip();
 						}
 						//$scope.map.zoom = place.geometry.viewport
 
@@ -126,7 +126,8 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 		$scope.togglePrivacy = function() {
 			$scope.trip.privacy = $scope.trip.privacy?0:1;
-			$scope.trip.$update();
+			//TODO: optimize this, only pass field
+			$scope.updateTrip();
 		};
 
 		GoogleMapApi.then(function(maps) {
@@ -144,21 +145,44 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			$scope.centerMap = function(index) {
 				var map = $scope.map.object.getGMap();
 				var marker = $scope.trip.markers[index];
-				//TODO: fix this stupid bug
-				//if(marker.viewport)
-				//{
-					//map.fitBounds(marker.viewport);
-				//}
-				//else {
-				map.setCenter(new maps.LatLng(marker.location.latitude, marker.location.longitude));
-				map.setZoom(17);
-				//}
+				if(marker.viewport)
+				{
+					var viewport = new maps.LatLngBounds(
+						new maps.LatLng(
+							marker.viewport.Ea.k,
+							marker.viewport.va.j
+						),
+						new maps.LatLng(
+							marker.viewport.Ea.j,
+							marker.viewport.va.k
+						));
+					map.fitBounds(viewport);
+				}
+				else {
+					map.setCenter(
+						{
+							lat:marker.location.latitude,
+							lng:marker.location.longitude
+						});
+					map.setZoom(17);
+				}
 			};
 
 			$scope.deleteMarker = function(index) {
 				$scope.trip.markers.splice(index, 1);
-				$scope.trip.$update();
+				//TODO: optimizar (lento a mandar)
+				$scope.updateTrip();
 			};
+
+			$scope.updateTrip = function() {
+				$scope.inputsDisabled = true;
+				$scope.isLoading = true;
+				$scope.trip.$update().then(function (response) {
+					$scope.inputsDisabled = false;
+					$scope.isLoading = false;
+				});
+			};
+
 		});
 	}
 ]);

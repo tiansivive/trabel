@@ -20,6 +20,7 @@ module.exports = {
 			],
 			js: [
 				'public/lib/lodash/dist/lodash.underscore.js',
+				'public/lib/jquery/dist/jquery.min.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
@@ -29,9 +30,10 @@ module.exports = {
 				'public/lib/famous-angular/dist/famous-angular.js',
 				'public/lib/bluebird/js/browser/bluebird.js',
 				'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
-				'public/lib/jquery/dist/jquery.min.js',
-				'public/lib/angular-xeditable/dist/js/xeditable.min.js'
-
+				'public/lib/angular-xeditable/dist/js/xeditable.min.js',
+				'public/lib/angular-ui-sortable/sortable.min.js',
+				'public/lib/jquery-ui/jquery-ui.min.js',
+				'public/lib/jquery-ui/ui/minified/sortable.min.js'
 				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
 
 
