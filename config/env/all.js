@@ -36,7 +36,7 @@ module.exports = {
 				'public/lib/angular-xeditable/dist/js/xeditable.min.js',
 				'public/lib/angular-ui-sortable/sortable.min.js',
 				'public/lib/jquery-ui/jquery-ui.min.js',
-				'public/lib/jquery-ui/ui/minified/sortable.min.js'
+				'public/lib/jquery-ui/ui/minified/sortable.min.js',
 				'public/lib/jquery/dist/jquery.min.js',
 				'public/lib/mixitup2/build/jquery.mixitup.min.js',
 				'public/lib/slippry/dist/slippry.min.js',
