@@ -17,6 +17,8 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 				'public/lib/famous-angular/dist/famous-angular.css',
 				'public/lib/angular-xeditable/dist/css/xeditable.css',
+				'public/lib/slippry/dist/slippry.min.css',
+				'public/lib/ngAnimate/css/ng-animation.css'
 			],
 			js: [
 				'public/lib/lodash/dist/lodash.underscore.js',
@@ -26,6 +28,7 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/angular-animate/angular-animate.js',
 				'public/lib/famous/famous-global.js',
 				'public/lib/famous-angular/dist/famous-angular.js',
 				'public/lib/bluebird/js/browser/bluebird.js',
@@ -34,6 +37,13 @@ module.exports = {
 				'public/lib/angular-ui-sortable/sortable.min.js',
 				'public/lib/jquery-ui/jquery-ui.min.js',
 				'public/lib/jquery-ui/ui/minified/sortable.min.js'
+				'public/lib/jquery/dist/jquery.min.js',
+				'public/lib/mixitup2/build/jquery.mixitup.min.js',
+				'public/lib/slippry/dist/slippry.min.js',
+				'public/lib/wowjs/dist/wow.js',
+				'public/lib/bootstrap/dist/js/bootstrap.js',
+				'public/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js'
+
 				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
 
 
