@@ -59,6 +59,8 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 		$scope.findOne = function() {
 			$scope.trip = Trips.get({
 				tripId: $stateParams.tripId
+			},function(data) { //this runs after trip is loaded
+				$scope.init();
 			});
 		};
 
@@ -70,7 +72,10 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			},
 			zoom: 2,
 			events: {
-				/*center_changed: function(maps, eventName, args){
+				/*click: function(maps, eventName, args){
+					console.log('CLICKED ON:', args[0].latLng);
+				},
+				center_changed: function(maps, eventName, args){
 					console.log('ALOOO');
 				}*/
 			},
@@ -80,84 +85,138 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 		$scope.searchbox = {
 			template:'searchbox.tpl.html',
 			position:'top-left',
-			events:
-				{
-					places_changed: function(box, eventName, args){
-						var map = $scope.map.object.getGMap();
-						var place = box.getPlaces()[0];
-						var id = 0;
-						if($scope.trip.markers.length>0)
-							id = $scope.trip.markers[$scope.trip.markers.length-1].id+1;
-						var marker = {
-							id: id,
-							place_name: place.name,
-							place_id: place.place_id,
-							location: {
-								latitude: place.geometry.location.lat(),
-								longitude: place.geometry.location.lng()
-							}
-						};
-
-						if(place.geometry.viewport)
-						{
-							marker.viewport = place.geometry.viewport;
-							map.fitBounds(place.geometry.viewport);
-						}
-						else {
-							map.setCenter(place.geometry.location);
-							map.setZoom(17);
-						}
-						//TODO: save in different collection
-						//TODO: dont allow duplicates
-						var exists = false;
-						$scope.trip.markers.forEach(function(marker) {
-							if(marker.place_id === place.place_id)
-								exists = true;
-						});
-						if(!exists) {
-							$scope.trip.markers.push(marker);
-							$scope.trip.$update();
-						}
-						//$scope.map.zoom = place.geometry.viewport
-
-					}
-				}
-			};
+			events: {}
+		};
 
 		$scope.togglePrivacy = function() {
 			$scope.trip.privacy = $scope.trip.privacy?0:1;
-			$scope.trip.$update();
+			//TODO: optimize this, only pass field
+			$scope.updateTrip();
 		};
 
 		GoogleMapApi.then(function(maps) {
 
-			//TODO: complete this
-			/*var bounds = new maps.LatLngBounds();
-
-			$scope.trip.markers.forEach(function(marker)
-			{
-				bounds.extend(new maps.LatLng(marker.location.latitude, marker.location.longitude));
+			$scope.searchbox.events.places_changed = function(box, eventName, args){
 				var map = $scope.map.object.getGMap();
-				map.fitBounds(bounds);
-			});*/
+				var place = box.getPlaces()[0];
+				var marker = {
+					place_name: place.name,
+					place_id: place.place_id,
+					location: {
+						latitude: place.geometry.location.lat(),
+						longitude: place.geometry.location.lng()
+					}
+				};
+				//TODO: save in different collection
+				//TODO: dont allow duplicates
+				var exists = false;
+				$scope.trip.markers.forEach(function(marker) {
+					if(marker.place_id === place.place_id)
+						exists = true;
+				});
+				if(!exists) {
+					if(place.geometry.viewport)
+					{
+						marker.viewport = place.geometry.viewport;
+						$scope.bounds.union(place.geometry.viewport);
+					}
+					else
+						$scope.bounds.extend(place.geometry.location);
+					$scope.lineCoords.push(place.geometry.location);
+					$scope.path.setPath($scope.lineCoords);
+					var index = $scope.trip.markers.push(marker)-1; //returns lenght
+					$scope.centerMap(index);
+					$scope.updateTrip();
+				}
+			};
 
-			$scope.centerMap = function(id) {
+			$scope.centerMap = function(index) {
 				var map = $scope.map.object.getGMap();
-				var marker = $scope.trip.markers[id];
-				//TODO: fix this stupid bug
+				var marker = $scope.trip.markers[index];
 				if(marker.viewport)
 				{
-					map.fitBounds(marker.viewport);
+					map.fitBounds(makeViewport(marker.viewport));
 				}
 				else {
-					map.setCenter(new maps.LatLng(marker.location.latitude, marker.location.longitude));
+					map.setCenter(
+						{
+							lat:marker.location.latitude,
+							lng:marker.location.longitude
+						});
 					map.setZoom(17);
 				}
 			};
 
-			$scope.deleteMarker = function(id) {
-				$scope.trip.markers.splice(id, 1);
-				$scope.trip.$update();
+			$scope.deleteMarker = function(index) {
+				$scope.trip.markers.splice(index, 1);
+				$scope.init(); //need to re-init (bounds cant be "un-extended")
+				//TODO: optimizar (lento a mandar)
+				$scope.updateTrip();
+			};
+
+			$scope.updateTrip = function() {
+				$scope.isLoading = true;
+				$scope.sortableOptions.disabled = true;
+				$scope.trip.$update().then(function (response) {
+					$scope.isLoading = false;
+					$scope.sortableOptions.disabled = false;
+				});
+			};
+
+			$scope.sortableOptions = {
+				start: function(e, ui) {
+					ui.item.i = ui.item.index();
+				},
+				stop: function(e, ui) {
+					$scope.lineCoords.splice(ui.item.index(), 0, $scope.lineCoords.splice(ui.item.i, 1)[0]);
+					$scope.path.setPath($scope.lineCoords);
+					$scope.updateTrip();
+				}
+			};
+
+			$scope.path = new maps.Polyline({
+				geodesic: true,
+				strokeColor: 'blue',
+				strokeWeight: 5,
+				strokeOpacity: 0.5
+			});
+
+			function makeViewport(obj) {
+				return new maps.LatLngBounds(
+					new maps.LatLng(
+						obj.Ea.k,
+						obj.va.j
+					),
+					new maps.LatLng(
+						obj.Ea.j,
+						obj.va.k
+					));
+			}
+
+			$scope.init = function() {
+				var map = $scope.map.object.getGMap();
+				$scope.bounds = new maps.LatLngBounds();
+				$scope.lineCoords = [];
+				for (var i=0; i<$scope.trip.markers.length; i++) {
+					var marker = $scope.trip.markers[i];
+					var latlng = new maps.LatLng(
+						marker.location.latitude,
+						marker.location.longitude
+					);
+					$scope.lineCoords.push(latlng);
+					if(marker.viewport)
+						$scope.bounds.union(makeViewport(marker.viewport));
+					else
+						$scope.bounds.extend(latlng);
+				}
+				$scope.path.setPath($scope.lineCoords);
+				$scope.path.setMap(map);
+				map.fitBounds($scope.bounds);
+			};
+
+			$scope.resetMap = function() {
+				var map = $scope.map.object.getGMap();
+				map.fitBounds($scope.bounds);
 			};
 		});
 	}

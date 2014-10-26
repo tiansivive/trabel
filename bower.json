@@ -12,7 +12,8 @@
     "angular-ui-router": "~0.2.10",
     "angular-google-maps": "~2.0.1",
     "a": "~1.6.10",
-    "angular-xeditable": "~0.1.8"
+    "angular-xeditable": "~0.1.8",
+    "angular-ui-sortable": "~0.13.0"
   },
   "resolutions": {
     "angular": ">= 1.0.8"

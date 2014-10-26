@@ -7,16 +7,23 @@
 		</div>
 	</div>
 	<div class="page-content">
-		<ui-gmap-google-map center="map.center" zoom="map.zoom" events="map.events">
-			<ui-gmap-markers models="trip.markers" coords="'location'" />
+		<ui-gmap-google-map center="map.center" zoom="map.zoom" events="map.events" control="map.object">
+			<ui-gmap-markers models="trip.markers" idkey="'place_id'" coords="'location'" />
 		</ui-gmap-google-map>
+		<p style="text-align:right;margin-top:5px;font-size:24px;">
+			<a href ng-click="resetMap()">
+				<span class="glyphicon glyphicon-repeat"></span>
+			</a>
+		</p>
 	</div>
+	
 	<div
 	  class="fb-like"
 	  data-share="true"
 	  data-width="450"
 	  data-show-faces="true">
 	</div>
+
 	<div class="pull-right" data-ng-show="authentication.user._id == trip.user._id">
 		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>

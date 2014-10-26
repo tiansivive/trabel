@@ -4,6 +4,20 @@
   overflow-x:hidden;
 }
 
+.disabled {
+  pointer-events: none;
+  color: gray;
+}
+
+.privacyToggle {
+  cursor:pointer;
+}
+
+.form-control.searchbox {
+  margin-top:5px;
+  width: 50%;
+}
+
 h1.editable {
   display:inline-block;
   border:none;
