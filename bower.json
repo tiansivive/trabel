@@ -13,7 +13,7 @@
     "angular-google-maps": "~2.0.1",
     "a": "~1.6.10",
     "angular-xeditable": "~0.1.8",
-    "angular-ui-sortable": "~0.13.0"
+    "angular-ui-sortable": "~0.13.0",
     "ngAnimate": "*",
     "wowjs": "~1.0.2",
     "mixitup2": "~2.1.7",
