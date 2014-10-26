@@ -6,8 +6,8 @@ module.exports = {
 		title: 'Trabel'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || '1544243265791777',
-		clientSecret: process.env.FACEBOOK_SECRET || 'dbf587914a274f9c5c41d1cb6c9de9ff',
+		clientID: process.env.FACEBOOK_ID || '1544255289123908',
+		clientSecret: process.env.FACEBOOK_SECRET || 'b7f79aaf3b527c7cca4e30399ab256dc',
 		callbackURL: 'http://localhost:3000/auth/facebook/callback'
 	},
 	twitter: {
