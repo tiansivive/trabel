@@ -5,5 +5,7 @@
   <form class="form-group">
     <input class="form-control searchbox" type="text" placeholder="Search Mates" ng-model="searchInput">
   </form>
-  {{searchInput}}
+  <ul>  
+    <li ng-repeat="user in users | filter:searchInput:undefined">{{user.name}}</li>
+  </ul>
 </section>

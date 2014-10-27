@@ -13,6 +13,7 @@ module.exports = function(app) {
 	// Setting up the users profile api
 	app.route('/users/me').get(users.me);
 	app.route('/users/all').get(users.list);
+	app.route('/users/all2').get(users.list2);
 	app.route('/users/names').get(users.list_by_name);
 	app.route('/users/emails').get(users.list_by_email);
 	app.route('/users').put(users.update);

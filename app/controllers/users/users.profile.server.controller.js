@@ -114,3 +114,24 @@ exports.list_by_email = function(req, res) {
     } 
   });
 };
+exports.list2 = function(req, res) {
+	User.find({}, function(err, users) {
+
+		if(err){
+			res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		}else{
+	    var users_list = [];
+	    users.forEach(function(user) {
+	    	var user_info = {
+	    		id: user._id,
+	    		name: user.displayName,
+	    		email: user.email
+	    	};
+	    	users_list.push(user_info);
+	    });
+	    res.send(users_list); 
+    } 
+  });
+};
