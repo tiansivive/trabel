@@ -8,6 +8,15 @@
       <p ng-switch-when="1" class="text-muted">Public Trip</p>
       <p ng-switch-when="0" class="text-muted">Private Trip</p>
     </div>
+    <div class="member_options">
+      <p class="trip_owner">Owned by {{trip.user.displayName}}</p>
+      <ul class="trip_members">
+        <li ng-repeat="member in trip.members">{{member.email}}</li>
+      </ul>
+      <a href ng-click="AddMate()">
+        <span>Add a tripmate</span>
+      </a>
+    </div>
   </div>
   <script type="text/ng-template" id="searchbox.tpl.html">
     <div class="form-group">

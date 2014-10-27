@@ -6,6 +6,20 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
+
+var memberInfo = new Schema({
+
+	user: {
+		type: Schema.ObjectId,
+		ref: 'User'
+	},
+	//read/write/admin
+	permission: {
+		type: String,
+		default: 'write'
+	}
+});
+
 /**
  * Trip Schema
  */
@@ -23,6 +37,10 @@ var TripSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
+	},
+	members: {
+		type: [memberInfo],
+		default: []
 	},
 	//0-private,1-public
 	privacy: {

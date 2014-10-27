@@ -19,9 +19,11 @@
     "mixitup2": "~2.1.7",
     "bootstrap-hover-dropdown": "~2.0.11",
     "slippry": "~1.2.1",
-    "angular-animate": "~1.3.0"
+    "angular-animate": "~1.3.0",
+    "angular-sweetalert": "~1.0.3",
+    "ngDialog": "~0.3.2"
   },
   "resolutions": {
-    "angular": "1.3.0"
+    "angular": "~1.x"
   }
 }

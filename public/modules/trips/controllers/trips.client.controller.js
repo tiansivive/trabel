@@ -1,9 +1,10 @@
 'use strict';
 
 // Trips controller
-angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(),
-	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi) {
+angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(), 'ngDialog',
+	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi, ngDialog) {
 		$scope.authentication = Authentication;
+
 
 		// Create new Trip
 		$scope.create = function() {
@@ -63,6 +64,17 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 				$scope.init();
 			});
 		};
+
+
+
+		$scope.AddMate = function () {
+        ngDialog.open({ 
+        	template: '/modules/trips/views/dialogs/add-mate-dialog.client.view.html',
+        	controller: 'AddMateController',
+        	scope: $scope,
+        	className: 'ngdialog-theme-plain'
+        });
+    };
 
 		$scope.map = {
 			//TODO: Center map on trip markers
