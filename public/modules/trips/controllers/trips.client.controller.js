@@ -168,9 +168,12 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 					ui.item.i = ui.item.index();
 				},
 				stop: function(e, ui) {
-					$scope.lineCoords.splice(ui.item.index(), 0, $scope.lineCoords.splice(ui.item.i, 1)[0]);
-					$scope.path.setPath($scope.lineCoords);
-					$scope.updateTrip();
+					//update positions in lineCoords array
+					if(ui.item.index()!==ui.item.i) {
+						$scope.lineCoords.splice(ui.item.index(), 0, $scope.lineCoords.splice(ui.item.i, 1)[0]);
+						$scope.path.setPath($scope.lineCoords);
+						$scope.updateTrip();
+					}
 				}
 			};
 
