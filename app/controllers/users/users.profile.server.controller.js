@@ -58,7 +58,7 @@ exports.me = function(req, res) {
 /*
  * Send all user data
  */
-exports.list = function(req, res) {
+exports.all = function(req, res) {
 	User.find({}, function(err, users) {
 
 		if(err){
@@ -114,7 +114,7 @@ exports.list_by_email = function(req, res) {
     } 
   });
 };
-exports.list2 = function(req, res) {
+exports.list = function(req, res) {
 	User.find({}, function(err, users) {
 
 		if(err){

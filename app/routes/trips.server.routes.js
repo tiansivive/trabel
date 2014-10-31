@@ -14,6 +14,10 @@ module.exports = function(app) {
 		.put(users.requiresLogin, trips.hasAuthorization, trips.update)
 		.delete(users.requiresLogin, trips.hasAuthorization, trips.delete);
 
+	app.route('/trips/:tripId/add/mate/:userId')
+		.put(users.requiresLogin, trips.hasAuthorization, trips.update);
 	// Finish by binding the Trip middleware
+	app.param('userId', trips.addMember);
 	app.param('tripId', trips.tripByID);
+
 };

@@ -6,6 +6,8 @@
     <input class="form-control searchbox" type="text" placeholder="Search Mates" ng-model="searchInput">
   </form>
   <ul>  
-    <li ng-repeat="user in users | filter:searchInput:undefined">{{user.name}}</li>
+    <li ng-repeat="user in users | filter:searchInput:undefined" ng-show="show_item" ng-click="addMate(user.id)">
+      <a href>{{user.name}}</a>
+    </li>
   </ul>
 </section>

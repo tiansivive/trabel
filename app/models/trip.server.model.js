@@ -7,18 +7,18 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 
-var memberInfo = new Schema({
 
-	user: {
+var TripMember = new Schema({
+	user:{
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
-	//read/write/admin
 	permission: {
 		type: String,
 		default: 'write'
 	}
 });
+
 
 /**
  * Trip Schema
@@ -39,7 +39,7 @@ var TripSchema = new Schema({
 		ref: 'User'
 	},
 	members: {
-		type: [memberInfo],
+		type: [TripMember],
 		default: []
 	},
 	//0-private,1-public

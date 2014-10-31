@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors'),
 	Trip = mongoose.model('Trip'),
+	User = mongoose.model('User'),
 	_ = require('lodash');
 
 /**
@@ -14,6 +15,9 @@ var mongoose = require('mongoose'),
 exports.create = function(req, res) {
 	var trip = new Trip(req.body);
 	trip.user = req.user;
+	console.log(req);
+
+	console.log(trip);
 
 	trip.save(function(err) {
 		if (err) {
@@ -37,6 +41,7 @@ exports.read = function(req, res) {
  * Update a Trip
  */
 exports.update = function(req, res) {
+	console.log('STEP 5');
 	var trip = req.trip ;
 
 	trip = _.extend(trip , req.body);
@@ -88,23 +93,44 @@ exports.list = function(req, res) {
 		});
 };
 
+
 /**
  * Trip middleware
  */
-exports.tripByID = function(req, res, next, id) { Trip.findById(id).populate('user', 'displayName').exec(function(err, trip) {
+exports.tripByID = function(req, res, next, id) { 
+	
+	console.log('STEP 1');
+	Trip.findById(id).populate('user members.user', 'displayName email').exec(function(err, trip) {
 		if (err) return next(err);
 		if (! trip) return next(new Error('Failed to load Trip ' + id));
-		req.trip = trip ;
+		console.log('populating displayName and email');
+
+		req.trip = trip;
 		next();
 	});
+};
+
+exports.addMember = function(req, res, next, id) { 
+	console.log('STEP 2');
+
+	var member = {
+		user: id,
+		permission: 'write'
+	};
+	req.trip.members.push(member);
+
+	console.log(req.trip);
+	next();
 };
 
 /**
  * Trip authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
+	console.log('STEP 4');
 	if (req.trip.user.id !== req.user.id) {
 		return res.status(403).send('User is not authorized');
 	}
 	next();
 };
+
