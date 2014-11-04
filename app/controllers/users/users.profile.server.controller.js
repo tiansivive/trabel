@@ -135,3 +135,33 @@ exports.list = function(req, res) {
     } 
   });
 };
+exports.search = function(req, res){
+
+var re = new RegExp(req.body.pattern, 'i');
+var excludeList = [];
+
+req.body.members.forEach(function(member){
+	if(member.user._id === undefined){
+		excludeList.push(member.user);
+	}else{
+	 	excludeList.push(member.user._id);
+	}
+});
+excludeList.push(req.user._id);
+
+
+
+User.find().or([{ 'displayName': { $regex: re }},
+							  { 'email': { $regex: re }}])
+					 .where('_id').nin(excludeList)
+					 .select('displayName email')
+					 .exec(function(err, users) {
+							if(err){
+								res.status(400).send({
+									message: errorHandler.getErrorMessage(err)
+								});
+							}else{			    
+						    res.json(users);
+					    } 
+						});
+};

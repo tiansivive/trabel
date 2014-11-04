@@ -68,12 +68,18 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 
 		$scope.AddMate = function () {
-        ngDialog.open({ 
+      var dialog = ngDialog.open({ 
         	template: '/modules/trips/views/dialogs/add-mate-dialog.client.view.html',
         	controller: 'AddMateController',
         	scope: $scope,
         	className: 'ngdialog-theme-plain'
-        });
+      });
+
+      dialog.closePromise.then(function (data) {
+			  console.log(data.id + ' has been dismissed.');
+			  console.log(data.value);
+			  $scope.trip = data.value;
+			});
     };
 
 		$scope.map = {
@@ -104,6 +110,38 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			$scope.trip.privacy = $scope.trip.privacy?0:1;
 			//TODO: optimize this, only pass field
 			$scope.updateTrip();
+		};
+
+		//TODO security issues?
+		$scope.hasPermission = function(){
+
+			var permission = false;
+
+			if($scope.authentication.user._id === $scope.trip.user._id){
+				permission = true;
+			}else{
+				$scope.trip.members.forEach(function(member){
+					if(member.user._id === $scope.authentication.user._id || member.user.permission === 'write'){
+						permission = true;	
+					}
+				});
+			}
+
+			return permission;
+		};
+
+		$scope.isTripMember = function(){
+			var isMember = false;
+			$scope.trip.members.forEach(function(member){
+				if(member.user._id === $scope.authentication.user._id){
+					isMember = true;
+				}
+			});
+			return isMember;
+		};
+
+		$scope.leaveTrip = function(){
+
 		};
 
 		GoogleMapApi.then(function(maps) {

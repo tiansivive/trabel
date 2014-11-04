@@ -9,15 +9,17 @@ var mongoose = require('mongoose'),
 
 
 var TripMember = new Schema({
-	user:{
-		type: Schema.ObjectId,
-		ref: 'User'
-	},
-	permission: {
-		type: String,
-		default: 'write'
-	}
-});
+		user:{
+			type: Schema.ObjectId,
+			ref: 'User'
+		},
+		permission: {
+			type: String,
+			default: 'write'
+		}
+	},{
+	  _id: false
+	});
 
 
 /**

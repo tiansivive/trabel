@@ -11,7 +11,7 @@
     <div class="member_options">
       <p class="trip_owner">Owned by {{trip.user.displayName}}</p>
       <ul class="trip_members">
-        <li ng-repeat="member in trip.members">{{member.email}}</li>
+        <li ng-repeat="member in trip.members">{{member.user.displayName}}</li>
       </ul>
       <a href ng-click="AddMate()">
         <span>Add a tripmate</span>
