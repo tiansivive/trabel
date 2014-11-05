@@ -13,6 +13,11 @@ module.exports = function(app) {
 		.get(trips.read)
 		.put(users.requiresLogin, trips.hasAuthorization, trips.update)
 		.delete(users.requiresLogin, trips.hasAuthorization, trips.delete);
+
+	app.route('/trips/:tripId/leave')
+		.put(users.requiresLogin, trips.hasAuthorization, trips.removeMate, trips.update);
+	app.route('/trips/:tripId/request/join')
+		.post(users.requiresLogin, trips.requestJoin);
 	app.route('/trips/:tripId/invite/mate/:userId')
 		.post(users.requiresLogin, trips.hasAuthorization, trips.inviteMate);
 

@@ -128,7 +128,7 @@ exports.inviteMate = function(req, res){
 				var mailOptions = {
 					to: req.resolvedUser.email,
 					from: config.mailer.from,
-					subject: 'Trip Invitation',
+					subject: 'Request to Join',
 					html: emailHTML
 				};
 				smtpTransport.sendMail(mailOptions, function(err) {
@@ -150,11 +150,57 @@ exports.inviteMate = function(req, res){
 
 };
 
+exports.requestJoin = function(req, res) {
+	console.log('Request Join');
+
+	User.findById(req.trip.user._id).select('displayName email').exec(function(err, usr){ //maybe just populate email on TripByID?
+		async.waterfall([
+
+			function(done) {
+				res.render('templates/request-joining', {
+					appName: config.app.title,
+					requestingUser: req.user.displayName,
+					tripOwner: usr.displayName,
+					tripName: req.trip.name,
+					acceptURL: 'http://' + req.headers.host + '/trips/' + req.trip._id + '/add/mate/' + req.user._id,
+					declineURL: 'http://' + req.headers.host + '/trips/' + req.trip._id + '/decline/join/request' + req.user._id
+				}, function(err, emailHTML) {
+					done(err, emailHTML);
+				});
+			},
+			function(emailHTML, done) {
+				var smtpTransport = nodemailer.createTransport(config.mailer.options);
+				var mailOptions = {
+					to: usr.email,
+					from: config.mailer.from,
+					subject: 'Trip Invitation',
+					html: emailHTML
+				};
+				smtpTransport.sendMail(mailOptions, function(err) {
+					if (!err) {
+						res.send({
+							message: 'A request to join the trip has been sent to ' + usr.displayName
+						});
+					}
+					done(err);
+				});
+			}
+		], function(err) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			}
+		});
+	});
+};
+
 
 exports.declineInvitation = function(req, res){
 	//once Notification system is up, notify user as well
 
 };
+
 
 /**
  * Trip middleware
@@ -206,18 +252,39 @@ exports.addTripMate = function(req, res){
 	
 };
 
+exports.removeMate =  function(req, res, next){
+
+	var index = 0;
+
+	req.trip.members.forEach(function(member){
+		if(member.user._id === req.user._id){
+			index = req.trip.members.indexOf(member);
+		}
+	});
+	console.log('before splice');
+	console.log(req.trip.members);
+	req.trip.members.splice(index, 1);
+	console.log('after splice');
+	console.log(req.trip.members);
+	next();
+
+};
+
 /**
  * Trip authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
 	console.log('STEP - hasAuthorization');
-	if (req.trip.user.id !== req.user._id) {
+	if (req.trip.user.id !== req.user.id) {
 		var authorized = false;
 		console.log(req.trip.members);
 		console.log(req.user);
 		req.trip.members.forEach(function(member){
-
-			if(member.user._id === req.user._id){
+			console.log('member id');
+			console.log(member.user.id);
+			console.log('user id');
+			console.log(req.user.id);
+			if(member.user.id === req.user.id){
 				authorized = true;
 			} 
 		});
@@ -227,7 +294,6 @@ exports.hasAuthorization = function(req, res, next) {
 			return res.status(403).send('User is not authorized');
 		}
 	}
-	next();
 	next();
 };
 

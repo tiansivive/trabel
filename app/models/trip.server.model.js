@@ -55,3 +55,4 @@ var TripSchema = new Schema({
 });
 
 mongoose.model('Trip', TripSchema);
+mongoose.model('TripMember', TripMember);

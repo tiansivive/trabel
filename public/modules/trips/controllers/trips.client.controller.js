@@ -1,9 +1,35 @@
 'use strict';
 
 // Trips controller
-angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(), 'ngDialog',
-	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi, ngDialog) {
+angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(), 'ngDialog', '$http',
+	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi, ngDialog, $http) {
 		$scope.authentication = Authentication;
+		
+		$scope.map = {
+			//TODO: Center map on trip markers
+			center: {
+				latitude: 20,
+				longitude: 0
+			},
+			zoom: 2,
+			events: {
+				/*click: function(maps, eventName, args){
+					console.log('CLICKED ON:', args[0].latLng);
+				},
+				center_changed: function(maps, eventName, args){
+					console.log('ALOOO');
+				}*/
+			},
+			object: {}
+		};
+
+		$scope.searchbox = {
+			template:'searchbox.tpl.html',
+			position:'top-left',
+			events: {}
+		};
+
+
 
 
 		// Create new Trip
@@ -82,68 +108,38 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			});
     };
 
-		$scope.map = {
-			//TODO: Center map on trip markers
-			center: {
-				latitude: 20,
-				longitude: 0
-			},
-			zoom: 2,
-			events: {
-				/*click: function(maps, eventName, args){
-					console.log('CLICKED ON:', args[0].latLng);
-				},
-				center_changed: function(maps, eventName, args){
-					console.log('ALOOO');
-				}*/
-			},
-			object: {}
+    $scope.leaveTrip = function(){
+
+    	var url = '/trips/' + $scope.trip._id + '/leave';
+    	$http.put(url, '')
+           .success(function(data, status, headers, config){ 
+           		console.log('SUCCESS on PUT leaveTrip');
+           		console.log(data);     
+              $location.path('trips');
+           })
+           .error(function(data, status, headers, config){
+              console.error('ERROR on PUT leaveTrip');
+              console.log(data);
+           });
 		};
 
-		$scope.searchbox = {
-			template:'searchbox.tpl.html',
-			position:'top-left',
-			events: {}
-		};
-
-		$scope.togglePrivacy = function() {
-			$scope.trip.privacy = $scope.trip.privacy?0:1;
-			//TODO: optimize this, only pass field
-			$scope.updateTrip();
-		};
-
-		//TODO security issues?
-		$scope.hasPermission = function(){
-
-			var permission = false;
-
-			if($scope.authentication.user._id === $scope.trip.user._id){
-				permission = true;
-			}else{
-				$scope.trip.members.forEach(function(member){
-					if(member.user._id === $scope.authentication.user._id || member.user.permission === 'write'){
-						permission = true;	
-					}
-				});
-			}
-
-			return permission;
-		};
-
-		$scope.isTripMember = function(){
-			var isMember = false;
-			$scope.trip.members.forEach(function(member){
-				if(member.user._id === $scope.authentication.user._id){
-					isMember = true;
-				}
-			});
-			return isMember;
-		};
-
-		$scope.leaveTrip = function(){
+		$scope.requestToJoin = function(){
+			
+    	var url = '/trips/' + $scope.trip._id + '/request/join';
+    	$http.post(url, '')
+           .success(function(data, status, headers, config){ 
+           		console.log('SUCCESS on POST requestToJoin');
+           		console.log(data);     
+              $location.path('trips');
+           })
+           .error(function(data, status, headers, config){
+              console.error('ERROR on POST requestToJoin');
+              console.log(data);
+           });
 
 		};
 
+	
 		GoogleMapApi.then(function(maps) {
 
 			$scope.searchbox.events.places_changed = function(box, eventName, args){
@@ -267,6 +263,39 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			$scope.resetMap = function() {
 				var map = $scope.map.object.getGMap();
 				map.fitBounds($scope.bounds);
+			};
+
+			$scope.togglePrivacy = function() {
+				$scope.trip.privacy = $scope.trip.privacy?0:1;
+				//TODO: optimize this, only pass field
+				$scope.updateTrip();
+			};
+
+			//TODO security issues?
+			$scope.hasPermission = function(){
+				var permission = false;
+	
+				if($scope.authentication.user._id === $scope.trip.user._id){
+					permission = true;
+				}else{
+					$scope.trip.members.forEach(function(member){
+						if(member.user._id === $scope.authentication.user._id || member.user.permission === 'write'){
+							permission = true;	
+						}
+					});
+				}
+
+				return permission;
+			};
+
+			$scope.isTripMember = function(){
+				var isMember = false;
+				$scope.trip.members.forEach(function(member){
+					if(member.user._id === $scope.authentication.user._id){
+						isMember = true;
+					}
+				});
+				return isMember;
 			};
 		});
 	}
