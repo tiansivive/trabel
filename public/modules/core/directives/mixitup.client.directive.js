@@ -6,7 +6,7 @@ angular.module('core').directive('mixitup', [
 			restrict: 'A',
 			link: function postLink(scope, element, attrs) {
 				
-				 $(element).mixItUp();
+				
 			}
 		};
 	}

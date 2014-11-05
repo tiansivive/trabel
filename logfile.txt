@@ -1,0 +1,2096 @@
+[4mRunning "jshint:all" (jshint) task[24m
+[32m>> [39m62 files lint free.
+
+[4mRunning "csslint:all" (csslint) task[24m
+Linting public/modules/core/css/index.css ...[31mERROR[39m
+[31m[[39m[33mL31[39m[31m:[39m[33mC1[39m[31m][39m
+Rule is empty. Rules without any properties specified should be removed. (empty-rules)
+[31m[[39m[33mL32[39m[31m:[39m[33mC16[39m[31m][39m
+[31m>> [39mExpected COLON at line 32, col 16. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL43[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+Linting public/modules/core/css/landing_page.css ...[31mERROR[39m
+[31m[[39m[33mL511[39m[31m:[39m[33mC1[39m[31m][39m
+Outlines shouldn't be hidden unless other visual changes are made. Use of outline: none or outline: 0 should be limited to :focus rules. (outline-none)
+[31m[[39m[33mL529[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL529[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL550[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL550[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL658[39m[31m:[39m[33mC1[39m[31m][39m
+Missing vendor-prefixed CSS gradients for Firefox 3.6+, Opera 11.1+. When using a vendor-prefixed gradient, make sure to use them all. (gradients)
+[31m[[39m[33mL677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL803[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL810[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL819[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL899[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL899[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL902[39m[31m:[39m[33mC1[39m[31m][39m
+Outlines shouldn't be hidden unless other visual changes are made. Use of outline: none or outline: 0 should be limited to :focus rules. (outline-none)
+[31m[[39m[33mL969[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1162[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1165[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1168[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1377[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1377[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1425[39m[31m:[39m[33mC5[39m[31m][39m
+The property -webkit-box-sizing is compatible with -moz-box-sizing and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1441[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1441[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1449[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1449[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1451[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1465[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1473[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1473[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1482[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1482[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1492[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1502[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1517[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1517[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1540[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1540[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1542[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1548[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1563[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1563[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1583[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback border (hex or RGB) should precede RGBA border. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1603[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1603[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1698[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1698[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1708[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1721[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1728[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1735[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1741[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1752[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1752[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1761[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1763[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1773[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1781[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1792[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1819[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1823[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1823[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1843[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mUnexpected token 'not(' at line 1849, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC37[39m[31m][39m
+[31m>> [39mExpected LBRACE at line 1849, col 37. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC37[39m[31m][39m
+[31m>> [39mUnexpected token ')' at line 1849, col 37. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mExpected LBRACE at line 1849, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1852[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 1852, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1869[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1869[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1897[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1901[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1901[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1907[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1915[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1932[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1932[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1940[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1955[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1967[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2000[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2067[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2067[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2134[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2134[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2172[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2172[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2248[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2248[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2435[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2435[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2576[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL2606[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL2752[39m[31m:[39m[33mC3[39m[31m][39m
+[31m>> [39mExpected RBRACE at line 2752, col 3. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2752[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2752[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2752, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2768[39m[31m:[39m[33mC14[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2768, col 14. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2768[39m[31m:[39m[33mC14[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2785[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2788[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2788, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2788[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name2. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2810[39m[31m:[39m[33mC5[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 2810, col 5. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2833[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2836[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2836, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2836[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name3. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2851[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2851, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2851[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name3. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2867[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2870[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2870, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2870[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name4. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2885[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2885, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2885[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name4. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2901[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2904[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2904, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2904[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name5. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2919[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2919, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2919[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name5. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2935[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2938[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2938, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2938[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name6. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2946[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name6. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2946[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2946, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2955[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2957[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2957[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2960[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2960, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2960[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name7. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2979[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 2979, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2979[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2979, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2979[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name7. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2998[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 2998, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2999[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3002[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 3002, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL3013[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3013[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3026[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3030[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3030[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3038[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3038[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3065[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3091[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3095[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3099[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3119[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3119[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3123[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3148[39m[31m:[39m[33mC5[39m[31m][39m
+The property -webkit-box-shadow is compatible with -moz-box-shadow and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3151[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3151[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3170[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3170[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC14[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC28[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC39[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3194[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3213[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL3216[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL3245[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL3306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3313[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3319[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3366[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3372[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3383[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3383[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3453[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3534[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3534[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3545[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3545[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3558[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3558[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[33mWarning: Task "csslint:all" failed. [4mUsed --force, continuing.[24m[39m
+
+[4mRunning "concurrent:default" (concurrent) task[24m
+[4mRunning "watch" task[24m
+[4mRunning "nodemon:dev" (nodemon) task[24m
+Waiting...
+[33m[nodemon] v1.2.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: app/views/**/*.* gruntfile.js server.js config/**/*.js app/**/*.js[39m
+[32m[nodemon] starting `node --debug server.js`[39m
+
+[0m
+MEAN.JS application started on port 3000
+[0mGET / [36m304 [0m756.283 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m380.178 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m376.803 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/css/xeditable.css [36m304 [0m357.845 ms - -[0m
+[0mGET /lib/ngAnimate/css/ng-animation.css [36m304 [0m371.346 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.css [36m304 [0m374.609 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog.css [36m304 [0m381.761 ms - -[0m
+[0mGET /modules/core/css/core.css [36m304 [0m366.480 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog-theme-plain.css [36m304 [0m369.255 ms - -[0m
+[0mGET /modules/core/css/index.css [36m304 [0m359.201 ms - -[0m
+[0mGET /modules/core/css/landing_page.css [36m304 [0m362.551 ms - -[0m
+[0mGET /modules/trips/css/trips.css [36m304 [0m357.823 ms - -[0m
+[0mGET /modules/users/css/users.css [36m304 [0m356.651 ms - -[0m
+[0mGET /css/buttons.css [36m304 [0m363.528 ms - -[0m
+[0mGET /css/loadbar.css [36m304 [0m362.453 ms - -[0m
+[0mGET /css/ngcloak.css [36m304 [0m359.211 ms - -[0m
+[0mGET /lib/jquery/dist/jquery.min.js [36m304 [0m355.358 ms - -[0m
+[0mGET /lib/lodash/dist/lodash.underscore.js [36m304 [0m358.382 ms - -[0m
+[0mGET /lib/angular/angular.js [36m304 [0m359.744 ms - -[0m
+[0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m361.414 ms - -[0m
+[0mGET /lib/angular-resource/angular-resource.js [36m304 [0m371.687 ms - -[0m
+[0mGET /lib/angular-ui-utils/ui-utils.js [36m304 [0m356.021 ms - -[0m
+[0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m355.659 ms - -[0m
+[0mGET /lib/angular-animate/angular-animate.js [36m304 [0m365.546 ms - -[0m
+[0mGET /lib/bluebird/js/browser/bluebird.js [36m304 [0m369.454 ms - -[0m
+[0mGET /lib/angular-google-maps/dist/angular-google-maps.min.js [36m304 [0m354.222 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/js/xeditable.min.js [36m304 [0m354.257 ms - -[0m
+[0mGET /lib/angular-ui-sortable/sortable.min.js [36m304 [0m355.433 ms - -[0m
+[0mGET /lib/jquery-ui/jquery-ui.min.js [36m304 [0m354.188 ms - -[0m
+[0mGET /lib/jquery-ui/ui/minified/sortable.min.js [36m304 [0m360.997 ms - -[0m
+[0mGET /lib/mixitup2/build/jquery.mixitup.min.js [36m304 [0m360.808 ms - -[0m
+[0mGET /lib/wowjs/dist/wow.js [36m304 [0m374.297 ms - -[0m
+[0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m369.669 ms - -[0m
+[0mGET /lib/slippry/dist/slippry.min.js [36m304 [0m384.433 ms - -[0m
+[0mGET /lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js [36m304 [0m354.547 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.js [36m304 [0m355.512 ms - -[0m
+[0mGET /lib/angular-sweetalert/SweetAlert.js [36m304 [0m359.561 ms - -[0m
+[0mGET /application.js [36m304 [0m369.229 ms - -[0m
+[0mGET /lib/ngDialog/js/ngDialog.js [36m304 [0m445.614 ms - -[0m
+[0mGET /config.js [36m304 [0m444.302 ms - -[0m
+[0mGET /modules/core/core.client.module.js [36m304 [0m423.608 ms - -[0m
+[0mGET /modules/trips/trips.client.module.js [36m304 [0m403.813 ms - -[0m
+[0mGET /modules/users/users.client.module.js [36m304 [0m395.214 ms - -[0m
+[0mGET /modules/core/config/core.client.routes.js [36m304 [0m353.229 ms - -[0m
+[0mGET /modules/core/controllers/header.client.controller.js [36m304 [0m357.282 ms - -[0m
+[0mGET /modules/core/controllers/home.client.controller.js [36m304 [0m357.866 ms - -[0m
+[0mGET /modules/core/controllers/landing.client.controller.js [36m304 [0m356.018 ms - -[0m
+[0mGET /modules/core/services/menus.client.service.js [36m304 [0m358.346 ms - -[0m
+[0mGET /modules/core/directives/mixitup.client.directive.js [36m304 [0m362.673 ms - -[0m
+[0mGET /modules/trips/config/trips.client.config.js [36m304 [0m367.127 ms - -[0m
+[0mGET /modules/trips/config/trips.client.routes.js [36m304 [0m355.649 ms - -[0m
+[0mGET /modules/trips/controllers/add-mate.client.controller.js [36m304 [0m355.338 ms - -[0m
+[0mGET /modules/trips/controllers/trips.client.controller.js [36m304 [0m355.057 ms - -[0m
+[0mGET /modules/trips/services/trips.client.service.js [36m304 [0m357.495 ms - -[0m
+[0mGET /modules/users/config/users.client.config.js [36m304 [0m359.744 ms - -[0m
+[0mGET /modules/users/config/users.client.routes.js [36m304 [0m354.166 ms - -[0m
+[0mGET /modules/users/controllers/password.client.controller.js [36m304 [0m357.319 ms - -[0m
+[0mGET /modules/users/controllers/authentication.client.controller.js [36m304 [0m361.644 ms - -[0m
+[0mGET /modules/users/controllers/settings.client.controller.js [36m304 [0m355.873 ms - -[0m
+[0mGET /modules/users/services/authentication.client.service.js [36m304 [0m354.512 ms - -[0m
+[0mGET /modules/users/services/users.client.service.js [36m304 [0m367.432 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap.css.map [36m304 [0m363.365 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [36m304 [0m354.169 ms - -[0m
+[0mGET /lib/jquery/dist/jquery.min.map [36m304 [0m372.980 ms - -[0m
+[0mGET /lib/slippry/dist/slippry.min.map [33m404 [0m395.082 ms - -[0m
+[0mGET /modules/core/views/header.client.view.html [36m304 [0m375.136 ms - -[0m
+[0mGET /modules/trips/views/edit-trip.client.view.html [36m304 [0m367.323 ms - -[0m
+STEP - tripByID
+{ _readableState: 
+   { highWaterMark: 16384,
+     buffer: [],
+     length: 0,
+     pipes: null,
+     pipesCount: 0,
+     flowing: false,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     calledRead: false,
+     sync: true,
+     needReadable: false,
+     emittedReadable: false,
+     readableListening: false,
+     objectMode: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     oldMode: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { close: [Function] },
+  _maxListeners: 10,
+  socket: 
+   { _connecting: false,
+     _handle: 
+      { fd: null,
+        writeQueueSize: 0,
+        owner: [Circular],
+        onread: [Function: onread],
+        reading: true },
+     _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        calledRead: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        oldMode: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: 
+      { end: [Object],
+        finish: [Function: onSocketFinish],
+        _socketEnd: [Function: onSocketEnd],
+        drain: [Object],
+        timeout: [Function],
+        error: [Object],
+        close: [Object] },
+     _maxListeners: 10,
+     _writableState: 
+      { highWaterMark: 16384,
+        objectMode: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function],
+        writecb: null,
+        writelen: 0,
+        buffer: [],
+        errorEmitted: false },
+     writable: true,
+     allowHalfOpen: true,
+     onend: [Function],
+     destroyed: false,
+     bytesRead: 8122,
+     _bytesDispatched: 4374,
+     _pendingData: null,
+     _pendingEncoding: '',
+     server: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 6,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        _connectionKey: '4:0.0.0.0:3000' },
+     _idleTimeout: 120000,
+     _idleNext: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 7107,
+        _bytesDispatched: 3795,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Circular],
+        _idleStart: 1415128124692,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Object],
+        _peername: [Object] },
+     _idlePrev: { _idleNext: [Circular], _idlePrev: [Object] },
+     _idleStart: 1415128124732,
+     parser: 
+      { _headers: [],
+        _url: '',
+        onHeaders: [Function: parserOnHeaders],
+        onHeadersComplete: [Function: parserOnHeadersComplete],
+        onBody: [Function: parserOnBody],
+        onMessageComplete: [Function: parserOnMessageComplete],
+        socket: [Circular],
+        incoming: [Circular],
+        maxHeaderPairs: 2000,
+        onIncoming: [Function] },
+     ondata: [Function],
+     _paused: false,
+     _httpMessage: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        output: [],
+        outputEncodings: [],
+        writable: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _headerSent: false,
+        _header: '',
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _hangupClose: false,
+        socket: [Circular],
+        connection: [Circular],
+        req: [Circular],
+        locals: [Object],
+        flush: [Function: noop],
+        write: [Function],
+        end: [Function: end],
+        on: [Function],
+        writeHead: [Function: writeHead],
+        __onFinished: [Object],
+        _headers: [Object],
+        _headerNames: [Object] },
+     _peername: { address: '127.0.0.1', family: 'IPv4', port: 64863 } },
+  connection: 
+   { _connecting: false,
+     _handle: 
+      { fd: null,
+        writeQueueSize: 0,
+        owner: [Circular],
+        onread: [Function: onread],
+        reading: true },
+     _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        calledRead: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        oldMode: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: 
+      { end: [Object],
+        finish: [Function: onSocketFinish],
+        _socketEnd: [Function: onSocketEnd],
+        drain: [Object],
+        timeout: [Function],
+        error: [Object],
+        close: [Object] },
+     _maxListeners: 10,
+     _writableState: 
+      { highWaterMark: 16384,
+        objectMode: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function],
+        writecb: null,
+        writelen: 0,
+        buffer: [],
+        errorEmitted: false },
+     writable: true,
+     allowHalfOpen: true,
+     onend: [Function],
+     destroyed: false,
+     bytesRead: 8122,
+     _bytesDispatched: 4374,
+     _pendingData: null,
+     _pendingEncoding: '',
+     server: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 6,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        _connectionKey: '4:0.0.0.0:3000' },
+     _idleTimeout: 120000,
+     _idleNext: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 7107,
+        _bytesDispatched: 3795,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Circular],
+        _idleStart: 1415128124692,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Object],
+        _peername: [Object] },
+     _idlePrev: { _idleNext: [Circular], _idlePrev: [Object] },
+     _idleStart: 1415128124732,
+     parser: 
+      { _headers: [],
+        _url: '',
+        onHeaders: [Function: parserOnHeaders],
+        onHeadersComplete: [Function: parserOnHeadersComplete],
+        onBody: [Function: parserOnBody],
+        onMessageComplete: [Function: parserOnMessageComplete],
+        socket: [Circular],
+        incoming: [Circular],
+        maxHeaderPairs: 2000,
+        onIncoming: [Function] },
+     ondata: [Function],
+     _paused: false,
+     _httpMessage: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        output: [],
+        outputEncodings: [],
+        writable: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _headerSent: false,
+        _header: '',
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _hangupClose: false,
+        socket: [Circular],
+        connection: [Circular],
+        req: [Circular],
+        locals: [Object],
+        flush: [Function: noop],
+        write: [Function],
+        end: [Function: end],
+        on: [Function],
+        writeHead: [Function: writeHead],
+        __onFinished: [Object],
+        _headers: [Object],
+        _headerNames: [Object] },
+     _peername: { address: '127.0.0.1', family: 'IPv4', port: 64863 } },
+  httpVersion: '1.1',
+  complete: true,
+  headers: 
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     accept: 'application/json, text/plain, */*',
+     'user-agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36',
+     referer: 'http://localhost:3000/',
+     'accept-encoding': 'gzip,deflate,sdch',
+     'accept-language': 'pt-PT,pt;q=0.8,en-US;q=0.6,en;q=0.4',
+     cookie: 'connect.sid=s%3AQG3kTTWg6e7JEbBSRXabbZvnDUXP-d6P.C6fFckLXEggEIW8xpiytGuZg3mT2hix9HLywNN1sXN0',
+     'if-none-match': 'W/"df-3874847927"' },
+  trailers: {},
+  _pendings: [],
+  _pendingIndex: 0,
+  url: '/trips/5459231d22f5007c1dc6de36',
+  method: 'GET',
+  statusCode: null,
+  client: 
+   { _connecting: false,
+     _handle: 
+      { fd: null,
+        writeQueueSize: 0,
+        owner: [Circular],
+        onread: [Function: onread],
+        reading: true },
+     _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        calledRead: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        oldMode: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: 
+      { end: [Object],
+        finish: [Function: onSocketFinish],
+        _socketEnd: [Function: onSocketEnd],
+        drain: [Object],
+        timeout: [Function],
+        error: [Object],
+        close: [Object] },
+     _maxListeners: 10,
+     _writableState: 
+      { highWaterMark: 16384,
+        objectMode: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function],
+        writecb: null,
+        writelen: 0,
+        buffer: [],
+        errorEmitted: false },
+     writable: true,
+     allowHalfOpen: true,
+     onend: [Function],
+     destroyed: false,
+     bytesRead: 8122,
+     _bytesDispatched: 4374,
+     _pendingData: null,
+     _pendingEncoding: '',
+     server: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 6,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        _connectionKey: '4:0.0.0.0:3000' },
+     _idleTimeout: 120000,
+     _idleNext: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 7107,
+        _bytesDispatched: 3795,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Circular],
+        _idleStart: 1415128124692,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Object],
+        _peername: [Object] },
+     _idlePrev: { _idleNext: [Circular], _idlePrev: [Object] },
+     _idleStart: 1415128124732,
+     parser: 
+      { _headers: [],
+        _url: '',
+        onHeaders: [Function: parserOnHeaders],
+        onHeadersComplete: [Function: parserOnHeadersComplete],
+        onBody: [Function: parserOnBody],
+        onMessageComplete: [Function: parserOnMessageComplete],
+        socket: [Circular],
+        incoming: [Circular],
+        maxHeaderPairs: 2000,
+        onIncoming: [Function] },
+     ondata: [Function],
+     _paused: false,
+     _httpMessage: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        output: [],
+        outputEncodings: [],
+        writable: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _headerSent: false,
+        _header: '',
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _hangupClose: false,
+        socket: [Circular],
+        connection: [Circular],
+        req: [Circular],
+        locals: [Object],
+        flush: [Function: noop],
+        write: [Function],
+        end: [Function: end],
+        on: [Function],
+        writeHead: [Function: writeHead],
+        __onFinished: [Object],
+        _headers: [Object],
+        _headerNames: [Object] },
+     _peername: { address: '127.0.0.1', family: 'IPv4', port: 64863 } },
+  _consuming: false,
+  _dumped: false,
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  upgrade: false,
+  next: [Function: next],
+  baseUrl: '',
+  originalUrl: '/trips/5459231d22f5007c1dc6de36',
+  _parsedUrl: 
+   { protocol: null,
+     slashes: null,
+     auth: null,
+     host: null,
+     port: null,
+     hostname: null,
+     hash: null,
+     search: null,
+     query: null,
+     pathname: '/trips/5459231d22f5007c1dc6de36',
+     path: '/trips/5459231d22f5007c1dc6de36',
+     href: '/trips/5459231d22f5007c1dc6de36',
+     _raw: '/trips/5459231d22f5007c1dc6de36' },
+  params: { tripId: '5459231d22f5007c1dc6de36' },
+  query: {},
+  res: 
+   { domain: null,
+     _events: { finish: [Object], end: [Function: onevent] },
+     _maxListeners: 10,
+     output: [],
+     outputEncodings: [],
+     writable: true,
+     _last: false,
+     chunkedEncoding: false,
+     shouldKeepAlive: true,
+     useChunkedEncodingByDefault: true,
+     sendDate: true,
+     _headerSent: false,
+     _header: '',
+     _hasBody: true,
+     _trailer: '',
+     finished: false,
+     _hangupClose: false,
+     socket: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 8122,
+        _bytesDispatched: 4374,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1415128124732,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Circular],
+        _peername: [Object] },
+     connection: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 8122,
+        _bytesDispatched: 4374,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1415128124732,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Circular],
+        _peername: [Object] },
+     req: [Circular],
+     locals: { url: 'http://localhost:3000/trips/5459231d22f5007c1dc6de36' },
+     flush: [Function: noop],
+     write: [Function],
+     end: [Function: end],
+     on: [Function],
+     writeHead: [Function: writeHead],
+     __onFinished: { [Function: listener] queue: [Object] },
+     _headers: 
+      { 'x-frame-options': 'DENY',
+        'x-xss-protection': '1; mode=block',
+        'x-content-type-options': 'nosniff',
+        'x-download-options': 'noopen' },
+     _headerNames: 
+      { 'x-frame-options': 'X-Frame-Options',
+        'x-xss-protection': 'X-XSS-Protection',
+        'x-content-type-options': 'X-Content-Type-Options',
+        'x-download-options': 'X-Download-Options' } },
+  _startAt: [ 24089, 461099886 ],
+  _startTime: Tue Nov 04 2014 19:08:44 GMT+0000 (GMT Standard Time),
+  _remoteAddress: '127.0.0.1',
+  body: {},
+  originalMethod: 'GET',
+  secret: undefined,
+  cookies: { 'connect.sid': 's:QG3kTTWg6e7JEbBSRXabbZvnDUXP-d6P.C6fFckLXEggEIW8xpiytGuZg3mT2hix9HLywNN1sXN0' },
+  signedCookies: {},
+  _parsedOriginalUrl: 
+   { protocol: null,
+     slashes: null,
+     auth: null,
+     host: null,
+     port: null,
+     hostname: null,
+     hash: null,
+     search: null,
+     query: null,
+     pathname: '/trips/5459231d22f5007c1dc6de36',
+     path: '/trips/5459231d22f5007c1dc6de36',
+     href: '/trips/5459231d22f5007c1dc6de36',
+     _raw: '/trips/5459231d22f5007c1dc6de36' },
+  sessionStore: 
+   { db: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        databaseName: 'app30695605',
+        serverConfig: [Object],
+        options: [Object],
+        _applicationClosed: false,
+        slaveOk: false,
+        bufferMaxEntries: -1,
+        native_parser: undefined,
+        bsonLib: [Object],
+        bson: [Object],
+        bson_deserializer: [Object],
+        bson_serializer: [Object],
+        _state: 'connected',
+        pkFactory: [Object],
+        forceServerObjectId: false,
+        safe: false,
+        notReplied: {},
+        isInitializing: true,
+        openCalled: true,
+        commands: [],
+        logger: [Object],
+        tag: 1415128059665,
+        eventHandlers: [Object],
+        serializeFunctions: false,
+        raw: false,
+        recordQueryStats: false,
+        retryMiliSeconds: 1000,
+        numberOfRetries: 60,
+        readPreference: undefined },
+     db_collection_name: 'sessions',
+     _serialize_session: [Function: stringify],
+     _unserialize_session: [Function: parse],
+     _get_collection: [Function],
+     _open_database: [Function],
+     defaultExpirationTime: 1209600000,
+     generate: [Function],
+     _events: { disconnect: [Function], connect: [Function] },
+     collection: 
+      { db: [Object],
+        collectionName: 'sessions',
+        internalHint: null,
+        opts: {},
+        slaveOk: false,
+        serializeFunctions: false,
+        raw: false,
+        pkFactory: [Object],
+        serverCapabilities: undefined } },
+  sessionID: 'QG3kTTWg6e7JEbBSRXabbZvnDUXP-d6P',
+  session: 
+   { cookie: 
+      { path: '/',
+        _expires: null,
+        originalMaxAge: null,
+        httpOnly: true },
+     passport: { user: '54461cb83a19d0e400f1b904' } },
+  _passport: 
+   { instance: 
+      { _key: 'passport',
+        _strategies: [Object],
+        _serializers: [Object],
+        _deserializers: [Object],
+        _infoTransformers: [],
+        _framework: [Object],
+        _userProperty: 'user',
+        Authenticator: [Function: Authenticator],
+        Passport: [Function: Authenticator],
+        Strategy: [Object],
+        strategies: [Object] },
+     session: { user: '54461cb83a19d0e400f1b904' } },
+  user: 
+   { displayName: 'Тягу Вила Верде',
+     provider: 'facebook',
+     providerData: 
+      { id: '840765592623858',
+        email: 'tiagoandrevilaverde@gmail.com',
+        first_name: 'Тягу',
+        gender: 'male',
+        last_name: 'Вила Верде',
+        link: 'https://www.facebook.com/app_scoped_user_id/840765592623858/',
+        locale: 'en_US',
+        name: 'Тягу Вила Верде',
+        timezone: 1,
+        updated_time: '2014-08-21T22:30:06+0000',
+        verified: true,
+        accessToken: 'CAAV8eydN5yEBAPZAH2vVS6yfwDdJpWPcfjZASDrKh0c8ZBbZA6biKwDQ6APczrOOpiivHTBCTV4wDXZBEJBFcKhsZAXGYDsgGr1bXuVATZBM7Kgx2aOwbtKdoJWhig1EiB9uYAWtlpuSrS5jsEAn2SWx5qHshgcZB6hqmLqnm87pGOmcBgTEZCr7SSS2Ra6YZBycZAQbKJzNw0O4AcoTvzryA3I' },
+     _id: 54461cb83a19d0e400f1b904,
+     __v: 0,
+     created: Tue Oct 21 2014 09:43:36 GMT+0100 (GMT Summer Time),
+     roles: [ 'user' ],
+     email: 'tiagoandrevilaverde@gmail.com',
+     lastName: 'Вила Верде',
+     firstName: 'Тягу' },
+  flash: [Function: _flash],
+  route: 
+   { path: '/trips/:tripId',
+     stack: 
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ],
+     methods: { get: true, put: true, delete: true } } }
+[0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff [36m304 [0m357.816 ms - -[0m
+[0mGET /trips/5459231d22f5007c1dc6de36 [36m304 [0m707.831 ms - -[0m
+[0mGET /modules/trips/views/dialogs/add-mate-dialog.client.view.html [36m304 [0m379.135 ms - -[0m
+[0mPOST /users/list [32m200 [0m526.143 ms - 92[0m
+STEP - tripByID
+{ _readableState: 
+   { highWaterMark: 16384,
+     buffer: [],
+     length: 0,
+     pipes: null,
+     pipesCount: 0,
+     flowing: false,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     calledRead: false,
+     sync: true,
+     needReadable: false,
+     emittedReadable: false,
+     readableListening: false,
+     objectMode: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     oldMode: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { close: [Function] },
+  _maxListeners: 10,
+  socket: 
+   { _connecting: false,
+     _handle: 
+      { fd: null,
+        writeQueueSize: 0,
+        owner: [Circular],
+        onread: [Function: onread],
+        reading: true },
+     _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        calledRead: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        oldMode: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: 
+      { end: [Object],
+        finish: [Function: onSocketFinish],
+        _socketEnd: [Function: onSocketEnd],
+        drain: [Object],
+        timeout: [Function],
+        error: [Object],
+        close: [Object] },
+     _maxListeners: 10,
+     _writableState: 
+      { highWaterMark: 16384,
+        objectMode: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function],
+        writecb: null,
+        writelen: 0,
+        buffer: [],
+        errorEmitted: false },
+     writable: true,
+     allowHalfOpen: true,
+     onend: [Function],
+     destroyed: false,
+     bytesRead: 9934,
+     _bytesDispatched: 5354,
+     _pendingData: null,
+     _pendingEncoding: '',
+     server: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 6,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        _connectionKey: '4:0.0.0.0:3000' },
+     _idleTimeout: 120000,
+     _idleNext: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 7107,
+        _bytesDispatched: 4140,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Circular],
+        _idleStart: 1415128125051,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: null,
+        _peername: [Object] },
+     _idlePrev: { _idleNext: [Circular], _idlePrev: [Object] },
+     _idleStart: 1415128153590,
+     parser: 
+      { _headers: [],
+        _url: '',
+        onHeaders: [Function: parserOnHeaders],
+        onHeadersComplete: [Function: parserOnHeadersComplete],
+        onBody: [Function: parserOnBody],
+        onMessageComplete: [Function: parserOnMessageComplete],
+        socket: [Circular],
+        incoming: [Circular],
+        maxHeaderPairs: 2000,
+        onIncoming: [Function] },
+     ondata: [Function],
+     _paused: false,
+     _httpMessage: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        output: [],
+        outputEncodings: [],
+        writable: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _headerSent: false,
+        _header: '',
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _hangupClose: false,
+        socket: [Circular],
+        connection: [Circular],
+        req: [Circular],
+        locals: [Object],
+        flush: [Function: noop],
+        write: [Function],
+        end: [Function: end],
+        on: [Function],
+        writeHead: [Function: writeHead],
+        __onFinished: [Object],
+        _headers: [Object],
+        _headerNames: [Object] },
+     _peername: { address: '127.0.0.1', family: 'IPv4', port: 64863 } },
+  connection: 
+   { _connecting: false,
+     _handle: 
+      { fd: null,
+        writeQueueSize: 0,
+        owner: [Circular],
+        onread: [Function: onread],
+        reading: true },
+     _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        calledRead: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        oldMode: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: 
+      { end: [Object],
+        finish: [Function: onSocketFinish],
+        _socketEnd: [Function: onSocketEnd],
+        drain: [Object],
+        timeout: [Function],
+        error: [Object],
+        close: [Object] },
+     _maxListeners: 10,
+     _writableState: 
+      { highWaterMark: 16384,
+        objectMode: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function],
+        writecb: null,
+        writelen: 0,
+        buffer: [],
+        errorEmitted: false },
+     writable: true,
+     allowHalfOpen: true,
+     onend: [Function],
+     destroyed: false,
+     bytesRead: 9934,
+     _bytesDispatched: 5354,
+     _pendingData: null,
+     _pendingEncoding: '',
+     server: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 6,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        _connectionKey: '4:0.0.0.0:3000' },
+     _idleTimeout: 120000,
+     _idleNext: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 7107,
+        _bytesDispatched: 4140,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Circular],
+        _idleStart: 1415128125051,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: null,
+        _peername: [Object] },
+     _idlePrev: { _idleNext: [Circular], _idlePrev: [Object] },
+     _idleStart: 1415128153590,
+     parser: 
+      { _headers: [],
+        _url: '',
+        onHeaders: [Function: parserOnHeaders],
+        onHeadersComplete: [Function: parserOnHeadersComplete],
+        onBody: [Function: parserOnBody],
+        onMessageComplete: [Function: parserOnMessageComplete],
+        socket: [Circular],
+        incoming: [Circular],
+        maxHeaderPairs: 2000,
+        onIncoming: [Function] },
+     ondata: [Function],
+     _paused: false,
+     _httpMessage: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        output: [],
+        outputEncodings: [],
+        writable: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _headerSent: false,
+        _header: '',
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _hangupClose: false,
+        socket: [Circular],
+        connection: [Circular],
+        req: [Circular],
+        locals: [Object],
+        flush: [Function: noop],
+        write: [Function],
+        end: [Function: end],
+        on: [Function],
+        writeHead: [Function: writeHead],
+        __onFinished: [Object],
+        _headers: [Object],
+        _headerNames: [Object] },
+     _peername: { address: '127.0.0.1', family: 'IPv4', port: 64863 } },
+  httpVersion: '1.1',
+  complete: true,
+  headers: 
+   { host: 'localhost:3000',
+     connection: 'keep-alive',
+     'content-length': '0',
+     accept: 'application/json, text/plain, */*',
+     origin: 'http://localhost:3000',
+     'user-agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36',
+     'content-type': 'application/json;charset=utf-8',
+     referer: 'http://localhost:3000/',
+     'accept-encoding': 'gzip,deflate',
+     'accept-language': 'pt-PT,pt;q=0.8,en-US;q=0.6,en;q=0.4',
+     cookie: 'connect.sid=s%3AQG3kTTWg6e7JEbBSRXabbZvnDUXP-d6P.C6fFckLXEggEIW8xpiytGuZg3mT2hix9HLywNN1sXN0' },
+  trailers: {},
+  _pendings: [],
+  _pendingIndex: 0,
+  url: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+  method: 'POST',
+  statusCode: null,
+  client: 
+   { _connecting: false,
+     _handle: 
+      { fd: null,
+        writeQueueSize: 0,
+        owner: [Circular],
+        onread: [Function: onread],
+        reading: true },
+     _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: true,
+        calledRead: true,
+        sync: false,
+        needReadable: true,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        oldMode: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: 
+      { end: [Object],
+        finish: [Function: onSocketFinish],
+        _socketEnd: [Function: onSocketEnd],
+        drain: [Object],
+        timeout: [Function],
+        error: [Object],
+        close: [Object] },
+     _maxListeners: 10,
+     _writableState: 
+      { highWaterMark: 16384,
+        objectMode: false,
+        needDrain: false,
+        ending: false,
+        ended: false,
+        finished: false,
+        decodeStrings: false,
+        defaultEncoding: 'utf8',
+        length: 0,
+        writing: false,
+        sync: false,
+        bufferProcessing: false,
+        onwrite: [Function],
+        writecb: null,
+        writelen: 0,
+        buffer: [],
+        errorEmitted: false },
+     writable: true,
+     allowHalfOpen: true,
+     onend: [Function],
+     destroyed: false,
+     bytesRead: 9934,
+     _bytesDispatched: 5354,
+     _pendingData: null,
+     _pendingEncoding: '',
+     server: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 6,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        _connectionKey: '4:0.0.0.0:3000' },
+     _idleTimeout: 120000,
+     _idleNext: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 7107,
+        _bytesDispatched: 4140,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Circular],
+        _idleStart: 1415128125051,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: null,
+        _peername: [Object] },
+     _idlePrev: { _idleNext: [Circular], _idlePrev: [Object] },
+     _idleStart: 1415128153590,
+     parser: 
+      { _headers: [],
+        _url: '',
+        onHeaders: [Function: parserOnHeaders],
+        onHeadersComplete: [Function: parserOnHeadersComplete],
+        onBody: [Function: parserOnBody],
+        onMessageComplete: [Function: parserOnMessageComplete],
+        socket: [Circular],
+        incoming: [Circular],
+        maxHeaderPairs: 2000,
+        onIncoming: [Function] },
+     ondata: [Function],
+     _paused: false,
+     _httpMessage: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        output: [],
+        outputEncodings: [],
+        writable: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _headerSent: false,
+        _header: '',
+        _hasBody: true,
+        _trailer: '',
+        finished: false,
+        _hangupClose: false,
+        socket: [Circular],
+        connection: [Circular],
+        req: [Circular],
+        locals: [Object],
+        flush: [Function: noop],
+        write: [Function],
+        end: [Function: end],
+        on: [Function],
+        writeHead: [Function: writeHead],
+        __onFinished: [Object],
+        _headers: [Object],
+        _headerNames: [Object] },
+     _peername: { address: '127.0.0.1', family: 'IPv4', port: 64863 } },
+  _consuming: false,
+  _dumped: false,
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  upgrade: false,
+  next: [Function: next],
+  baseUrl: '',
+  originalUrl: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+  _parsedUrl: 
+   { protocol: null,
+     slashes: null,
+     auth: null,
+     host: null,
+     port: null,
+     hostname: null,
+     hash: null,
+     search: null,
+     query: null,
+     pathname: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+     path: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+     href: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+     _raw: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4' },
+  params: 
+   { tripId: '5459231d22f5007c1dc6de36',
+     userId: '545907f1d693b3d41ee4fdd4' },
+  query: {},
+  res: 
+   { domain: null,
+     _events: { finish: [Object], end: [Function: onevent] },
+     _maxListeners: 10,
+     output: [],
+     outputEncodings: [],
+     writable: true,
+     _last: false,
+     chunkedEncoding: false,
+     shouldKeepAlive: true,
+     useChunkedEncodingByDefault: true,
+     sendDate: true,
+     _headerSent: false,
+     _header: '',
+     _hasBody: true,
+     _trailer: '',
+     finished: false,
+     _hangupClose: false,
+     socket: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 9934,
+        _bytesDispatched: 5354,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1415128153590,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Circular],
+        _peername: [Object] },
+     connection: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        bytesRead: 9934,
+        _bytesDispatched: 5354,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 120000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1415128153590,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _httpMessage: [Circular],
+        _peername: [Object] },
+     req: [Circular],
+     locals: { url: 'http://localhost:3000/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4' },
+     flush: [Function: noop],
+     write: [Function],
+     end: [Function: end],
+     on: [Function],
+     writeHead: [Function: writeHead],
+     __onFinished: { [Function: listener] queue: [Object] },
+     _headers: 
+      { vary: 'X-HTTP-Method-Override',
+        'x-frame-options': 'DENY',
+        'x-xss-protection': '1; mode=block',
+        'x-content-type-options': 'nosniff',
+        'x-download-options': 'noopen' },
+     _headerNames: 
+      { vary: 'Vary',
+        'x-frame-options': 'X-Frame-Options',
+        'x-xss-protection': 'X-XSS-Protection',
+        'x-content-type-options': 'X-Content-Type-Options',
+        'x-download-options': 'X-Download-Options' } },
+  _startAt: [ 24118, 319329981 ],
+  _startTime: Tue Nov 04 2014 19:09:13 GMT+0000 (GMT Standard Time),
+  _remoteAddress: '127.0.0.1',
+  body: {},
+  originalMethod: 'POST',
+  secret: undefined,
+  cookies: { 'connect.sid': 's:QG3kTTWg6e7JEbBSRXabbZvnDUXP-d6P.C6fFckLXEggEIW8xpiytGuZg3mT2hix9HLywNN1sXN0' },
+  signedCookies: {},
+  _parsedOriginalUrl: 
+   { protocol: null,
+     slashes: null,
+     auth: null,
+     host: null,
+     port: null,
+     hostname: null,
+     hash: null,
+     search: null,
+     query: null,
+     pathname: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+     path: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+     href: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4',
+     _raw: '/trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4' },
+  sessionStore: 
+   { db: 
+      { domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        databaseName: 'app30695605',
+        serverConfig: [Object],
+        options: [Object],
+        _applicationClosed: false,
+        slaveOk: false,
+        bufferMaxEntries: -1,
+        native_parser: undefined,
+        bsonLib: [Object],
+        bson: [Object],
+        bson_deserializer: [Object],
+        bson_serializer: [Object],
+        _state: 'connected',
+        pkFactory: [Object],
+        forceServerObjectId: false,
+        safe: false,
+        notReplied: {},
+        isInitializing: true,
+        openCalled: true,
+        commands: [],
+        logger: [Object],
+        tag: 1415128059665,
+        eventHandlers: [Object],
+        serializeFunctions: false,
+        raw: false,
+        recordQueryStats: false,
+        retryMiliSeconds: 1000,
+        numberOfRetries: 60,
+        readPreference: undefined },
+     db_collection_name: 'sessions',
+     _serialize_session: [Function: stringify],
+     _unserialize_session: [Function: parse],
+     _get_collection: [Function],
+     _open_database: [Function],
+     defaultExpirationTime: 1209600000,
+     generate: [Function],
+     _events: { disconnect: [Function], connect: [Function] },
+     collection: 
+      { db: [Object],
+        collectionName: 'sessions',
+        internalHint: null,
+        opts: {},
+        slaveOk: false,
+        serializeFunctions: false,
+        raw: false,
+        pkFactory: [Object],
+        serverCapabilities: undefined } },
+  sessionID: 'QG3kTTWg6e7JEbBSRXabbZvnDUXP-d6P',
+  session: 
+   { cookie: 
+      { path: '/',
+        _expires: null,
+        originalMaxAge: null,
+        httpOnly: true },
+     passport: { user: '54461cb83a19d0e400f1b904' } },
+  _passport: 
+   { instance: 
+      { _key: 'passport',
+        _strategies: [Object],
+        _serializers: [Object],
+        _deserializers: [Object],
+        _infoTransformers: [],
+        _framework: [Object],
+        _userProperty: 'user',
+        Authenticator: [Function: Authenticator],
+        Passport: [Function: Authenticator],
+        Strategy: [Object],
+        strategies: [Object] },
+     session: { user: '54461cb83a19d0e400f1b904' } },
+  user: 
+   { displayName: 'Тягу Вила Верде',
+     provider: 'facebook',
+     providerData: 
+      { id: '840765592623858',
+        email: 'tiagoandrevilaverde@gmail.com',
+        first_name: 'Тягу',
+        gender: 'male',
+        last_name: 'Вила Верде',
+        link: 'https://www.facebook.com/app_scoped_user_id/840765592623858/',
+        locale: 'en_US',
+        name: 'Тягу Вила Верде',
+        timezone: 1,
+        updated_time: '2014-08-21T22:30:06+0000',
+        verified: true,
+        accessToken: 'CAAV8eydN5yEBAPZAH2vVS6yfwDdJpWPcfjZASDrKh0c8ZBbZA6biKwDQ6APczrOOpiivHTBCTV4wDXZBEJBFcKhsZAXGYDsgGr1bXuVATZBM7Kgx2aOwbtKdoJWhig1EiB9uYAWtlpuSrS5jsEAn2SWx5qHshgcZB6hqmLqnm87pGOmcBgTEZCr7SSS2Ra6YZBycZAQbKJzNw0O4AcoTvzryA3I' },
+     _id: 54461cb83a19d0e400f1b904,
+     __v: 0,
+     created: Tue Oct 21 2014 09:43:36 GMT+0100 (GMT Summer Time),
+     roles: [ 'user' ],
+     email: 'tiagoandrevilaverde@gmail.com',
+     lastName: 'Вила Верде',
+     firstName: 'Тягу' },
+  flash: [Function: _flash],
+  route: 
+   { path: '/trips/:tripId/invite/mate/:userId',
+     stack: [ [Object], [Object], [Object] ],
+     methods: { post: true } } }
+STEP - userByID
+STEP - requiresLogin
+STEP - hasAuthorization
+[0mPOST /trips/5459231d22f5007c1dc6de36/invite/mate/545907f1d693b3d41ee4fdd4 [32m200 [0m2920.420 ms - 60[0m
+[32m>> [39mFile "app\controllers\trips.server.controller.js" changed.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node --debug server.js`[39m
+
+[0m
+[4mRunning "jshint:all" (jshint) task[24m
+MEAN.JS application started on port 3000
+[32m>> [39m62 files lint free.
+
+[32mDone, without errors.[39m
+[36mCompleted in 9.306s at Tue Nov 04 2014 19:10:57 GMT+0000 (GMT Standard Time)[39m - Waiting...
+[0mGET / [36m304 [0m728.060 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m372.422 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m370.122 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/css/xeditable.css [36m304 [0m355.587 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog.css [36m304 [0m359.470 ms - -[0m
+[0mGET /lib/ngAnimate/css/ng-animation.css [36m304 [0m371.913 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.css [36m304 [0m372.404 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog-theme-plain.css [36m304 [0m371.985 ms - -[0m
+[0mGET /modules/core/css/core.css [36m304 [0m359.032 ms - -[0m
+[0mGET /modules/core/css/index.css [36m304 [0m360.061 ms - -[0m
+[0mGET /modules/core/css/landing_page.css [36m304 [0m363.015 ms - -[0m
+[0mGET /modules/trips/css/trips.css [36m304 [0m363.735 ms - -[0m
+[0mGET /modules/users/css/users.css [36m304 [0m363.424 ms - -[0m
+[0mGET /css/buttons.css [36m304 [0m363.686 ms - -[0m
+[0mGET /css/loadbar.css [36m304 [0m359.493 ms - -[0m
+[0mGET /css/ngcloak.css [36m304 [0m366.043 ms - -[0m
+[0mGET /lib/lodash/dist/lodash.underscore.js [36m304 [0m357.913 ms - -[0m
+[0mGET /lib/jquery/dist/jquery.min.js [36m304 [0m357.159 ms - -[0m
+[0mGET /lib/angular/angular.js [36m304 [0m365.672 ms - -[0m
+[0mGET /lib/angular-resource/angular-resource.js [36m304 [0m374.757 ms - -[0m
+[0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m371.047 ms - -[0m
+[0mGET /lib/angular-ui-utils/ui-utils.js [36m304 [0m364.814 ms - -[0m
+[0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m368.012 ms - -[0m
+[0mGET /lib/angular-animate/angular-animate.js [36m304 [0m364.353 ms - -[0m
+[0mGET /lib/bluebird/js/browser/bluebird.js [36m304 [0m358.198 ms - -[0m
+[0mGET /lib/angular-google-maps/dist/angular-google-maps.min.js [36m304 [0m363.301 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/js/xeditable.min.js [36m304 [0m361.729 ms - -[0m
+[0mGET /lib/angular-ui-sortable/sortable.min.js [36m304 [0m362.354 ms - -[0m
+[0mGET /lib/jquery-ui/jquery-ui.min.js [36m304 [0m358.896 ms - -[0m
+[0mGET /lib/jquery-ui/ui/minified/sortable.min.js [36m304 [0m360.995 ms - -[0m
+[0mGET /lib/mixitup2/build/jquery.mixitup.min.js [36m304 [0m360.316 ms - -[0m
+[0mGET /lib/slippry/dist/slippry.min.js [36m304 [0m360.864 ms - -[0m
+[0mGET /lib/wowjs/dist/wow.js [36m304 [0m367.323 ms - -[0m
+[0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m355.282 ms - -[0m
+[0mGET /lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js [36m304 [0m363.961 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.js [36m304 [0m355.944 ms - -[0m
+[0mGET /lib/angular-sweetalert/SweetAlert.js [36m304 [0m360.795 ms - -[0m
+[0mGET /lib/ngDialog/js/ngDialog.js [36m304 [0m372.148 ms - -[0m
+[0mGET /config.js [36m304 [0m377.522 ms - -[0m
+[0mGET /application.js [36m304 [0m369.468 ms - -[0m
+[0mGET /modules/core/core.client.module.js [36m304 [0m365.434 ms - -[0m
+[0mGET /modules/trips/trips.client.module.js [36m304 [0m367.248 ms - -[0m
+[0mGET /modules/users/users.client.module.js [36m304 [0m408.291 ms - -[0m
+[0mGET /modules/core/controllers/header.client.controller.js [36m304 [0m376.418 ms - -[0m
+[0mGET /modules/core/config/core.client.routes.js [36m304 [0m394.722 ms - -[0m
+[0mGET /modules/core/controllers/home.client.controller.js [36m304 [0m357.673 ms - -[0m
+[0mGET /modules/core/controllers/landing.client.controller.js [36m304 [0m361.165 ms - -[0m
+[0mGET /modules/core/directives/mixitup.client.directive.js [36m304 [0m359.484 ms - -[0m
+[0mGET /modules/core/services/menus.client.service.js [36m304 [0m360.791 ms - -[0m
+[0mGET /modules/trips/config/trips.client.config.js [36m304 [0m360.820 ms - -[0m
+[0mGET /modules/trips/config/trips.client.routes.js [36m304 [0m366.864 ms - -[0m
+[0mGET /modules/trips/controllers/add-mate.client.controller.js [36m304 [0m355.561 ms - -[0m
+[0mGET /modules/trips/services/trips.client.service.js [36m304 [0m358.011 ms - -[0m
+[0mGET /modules/trips/controllers/trips.client.controller.js [36m304 [0m365.027 ms - -[0m
+[0mGET /modules/users/config/users.client.config.js [36m304 [0m353.763 ms - -[0m
+[0mGET /modules/users/config/users.client.routes.js [36m304 [0m357.588 ms - -[0m
+[0mGET /modules/users/controllers/authentication.client.controller.js [36m304 [0m357.708 ms - -[0m
+[0mGET /modules/users/controllers/password.client.controller.js [36m304 [0m356.187 ms - -[0m
+[0mGET /modules/users/controllers/settings.client.controller.js [36m304 [0m355.219 ms - -[0m
+[0mGET /modules/users/services/authentication.client.service.js [36m304 [0m355.643 ms - -[0m
+[0mGET /modules/users/services/users.client.service.js [36m304 [0m359.447 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap.css.map [36m304 [0m356.351 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap-theme.css.map [36m304 [0m362.794 ms - -[0m
+[0mGET /lib/jquery/dist/jquery.min.map [36m304 [0m367.105 ms - -[0m
+[0mGET /lib/slippry/dist/slippry.min.map [33m404 [0m384.585 ms - -[0m
+[0mGET /modules/core/views/header.client.view.html [36m304 [0m372.209 ms - -[0m
+[0mGET /modules/trips/views/edit-trip.client.view.html [36m304 [0m365.300 ms - -[0m
+STEP - tripByID
+[0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff [36m304 [0m366.262 ms - -[0m
+[0mGET /trips/5459231d22f5007c1dc6de36 [36m304 [0m617.658 ms - -[0m
+[32m>> [39mFile "app\controllers\trips.server.controller.js" changed.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node --debug server.js`[39m
+[4mRunning "jshint:all" (jshint) task[24m
+
+[0m
+[32m>> [39m62 files lint free.
+
+[32mDone, without errors.[39m
+[36mCompleted in 8.815s at Tue Nov 04 2014 19:14:04 GMT+0000 (GMT Standard Time)[39m - Waiting...
+MEAN.JS application started on port 3000
+[0mGET / [31m500 [0m176.982 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [31m500 [0m41.049 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap.css [31m500 [0m53.994 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/css/xeditable.css [31m500 [0m36.879 ms - -[0m
+[0mGET /lib/ngAnimate/css/ng-animation.css [31m500 [0m33.110 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.css [31m500 [0m41.839 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog.css [31m500 [0m37.205 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog-theme-plain.css [31m500 [0m38.399 ms - -[0m
+[0mGET /modules/core/css/core.css [31m500 [0m33.369 ms - -[0m
+[0mGET /modules/core/css/index.css [31m500 [0m47.608 ms - -[0m
+[0mGET /modules/core/css/landing_page.css [31m500 [0m43.915 ms - -[0m
+[0mGET /modules/trips/css/trips.css [31m500 [0m94.271 ms - -[0m
+[0mGET /modules/users/css/users.css [31m500 [0m85.922 ms - -[0m
+[0mGET /css/buttons.css [31m500 [0m86.284 ms - -[0m
+[0mGET /css/loadbar.css [31m500 [0m81.588 ms - -[0m
+[0mGET /lib/jquery/dist/jquery.min.js [31m500 [0m142.038 ms - -[0m
+[0mGET /css/ngcloak.css [31m500 [0m165.013 ms - -[0m
+[0mGET /lib/lodash/dist/lodash.underscore.js [31m500 [0m179.489 ms - -[0m
+[0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m566.696 ms - -[0m
+[0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m603.918 ms - -[0m
+[0mGET /lib/angular-ui-utils/ui-utils.js [36m304 [0m584.148 ms - -[0m
+[0mGET /lib/angular-animate/angular-animate.js [36m304 [0m471.680 ms - -[0m
+[0mGET /lib/angular-resource/angular-resource.js [36m304 [0m668.287 ms - -[0m
+[0mGET /lib/angular/angular.js [36m304 [0m702.040 ms - -[0m
+[0mGET /lib/angular-google-maps/dist/angular-google-maps.min.js [36m304 [0m386.978 ms - -[0m
+[0mGET /lib/bluebird/js/browser/bluebird.js [36m304 [0m398.950 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/js/xeditable.min.js [36m304 [0m394.160 ms - -[0m
+[0mGET /lib/jquery-ui/jquery-ui.min.js [36m304 [0m392.496 ms - -[0m
+[0mGET /lib/jquery-ui/ui/minified/sortable.min.js [36m304 [0m395.572 ms - -[0m
+[0mGET /lib/angular-ui-sortable/sortable.min.js [36m304 [0m432.837 ms - -[0m
+Terminate batch job (Y/N)? 

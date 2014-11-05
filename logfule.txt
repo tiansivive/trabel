@@ -1,0 +1,554 @@
+[4mRunning "jshint:all" (jshint) task[24m
+
+[1m   app\controllers\trips.server.controller.js[22m
+     40 |[90m    console.log("STEP 5");[39m
+                                 ^ Strings must use singlequote.
+     97 |[90m    console.log("STEP 1");[39m
+                                 ^ Strings must use singlequote.
+    107 |[90m    console.log("STEP 2");[39m
+                                 ^ Strings must use singlequote.
+    133 |[90m    console.log("STEP 4");[39m
+                                 ^ Strings must use singlequote.
+[1m   app\controllers\users\users.authorization.server.controller.js[22m
+     28 |[90m    console.log("STEP 3");[39m
+                                 ^ Strings must use singlequote.
+
+[31m>> [39m5 errors in 62 files
+[33mWarning: Task "jshint:all" failed. [4mUsed --force, continuing.[24m[39m
+
+[4mRunning "csslint:all" (csslint) task[24m
+Linting public/modules/core/css/buttons.css ...[31mERROR[39m
+[31m[[39m[33mL400[39m[31m:[39m[33mC12[39m[31m][39m
+Values of 0 shouldn't have units specified. You don't need to specify units when a value is 0. (zero-units)
+Linting public/modules/core/css/index.css ...[31mERROR[39m
+[31m[[39m[33mL31[39m[31m:[39m[33mC1[39m[31m][39m
+Rule is empty. Rules without any properties specified should be removed. (empty-rules)
+[31m[[39m[33mL32[39m[31m:[39m[33mC16[39m[31m][39m
+[31m>> [39mExpected COLON at line 32, col 16. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL43[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+Linting public/modules/core/css/landing_page.css ...[31mERROR[39m
+[31m[[39m[33mL511[39m[31m:[39m[33mC1[39m[31m][39m
+Outlines shouldn't be hidden unless other visual changes are made. Use of outline: none or outline: 0 should be limited to :focus rules. (outline-none)
+[31m[[39m[33mL529[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL529[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL550[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL550[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL658[39m[31m:[39m[33mC1[39m[31m][39m
+Missing vendor-prefixed CSS gradients for Firefox 3.6+, Opera 11.1+. When using a vendor-prefixed gradient, make sure to use them all. (gradients)
+[31m[[39m[33mL677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL803[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL810[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL819[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL899[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL899[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL902[39m[31m:[39m[33mC1[39m[31m][39m
+Outlines shouldn't be hidden unless other visual changes are made. Use of outline: none or outline: 0 should be limited to :focus rules. (outline-none)
+[31m[[39m[33mL969[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1162[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1165[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1168[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1377[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1377[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1425[39m[31m:[39m[33mC5[39m[31m][39m
+The property -webkit-box-sizing is compatible with -moz-box-sizing and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1441[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1441[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1449[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1449[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1451[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1465[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1473[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1473[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1482[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1482[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1492[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1502[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1517[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1517[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1540[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1540[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1542[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1548[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1563[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1563[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1583[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback border (hex or RGB) should precede RGBA border. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1603[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1603[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1677[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1698[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1698[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1708[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1721[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1728[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1735[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1741[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1752[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1752[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1761[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL1763[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1773[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1781[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1792[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1819[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1823[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1823[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1843[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mUnexpected token 'not(' at line 1849, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC37[39m[31m][39m
+[31m>> [39mExpected LBRACE at line 1849, col 37. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC37[39m[31m][39m
+[31m>> [39mUnexpected token ')' at line 1849, col 37. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1849[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mExpected LBRACE at line 1849, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1852[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 1852, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL1869[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1869[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1897[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1901[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1901[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1907[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1915[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1932[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1932[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1940[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1955[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL1967[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2000[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2067[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2067[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2134[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2134[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2172[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2172[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2248[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2248[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2353[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2435[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2435[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2576[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL2606[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL2752[39m[31m:[39m[33mC3[39m[31m][39m
+[31m>> [39mExpected RBRACE at line 2752, col 3. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2752[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2752[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2752, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2768[39m[31m:[39m[33mC14[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2768, col 14. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2768[39m[31m:[39m[33mC14[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2785[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2788[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2788, col 22. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2788[39m[31m:[39m[33mC22[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name2. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2810[39m[31m:[39m[33mC5[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 2810, col 5. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2833[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2836[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2836, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2836[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name3. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2851[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2851, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2851[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name3. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2867[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2870[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2870, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2870[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name4. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2885[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2885, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2885[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name4. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2901[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2904[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2904, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2904[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name5. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2919[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2919, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2919[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name5. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2935[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2938[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2938, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2938[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name6. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2946[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name6. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2946[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2946, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2955[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2957[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2957[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL2960[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2960, col 20. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2960[39m[31m:[39m[33mC20[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name7. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2979[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 2979, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2979[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mExpected IDENT at line 2979, col 13. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2979[39m[31m:[39m[33mC13[39m[31m][39m
+[31m>> [39mUnknown @ rule: @name7. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2998[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 2998, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL2999[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-animation-name is compatible with -webkit-animation-name and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3002[39m[31m:[39m[33mC1[39m[31m][39m
+[31m>> [39mUnexpected token '}' at line 3002, col 1. This rule looks for recoverable syntax errors. (errors)
+[31m[[39m[33mL3013[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3013[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3026[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3030[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3030[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3038[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3038[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3065[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3091[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3095[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3099[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3119[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3119[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3123[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3148[39m[31m:[39m[33mC5[39m[31m][39m
+The property -webkit-box-shadow is compatible with -moz-box-shadow and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3151[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3151[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3170[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3170[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC14[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC28[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3191[39m[31m:[39m[33mC39[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3194[39m[31m:[39m[33mC1[39m[31m][39m
+Don't use IDs in selectors. Selectors should not contain IDs. (ids)
+[31m[[39m[33mL3213[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL3216[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background-color (hex or RGB) should precede RGBA background-color. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL3245[39m[31m:[39m[33mC5[39m[31m][39m
+Fallback background (hex or RGB) should precede RGBA background. For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color. (fallback-colors)
+[31m[[39m[33mL3306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3306[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3313[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3319[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3366[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3372[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3383[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3383[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3453[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transform is compatible with -webkit-transform, -moz-transform, -ms-transform and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3534[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3534[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3545[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3545[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3558[39m[31m:[39m[33mC5[39m[31m][39m
+The property -moz-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[31m[[39m[33mL3558[39m[31m:[39m[33mC5[39m[31m][39m
+The property -o-transition is compatible with -webkit-transition and should be included as well. Include all compatible vendor prefixes to reach a wider range of users. (compatible-vendor-prefixes)
+[33mWarning: Task "csslint:all" failed. [4mUsed --force, continuing.[24m[39m
+
+[4mRunning "concurrent:default" (concurrent) task[24m
+[4mRunning "watch" task[24m
+Waiting...
+[4mRunning "nodemon:dev" (nodemon) task[24m
+[33m[nodemon] v1.2.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: app/views/**/*.* gruntfile.js server.js config/**/*.js app/**/*.js[39m
+[32m[nodemon] starting `node --debug server.js`[39m
+
+[0m
+MEAN.JS application started on port 3000
+[0mGET / [36m304 [0m874.213 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap.css [36m304 [0m538.418 ms - -[0m
+[0mGET /lib/bootstrap/dist/css/bootstrap-theme.css [36m304 [0m537.200 ms - -[0m
+[0mGET /lib/ngAnimate/css/ng-animation.css [36m304 [0m470.719 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog.css [36m304 [0m476.436 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.css [36m304 [0m482.509 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/css/xeditable.css [36m304 [0m516.432 ms - -[0m
+[0mGET /modules/core/css/buttons.css [36m304 [0m520.662 ms - -[0m
+[0mGET /lib/ngDialog/css/ngDialog-theme-plain.css [36m304 [0m532.087 ms - -[0m
+[0mGET /modules/core/css/core.css [36m304 [0m500.107 ms - -[0m
+[0mGET /modules/core/css/landing_page.css [36m304 [0m515.234 ms - -[0m
+[0mGET /modules/core/css/index.css [36m304 [0m520.769 ms - -[0m
+[0mGET /modules/trips/css/trips.css [36m304 [0m494.864 ms - -[0m
+[0mGET /modules/users/css/users.css [36m304 [0m471.197 ms - -[0m
+[0mGET /css/loadbar.css [36m304 [0m475.770 ms - -[0m
+[0mGET /css/ngcloak.css [36m304 [0m472.696 ms - -[0m
+[0mGET /lib/lodash/dist/lodash.underscore.js [36m304 [0m532.466 ms - -[0m
+[0mGET /lib/jquery/dist/jquery.min.js [36m304 [0m535.196 ms - -[0m
+[0mGET /lib/angular/angular.js [36m304 [0m531.664 ms - -[0m
+[0mGET /lib/angular-resource/angular-resource.js [36m304 [0m487.458 ms - -[0m
+[0mGET /lib/angular-ui-router/release/angular-ui-router.js [36m304 [0m483.385 ms - -[0m
+[0mGET /lib/angular-ui-utils/ui-utils.js [36m304 [0m622.049 ms - -[0m
+[0mGET /lib/angular-bootstrap/ui-bootstrap-tpls.js [36m304 [0m556.416 ms - -[0m
+[0mGET /lib/bluebird/js/browser/bluebird.js [36m304 [0m550.828 ms - -[0m
+[0mGET /lib/angular-animate/angular-animate.js [36m304 [0m554.135 ms - -[0m
+[0mGET /lib/angular-google-maps/dist/angular-google-maps.min.js [36m304 [0m544.804 ms - -[0m
+[0mGET /lib/angular-xeditable/dist/js/xeditable.min.js [36m304 [0m576.527 ms - -[0m
+[0mGET /lib/angular-ui-sortable/sortable.min.js [36m304 [0m427.757 ms - -[0m
+[0mGET /lib/jquery-ui/jquery-ui.min.js [36m304 [0m461.753 ms - -[0m
+[0mGET /lib/mixitup2/build/jquery.mixitup.min.js [36m304 [0m456.569 ms - -[0m
+[0mGET /lib/jquery-ui/ui/minified/sortable.min.js [36m304 [0m477.640 ms - -[0m
+[0mGET /lib/slippry/dist/slippry.min.js [36m304 [0m467.636 ms - -[0m
+[0mGET /lib/wowjs/dist/wow.js [36m304 [0m451.684 ms - -[0m
+[0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m434.027 ms - -[0m
+[0mGET /lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js [36m304 [0m464.797 ms - -[0m
+[0mGET /lib/angular-sweetalert/SweetAlert.js [36m304 [0m448.817 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.js [36m304 [0m464.687 ms - -[0m
+[0mGET /lib/ngDialog/js/ngDialog.js [36m304 [0m443.800 ms - -[0m
+[0mGET /config.js [36m304 [0m466.908 ms - -[0m
+[0mGET /application.js [36m304 [0m502.894 ms - -[0m
+[0mGET /modules/core/core.client.module.js [36m304 [0m466.326 ms - -[0m
+[0mGET /modules/trips/trips.client.module.js [36m304 [0m460.769 ms - -[0m
+[0mGET /modules/users/users.client.module.js [36m304 [0m507.837 ms - -[0m
+[0mGET /modules/core/config/core.client.routes.js [36m304 [0m445.918 ms - -[0m
+[0mGET /modules/core/controllers/header.client.controller.js [36m304 [0m469.318 ms - -[0m
+[0mGET /modules/core/controllers/home.client.controller.js [36m304 [0m451.884 ms - -[0m
+[0mGET /modules/core/controllers/landing.client.controller.js [36m304 [0m469.170 ms - -[0m
+[0mGET /modules/core/directives/mixitup.client.directive.js [36m304 [0m473.931 ms - -[0m
+[0mGET /modules/core/services/menus.client.service.js [36m304 [0m458.536 ms - -[0m
+[0mGET /modules/trips/config/trips.client.config.js [36m304 [0m547.436 ms - -[0m
+[0mGET /modules/trips/config/trips.client.routes.js [36m304 [0m458.400 ms - -[0m
+[0mGET /modules/trips/controllers/add-mate.client.controller.js [36m304 [0m462.683 ms - -[0m
+[0mGET /modules/trips/controllers/trips.client.controller.js [36m304 [0m486.892 ms - -[0m
+[0mGET /modules/trips/services/trips.client.service.js [36m304 [0m465.477 ms - -[0m
+[0mGET /modules/users/config/users.client.config.js [36m304 [0m475.436 ms - -[0m
+[0mGET /modules/users/config/users.client.routes.js [36m304 [0m445.017 ms - -[0m
+[0mGET /modules/users/controllers/authentication.client.controller.js [36m304 [0m458.733 ms - -[0m
+[0mGET /modules/users/controllers/password.client.controller.js [36m304 [0m462.170 ms - -[0m
+[0mGET /modules/users/controllers/settings.client.controller.js [36m304 [0m438.186 ms - -[0m
+[0mGET /modules/users/services/authentication.client.service.js [36m304 [0m430.993 ms - -[0m
+[0mGET /modules/users/services/users.client.service.js [36m304 [0m458.978 ms - -[0m
+[0mGET /lib/mixitup2/build/jquery.mixitup.min.js [36m304 [0m428.156 ms - -[0m
+[0mGET /lib/bootstrap/dist/js/bootstrap.js [36m304 [0m442.753 ms - -[0m
+[0mGET /lib/sweetalert/lib/sweet-alert.js [36m304 [0m515.826 ms - -[0m
+[0mGET /lib/ngDialog/js/ngDialog.js [36m304 [0m503.348 ms - -[0m
+[0mGET /modules/trips/controllers/trips.client.controller.js [36m304 [0m492.956 ms - -[0m
+[0mGET /modules/users/controllers/password.client.controller.js [36m304 [0m441.206 ms - -[0m
+[0mGET /modules/core/views/header.client.view.html [36m304 [0m515.566 ms - -[0m
+[0mGET /modules/trips/views/edit-trip.client.view.html [36m304 [0m515.908 ms - -[0m
+STEP 1
+[0mGET /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff [36m304 [0m537.765 ms - -[0m
+[0mGET /trips/54511620e425a77022d4e865 [36m304 [0m891.125 ms - -[0m
+[0mGET /modules/trips/views/dialogs/add-mate-dialog.client.view.html [36m304 [0m519.373 ms - -[0m
+[0mGET /users/list [36m304 [0m700.393 ms - -[0m
+[0mGET /users/list [36m304 [0m662.617 ms - -[0m
+STEP 1
+STEP 2
+{ user: { _id: 5441364d30e6450800c90842, displayName: 'Nuno Cruz' },
+  _id: 54511620e425a77022d4e865,
+  __v: 0,
+  markers: [],
+  privacy: 0,
+  members: [ { default: [], permission: 'write' } ],
+  created: Wed Oct 29 2014 16:30:24 GMT+0000 (GMT Standard Time),
+  name: 'teste' }
+{ user: 5441364d30e6450800c90842,
+  _id: 54511620e425a77022d4e865,
+  __v: 0,
+  markers: [],
+  privacy: 0,
+  members: 
+   [ { default: [], permission: 'write' },
+     { user: 5441364d30e6450800c90842,
+       _id: 54511b5738de4ddc2716720f,
+       permission: 'write' } ],
+  created: Wed Oct 29 2014 16:30:24 GMT+0000 (GMT Standard Time),
+  name: 'teste' }
+STEP 3
+STEP 4
+STEP 5
+[0mPUT /trips/54511620e425a77022d4e865/add/mate/544135507d55a67662f93eed [32m200 [0m932.848 ms - 235[0m
+[32m>> [39mFile "app\models\trip.server.model.js" changed.
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node --debug server.js`[39m
+
+[0m
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[4mRunning "jshint:all" (jshint) task[24m
+
+[1m   app\controllers\trips.server.controller.js[22m
+     40 |[90m    console.log("STEP 5");[39m
+                                 ^ Strings must use singlequote.
+     97 |[90m    console.log("STEP 1");[39m
+                                 ^ Strings must use singlequote.
+    107 |[90m    console.log("STEP 2");[39m
+                                 ^ Strings must use singlequote.
+    133 |[90m    console.log("STEP 4");[39m
+                                 ^ Strings must use singlequote.
+[1m   app\controllers\users\users.authorization.server.controller.js[22m
+     28 |[90m    console.log("STEP 3");[39m
+                                 ^ Strings must use singlequote.
+[1m   app\models\trip.server.model.js[22m
+     45 |[90m    privacy: {[39m
+                    ^ Expected ')' and instead saw ':'.
+     45 |[90m    privacy: {[39m
+                     ^ Missing semicolon.
+     46 |[90m        type: Number,[39m
+                       ^ Label 'type' on Number statement.
+     47 |[90m        default: 0[39m
+                 ^ Unexpected 'default'.
+     46 |[90m        type: Number,[39m
+                             ^ Expected an assignment or function call and instead saw an expression.
+     46 |[90m        type: Number,[39m
+                              ^ Missing semicolon.
+     47 |[90m        default: 0[39m
+                 ^ Expected '}' to match '{' from line 45 and instead saw 'default'.
+     47 |[90m        default: 0[39m
+                        ^ Expected '(end)' and instead saw ':'.
+     45 |[90m    privacy: {[39m
+             ^ 'privacy' is not defined.
+
+[31m>> [39m14 errors in 62 files
+[33mWarning: Task "jshint:all" failed. [4mUsed --force, continuing.[24m[39m
+
+[31mDone, but with warnings.[39m
+[36mCompleted in 9.325s at Wed Oct 29 2014 16:55:20 GMT+0000 (GMT Standard Time)[39m - Waiting...
+Terminate batch job (Y/N)? 

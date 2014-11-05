@@ -18,7 +18,10 @@ module.exports = {
 				'public/lib/famous-angular/dist/famous-angular.css',
 				'public/lib/angular-xeditable/dist/css/xeditable.css',
 				'public/lib/slippry/dist/slippry.min.css',
-				'public/lib/ngAnimate/css/ng-animation.css'
+				'public/lib/ngAnimate/css/ng-animation.css',
+				'public/lib/sweetalert/lib/sweet-alert.css',
+				'public/lib/ngDialog/css/ngDialog.css',
+				'public/lib/ngDialog/css/ngDialog-theme-plain.css'
 			],
 			js: [
 				'public/lib/lodash/dist/lodash.underscore.js',
@@ -42,7 +45,10 @@ module.exports = {
 				'public/lib/slippry/dist/slippry.min.js',
 				'public/lib/wowjs/dist/wow.js',
 				'public/lib/bootstrap/dist/js/bootstrap.js',
-				'public/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js'
+				'public/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js',
+				'public/lib/sweetalert/lib/sweet-alert.js',
+				'public/lib/angular-sweetalert/SweetAlert.js',
+				'public/lib/ngDialog/js/ngDialog.js'
 
 				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
 

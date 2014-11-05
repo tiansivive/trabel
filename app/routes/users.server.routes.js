@@ -9,8 +9,15 @@ module.exports = function(app) {
 	// User Routes
 	var users = require('../../app/controllers/users');
 
+	//console.log('Users: ' + users.list);
 	// Setting up the users profile api
 	app.route('/users/me').get(users.me);
+	app.route('/users/all').get(users.all);
+	app.route('/users/list')
+		.get(users.list)
+		.post(users.search);
+	app.route('/users/names').get(users.list_by_name);
+	app.route('/users/emails').get(users.list_by_email);
 	app.route('/users').put(users.update);
 	app.route('/users/accounts').delete(users.removeOAuthProvider);
 

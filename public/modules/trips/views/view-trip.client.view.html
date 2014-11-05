@@ -24,12 +24,20 @@
 	  data-show-faces="true">
 	</div>
 
-	<div class="pull-right" data-ng-show="authentication.user._id == trip.user._id">
-		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit">
+	<div class="pull-right" data-ng-show="hasPermission()">
+		<a class="btn btn-primary" data-ng-click="leaveTrip();" data-ng-show="isTripMember()">
+			<i class="glyphicon glyphicon-remove"></i>
+		</a>
+		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit"> 
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
 		<a class="btn btn-primary" data-ng-click="remove();">
 			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<div class="pull-right" data-ng-hide="hasPermission()">
+		<a class="btn btn-primary" data-ng-click="requestToJoin();">
+			<i class="glyphicon glyphicon-upload"></i>
 		</a>
 	</div>
 	<small>

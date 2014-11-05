@@ -1,0 +1,14 @@
+<section data-ng-controller="AddMateController">
+	<div class="dialog_header">
+    <h3>Choose a tripmate</h3> 
+  </div>
+  <form class="form-group">
+    <input class="form-control searchbox" type="text" placeholder="Search Mates" ng-model="searchInput">
+  </form>
+  <ul>  
+    <li ng-repeat="user in users" ng-click="addMate(user._id)">
+      <a href>{{user.displayName}}</a>
+    </li>
+  </ul>
+  <button class="btn btn-default sharp" ng-click="closeThisDialog(trip)">DONE</button>
+</section>
