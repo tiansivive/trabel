@@ -101,6 +101,32 @@ exports.list = function(req, res) {
 		});
 };
 
+
+/**
+ * Search Trips
+ */
+exports.search = function(req, res){
+
+	var regex = new RegExp(req.body.pattern, 'i');
+	//var name_regex = new RegExp(req.body.tripName, 'i');
+	//var places = req.body.places;
+	//var ownerName = new RegExp(req.body.owner.name, 'i');
+	//var ownerEmail = new RegExp(req.body.owner.email, 'i');
+
+	console.log('querying DB'); //TODO general search that finds users and trips by name, email or members based on 'pattern regex'
+	Trip.find({'name' : {$regex : regex}})
+			.populate('user members.user', 'displayName email')
+			.exec(function(err, trips){
+				if(err){
+					res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				}else{			    
+				  res.json(trips);
+				} 
+			});   
+};
+
 /**
  *	Invite a mate for the trip
  */

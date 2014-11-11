@@ -23,7 +23,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
   function onError(error) {
     console.log('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
   }
-  navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  //navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 }]);
 

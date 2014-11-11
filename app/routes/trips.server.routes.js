@@ -9,6 +9,9 @@ module.exports = function(app) {
 		.get(trips.list)
 		.post(users.requiresLogin, trips.create);
 
+	app.route('/trips/search')
+		.post(trips.search);	
+
 	app.route('/trips/:tripId')
 		.get(trips.read)
 		.put(users.requiresLogin, trips.hasAuthorization, trips.update)
