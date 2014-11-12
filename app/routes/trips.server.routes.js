@@ -29,7 +29,7 @@ module.exports = function(app) {
 	app.route('/trips/:tripId/add/mate/:userId')
 		.get(trips.addTripMate); //maybe change from GET later once we have notifications and inboxes
 	// Finish by binding the Trip middleware
-	app.param('userId', trips.userByID);
+	app.param('userId', trips.userByID); //compare with users.userByID
 	app.param('tripId', trips.tripByID);
 
 };
