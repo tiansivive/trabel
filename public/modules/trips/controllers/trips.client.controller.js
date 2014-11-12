@@ -242,7 +242,10 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 					));
 			}
 
-			$scope.tripID = $stateParams.tripId;
+			$scope.disqus = {
+				tripID: $stateParams.tripId,
+				url: $location.absUrl()
+			};
 
 			$scope.init = function() {
 				var map = $scope.map.object.getGMap();
