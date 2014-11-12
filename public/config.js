@@ -4,6 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'mean';
+
 	var applicationModuleVendorDependencies = ['ngResource',
 																						 'ui.router',
 																						 'ui.bootstrap',
@@ -13,6 +14,7 @@ var ApplicationConfiguration = (function() {
 																						 'ui.sortable',
 																						 'oitozero.ngSweetAlert',
 																						 'ngDialog',
+																						 'countrySelect',
 																						 'disqusHere'];
 
 	// Add a new vertical module

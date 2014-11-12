@@ -23,7 +23,8 @@
     "angular-sweetalert": "~1.0.3",
     "ngDialog": "~0.3.2",
     "restangular": "~1.4.0",
-    "disqus-here": "~0.0.3"
+    "disqus-here": "~0.0.3",
+    "angularjs-country-select": "*"
   },
   "resolutions": {
     "angular": "~1.x"

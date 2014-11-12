@@ -39,6 +39,19 @@ var UserSchema = new Schema({
 		type: String,
 		trim: true
 	},
+	phoneNumber: {
+		type: String,
+		trim: true,
+		match: [/^\+(?:[0-9] ?){6,14}[0-9]$/, 'Please fill a valid phone number (with country +xxx prefix)']
+	},
+	country: {
+		type: String,
+		trim: true
+	},
+	city: {
+		type: String,
+		trim: true
+	},
 	email: {
 		type: String,
 		trim: true,
