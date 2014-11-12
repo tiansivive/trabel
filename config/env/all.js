@@ -48,7 +48,8 @@ module.exports = {
 				'public/lib/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js',
 				'public/lib/sweetalert/lib/sweet-alert.js',
 				'public/lib/angular-sweetalert/SweetAlert.js',
-				'public/lib/ngDialog/js/ngDialog.js'
+				'public/lib/ngDialog/js/ngDialog.js',
+				'public/lib/angularjs-country-select/angular.country-select.js'
 
 				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
 

@@ -4,15 +4,17 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'mean';
-	var applicationModuleVendorDependencies = ['ngResource',
-																						 'ui.router',
-																						 'ui.bootstrap', 
-																						 'ui.utils', 
-																						 'uiGmapgoogle-maps', 
-																						 'xeditable', 
-																						 'ui.sortable',
-																						 'oitozero.ngSweetAlert',
-																						 'ngDialog'];
+	var applicationModuleVendorDependencies = 
+		['ngResource',
+		 'ui.router',
+		 'ui.bootstrap', 
+		 'ui.utils', 
+		 'uiGmapgoogle-maps', 
+		 'xeditable', 
+		 'ui.sortable',
+		 'oitozero.ngSweetAlert',
+		 'ngDialog',
+		 'countrySelect'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {

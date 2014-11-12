@@ -39,6 +39,18 @@ var UserSchema = new Schema({
 		type: String,
 		trim: true
 	},
+	phoneNumber: {
+		type: Number, 
+		trim: true
+	},
+	country: {
+		type: String,
+		trim: true
+	},	
+	city: {
+		type: String,
+		trim: true
+	},
 	email: {
 		type: String,
 		trim: true,
