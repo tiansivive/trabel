@@ -4,7 +4,7 @@
 angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(), 'ngDialog', '$http',
 	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi, ngDialog, $http) {
 		$scope.authentication = Authentication;
-		
+
 		$scope.map = {
 			//TODO: Center map on trip markers
 			center: {
@@ -94,7 +94,7 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 
 		$scope.AddMate = function () {
-      var dialog = ngDialog.open({ 
+      var dialog = ngDialog.open({
         	template: '/modules/trips/views/dialogs/add-mate-dialog.client.view.html',
         	controller: 'AddMateController',
         	scope: $scope,
@@ -112,9 +112,9 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
     	var url = '/trips/' + $scope.trip._id + '/leave';
     	$http.put(url, '')
-           .success(function(data, status, headers, config){ 
+           .success(function(data, status, headers, config){
            		console.log('SUCCESS on PUT leaveTrip');
-           		console.log(data);     
+           		console.log(data);
               $location.path('trips');
            })
            .error(function(data, status, headers, config){
@@ -124,12 +124,12 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 		};
 
 		$scope.requestToJoin = function(){
-			
+
     	var url = '/trips/' + $scope.trip._id + '/request/join';
     	$http.post(url, '')
-           .success(function(data, status, headers, config){ 
+           .success(function(data, status, headers, config){
            		console.log('SUCCESS on POST requestToJoin');
-           		console.log(data);     
+           		console.log(data);
               $location.path('trips');
            })
            .error(function(data, status, headers, config){
@@ -139,7 +139,7 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 		};
 
-	
+
 		GoogleMapApi.then(function(maps) {
 
 			$scope.searchbox.events.places_changed = function(box, eventName, args){
@@ -242,6 +242,8 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 					));
 			}
 
+			$scope.tripID = $stateParams.tripId;
+
 			$scope.init = function() {
 				var map = $scope.map.object.getGMap();
 				$scope.bounds = new maps.LatLngBounds();
@@ -277,13 +279,13 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			//TODO security issues?
 			$scope.hasPermission = function(){
 				var permission = false;
-	
+
 				if($scope.authentication.user._id === $scope.trip.user._id){
 					permission = true;
 				}else{
 					$scope.trip.members.forEach(function(member){
 						if(member.user._id === $scope.authentication.user._id || member.user.permission === 'write'){
-							permission = true;	
+							permission = true;
 						}
 					});
 				}

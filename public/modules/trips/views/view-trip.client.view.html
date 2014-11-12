@@ -16,7 +16,14 @@
 			</a>
 		</p>
 	</div>
-	
+
+	<!--
+	http://lukasz-zak.github.io/disqus-here/
+	-->
+	<disqus-here shortname="ldsotrabel"
+             identifier="{{tripID}}">
+	</disqus-here>
+
 	<div
 	  class="fb-like"
 	  data-share="true"
@@ -28,7 +35,7 @@
 		<a class="btn btn-primary" data-ng-click="leaveTrip();" data-ng-show="isTripMember()">
 			<i class="glyphicon glyphicon-remove"></i>
 		</a>
-		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit"> 
+		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
 		<a class="btn btn-primary" data-ng-click="remove();">
