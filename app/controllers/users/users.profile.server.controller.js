@@ -70,8 +70,8 @@ exports.all = function(req, res) {
 	    users.forEach(function(user) {
 	      users_list.push(user);
 	    });
-	    res.send(users_list); 
-    } 
+	    res.send(users_list);
+    }
   });
 };
 exports.list_by_name = function(req, res) {
@@ -90,8 +90,8 @@ exports.list_by_name = function(req, res) {
 	    	};
 	    	users_list[user.displayName] = info;
 	    });
-	    res.send(users_list); 
-    } 
+	    res.send(users_list);
+    }
   });
 };
 exports.list_by_email = function(req, res) {
@@ -110,8 +110,8 @@ exports.list_by_email = function(req, res) {
 	    	};
 	    	users_list[user.email] = info;
 	    });
-	    res.send(users_list); 
-    } 
+	    res.send(users_list);
+    }
   });
 };
 exports.list = function(req, res) {
@@ -131,8 +131,8 @@ exports.list = function(req, res) {
 	    	};
 	    	users_list.push(user_info);
 	    });
-	    res.send(users_list); 
-    } 
+	    res.send(users_list);
+    }
   });
 };
 exports.search = function(req, res){
@@ -160,8 +160,8 @@ User.find().or([{ 'displayName': { $regex: re }},
 								res.status(400).send({
 									message: errorHandler.getErrorMessage(err)
 								});
-							}else{			    
+							}else{
 						    res.json(users);
-					    } 
+					    }
 						});
 };

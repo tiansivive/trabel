@@ -107,7 +107,9 @@ exports.confirm = function(req, res, next) {
 		//resetPasswordExpires: {
 		//	$gt: Date.now()
 		//}
-	}, function(err, user) {
+	},
+	{ emailToken: 1, verified: 1 },
+	function(err, user) {
 		if (!user) {
 			//return res.redirect('/#!/password/reset/invalid');
 			//TODO: error page
@@ -117,7 +119,6 @@ exports.confirm = function(req, res, next) {
 			user.emailToken = undefined;
 			user.verified = true;
 			user.save(function(err) {
-				user.password = undefined;
 				user.salt = undefined;
 				if (err) {
 					return res.status(400).send({
@@ -218,7 +219,7 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 				return done(err);
 			} else {
 				if (!user) {
-					
+
 						user = new User({
 							firstName: providerUserProfile.firstName,
 							lastName: providerUserProfile.lastName,
@@ -232,7 +233,7 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 						user.save(function(err) {
 							return done(err, user);
 						});
-					
+
 				} else {
 					return done(err, user);
 				}
