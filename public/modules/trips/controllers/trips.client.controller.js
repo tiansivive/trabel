@@ -91,7 +91,12 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			});
 		};
 
-
+		$scope.returnToTripView = function() {
+			console.log('adas');
+			var url = 'trips/' + $scope.trip._id;
+			$location.path(url);
+			
+		}
 
 		$scope.AddMate = function () {
       var dialog = ngDialog.open({
