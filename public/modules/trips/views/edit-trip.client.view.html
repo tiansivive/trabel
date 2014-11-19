@@ -3,10 +3,10 @@
     <em>Loading...</em>
   </p>
   <div class="page-header">
-    <h1 class="editable" onaftersave="trip.$update()" editable-text="trip.name">{{trip.name}}</h1>
-    <div class="privacyToggle" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}">
-      <p ng-switch-when="1" class="text-muted">Public Trip</p>
-      <p ng-switch-when="0" class="text-muted">Private Trip</p>
+    <h1 class="editable" onaftersave="trip.$update()" editable-text="trip.name" tooltip="Click to change name">{{trip.name}}</h1>
+    <div class="privacyToggle" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}" tooltip="Click to change Privacy" tooltip-placement="right">
+      <p ng-switch-when="1" class="text-muted" >Public Trip</p>
+      <p ng-switch-when="0" class="text-muted" >Private Trip</p>
     </div>
     <div class="member_options">
       <p class="trip_owner">Owned by {{trip.user.displayName}}</p>
@@ -43,10 +43,15 @@
         <ui-gmap-markers models="trip.markers" idkey="'place_id'" coords="'location'" />
       </ui-gmap-google-map>
       <p style="text-align:right;margin-top:5px;font-size:24px;">
-        <a href ng-click="resetMap()">
+        <a href ng-click="resetMap()" tooltip="Reload Map" tooltip-placement="left">
           <span class="glyphicon glyphicon-repeat"></span>
         </a>
       </p>
     </div>
+	<div class="pull-left">
+		<a class="btn btn-primary" data-ng-click="returnToTripView()" tooltip="Back to Trip View">
+			<i class="glyphicon glyphicon-arrow-left"></i>
+		</a>
+	</div>
   </div>
 </section>

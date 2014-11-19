@@ -55,5 +55,10 @@ h1.editable:hover {
     }
 }
 
+.privacyToggle {
+	width: 80px;
+}
 
-
+.btn-primary {
+	margin-bottom: 10px;
+}
