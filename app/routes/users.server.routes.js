@@ -22,8 +22,10 @@ module.exports = function(app) {
 	app.route('/users').put(users.update);
 	app.route('/users/accounts').delete(users.removeOAuthProvider);
 
-	app.route('/users/send/message/:userId')
-		.post(users.requiresLogin, users.sendMessage);
+	app.route('/users/add/message/received/:userId')
+		.put(users.requiresLogin, users.addReceivedMessage, users.update);
+	app.route('/users/add/message/sent/:userId')
+		.put(users.requiresLogin, users.addSentMessage, users.update);
 
 	// Setting up the users password api
 	app.route('/users/password').post(users.changePassword);

@@ -9,8 +9,6 @@ var _ = require('lodash'),
 	passport = require('passport'),
 	User = mongoose.model('User');
 
-var _this = this;	
-
 /**
  * Update user details
  */
@@ -180,7 +178,7 @@ User.find().or([{ 'displayName': { $regex: re }},
 };
 
 
-exports.sendMessage = function(req, res){
+function messageBuilder(req){
 
 	var message = req.body;
 	message.receiver = req.profile._id;
@@ -188,6 +186,14 @@ exports.sendMessage = function(req, res){
 	message.date = Date.now();
 	message.read = false; 
 
+	return message;
+
+}
+
+
+exports.addReceivedMessage = function(req, res, next){
+
+	var message = messageBuilder(req);
 	console.log(message);
 
 
@@ -199,9 +205,19 @@ exports.sendMessage = function(req, res){
 				return res.status(400).send({
 					message: errorHandler.getErrorMessage(err)
 				});
+			}else{
+				req.user = user;
+				next();
 			}
 		});
 	});
+};
+
+exports.addSentMessage = function(req, res, next){
+
+	var message = messageBuilder(req);
+	console.log(message);
+
 
 	User.findById(req.user._id).exec(function(err, user){
 		user.messages_sent.push(message);
@@ -210,8 +226,10 @@ exports.sendMessage = function(req, res){
 				return res.status(400).send({
 					message: errorHandler.getErrorMessage(err)
 				});
+			}else{
+				req.user = user;
+				next();
 			}
 		});
 	});
-
 };

@@ -26,16 +26,27 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
       };
 
       console.log($stateParams.userID);
-      $http.post('/users/send/message/' + $stateParams.userID, requestData)
+      $http.put('/users/add/message/received/' + $stateParams.userID, requestData)
           .success(function(data, status, headers, config){ 
             console.log('SUCESS');
             console.log(data);
-            $scope.receiver = data;
+            $http.put('/users/add/message/sent/' + $stateParams.userID, requestData) //make it more semantic, the ID in the URL is not the sender's, but rather, the receiver's
+                .success(function(data, status, headers, config){ 
+                  console.log('SUCESS');
+                  console.log(data);
+                  console.log('Fuck Yeah!');
+                  
+                })
+                .error(function(data, status, headers, config){
+                    console.log('ERROR');
+                    console.log(data);
+            });
           })
           .error(function(data, status, headers, config){
               console.log('ERROR');
               console.log(data);
-          });
+      });
+     
     };
 	}
 ]);
