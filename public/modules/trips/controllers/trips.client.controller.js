@@ -1,8 +1,8 @@
 'use strict';
 
 // Trips controller
-angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'GoogleMapApi'.ns(), 'ngDialog', '$http',
-	function($scope, $stateParams, $location, Authentication, Trips, GoogleMapApi, ngDialog, $http) {
+angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'uiGmapGoogleMapApi', 'ngDialog', '$http',
+	function($scope, $stateParams, $location, Authentication, Trips, gmap, ngDialog, $http) {
 		$scope.authentication = Authentication;
 
 		$scope.map = {
@@ -140,7 +140,7 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 		};
 
 
-		GoogleMapApi.then(function(maps) {
+		gmap.then(function(maps) {
 
 			$scope.searchbox.events.places_changed = function(box, eventName, args){
 				var map = $scope.map.object.getGMap();
