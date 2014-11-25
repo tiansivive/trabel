@@ -5,6 +5,10 @@ angular.module('users').config(['$stateProvider',
 	function($stateProvider) {
 		// Users state routing
 		$stateProvider.
+		state('read-messages', {
+			url: '/read/messages',
+			templateUrl: 'modules/users/views/read-messages.client.view.html'
+		}).
 		state('send-message', {
 			url: '/send/message/:userID',
 			templateUrl: 'modules/users/views/send-message.client.view.html'
