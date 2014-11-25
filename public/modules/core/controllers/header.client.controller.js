@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$http',
-	function($scope, Authentication, Menus, $http) {
+angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$http', 'TripSearchResults', '$location',
+	function($scope, Authentication, Menus, $http, TripSearchResults, $location) {
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
 		$scope.menu = Menus.getMenu('topbar');
@@ -25,6 +25,8 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
            .success(function(data, status, headers, config){      
               console.log('SUCESS on POST /trips/search');
               console.log(data);
+              TripSearchResults.setTrips(data);
+              $location.path('trips/results');
            })
            .error(function(data, status, headers, config){
               console.error('ERROR on POST /trips/search');

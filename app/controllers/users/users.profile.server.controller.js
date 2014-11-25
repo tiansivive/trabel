@@ -55,6 +55,15 @@ exports.me = function(req, res) {
 	res.jsonp(req.user || null);
 };
 
+
+/*
+ * Find one user 
+ */
+exports.findUser = function(req, res){
+	res.jsonp(req.profile);
+};
+
+
 /*
  * Send all user data
  */
@@ -115,6 +124,8 @@ exports.list_by_email = function(req, res) {
   });
 };
 exports.list = function(req, res) {
+
+	console.log('cenas');
 	User.find({}, function(err, users) {
 
 		if(err){
@@ -164,4 +175,60 @@ User.find().or([{ 'displayName': { $regex: re }},
 						    res.json(users);
 					    }
 						});
+};
+
+function messageBuilder(req){
+
+	var message = req.body;
+	message.receiver = req.profile._id;
+	message.sender = req.user._id;
+	message.date = Date.now();
+	message.read = false; 
+
+	return message;
+
+}
+
+
+exports.addReceivedMessage = function(req, res, next){
+
+	var message = messageBuilder(req);
+	console.log(message);
+
+
+
+	User.findById(req.profile._id).exec(function(err, user){
+		user.messages_received.push(message);
+		user.save(function(err) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			}else{
+				req.user = user;
+				next();
+			}
+		});
+	});
+};
+
+exports.addSentMessage = function(req, res, next){
+
+	var message = messageBuilder(req);
+	console.log(message);
+
+
+	User.findById(req.user._id).exec(function(err, user){
+		user.messages_sent.push(message);
+		user.save(function(err) {
+			if (err) {
+				return res.status(400).send({
+					message: errorHandler.getErrorMessage(err)
+				});
+			}else{
+				req.user = user;
+				next();
+			}
+		});
+	});
 };
