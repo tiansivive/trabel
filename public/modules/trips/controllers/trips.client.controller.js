@@ -92,11 +92,9 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 		};
 
 		$scope.returnToTripView = function() {
-			console.log('adas');
 			var url = 'trips/' + $scope.trip._id;
 			$location.path(url);
-			
-		}
+		};
 
 		$scope.AddMate = function () {
       var dialog = ngDialog.open({
@@ -175,15 +173,14 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 						$scope.bounds.extend(place.geometry.location);
 					$scope.lineCoords.push(place.geometry.location);
 					$scope.path.setPath($scope.lineCoords);
-					var index = $scope.trip.markers.push(marker)-1; //returns lenght
-					$scope.centerMap(index);
+					$scope.trip.markers.push(marker);
+					$scope.centerMap(marker);
 					$scope.updateTrip();
 				}
 			};
 
-			$scope.centerMap = function(index) {
+			$scope.centerMap = function(marker) {
 				var map = $scope.map.object.getGMap();
-				var marker = $scope.trip.markers[index];
 				if(marker.viewport)
 				{
 					map.fitBounds(makeViewport(marker.viewport));
@@ -246,6 +243,14 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 						obj.va.k
 					));
 			}
+
+			$scope.markers = {
+				events: {
+					click: function(marker, eventName, model, args) {
+						$scope.centerMap(model);
+					}
+				}
+			};
 
 			$scope.disqus = {
 				tripID: $stateParams.tripId,
