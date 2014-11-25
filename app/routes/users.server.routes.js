@@ -12,6 +12,7 @@ module.exports = function(app) {
 	//console.log('Users: ' + users.list);
 	// Setting up the users profile api
 	app.route('/users/me').get(users.me);
+	app.route('/users/:userId').get(users.findUser);
 	app.route('/users/all').get(users.all);
 	app.route('/users/list')
 		.get(users.list)
@@ -20,6 +21,11 @@ module.exports = function(app) {
 	app.route('/users/emails').get(users.list_by_email);
 	app.route('/users').put(users.update);
 	app.route('/users/accounts').delete(users.removeOAuthProvider);
+
+	app.route('/users/add/message/received/:userId')
+		.put(users.requiresLogin, users.addReceivedMessage, users.update);
+	app.route('/users/add/message/sent/:userId')
+		.put(users.requiresLogin, users.addSentMessage, users.update);
 
 	// Setting up the users password api
 	app.route('/users/password').post(users.changePassword);

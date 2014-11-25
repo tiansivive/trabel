@@ -21,6 +21,51 @@ var validateLocalStrategyPassword = function(password) {
 	return (this.provider !== 'local' || (password && password.length > 6));
 };
 
+
+
+
+/*
+ * Notification Schema
+ */
+var NotificationSchema = new Schema({
+});
+
+
+/*
+ * Message Schema
+ */
+var MessageSchema = new Schema({
+	
+	subject: {
+		type: String,
+		trim: true,
+		default: 'Unknown' 
+	},
+	content: {
+		type: String,
+		trim: true,
+		default: ''
+	},
+	date: {
+		type: Date,
+		default: Date.now
+	},
+	receiver: {
+		type: Schema.ObjectId,
+		ref: 'User'
+	},
+	sender: {
+		type: Schema.ObjectId,
+		ref: 'User'
+	},
+	read: {
+		type: Boolean,
+		default: false
+	}
+
+});
+
+
 /**
  * User Schema
  */
@@ -100,7 +145,24 @@ var UserSchema = new Schema({
 	},
 	verified: {
 		type: Boolean
+	},
+
+	messages_sent: {
+		type: [MessageSchema],
+		default: []
+	},
+	messages_received: {
+		type: [MessageSchema],
+		default: []
 	}
+
+	/*
+	notifications:{
+		type: NotificationSchema,
+		default: undefined
+	}
+*/
+
 });
 
 /**
@@ -133,4 +195,7 @@ UserSchema.methods.authenticate = function(password) {
 	return this.password === this.hashPassword(password);
 };
 
+
+mongoose.model('Notification', NotificationSchema);
+mongoose.model('Message', MessageSchema);
 mongoose.model('User', UserSchema);
