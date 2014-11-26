@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('users').controller('SendMessageController', ['$scope', '$http', '$stateParams',
-	function($scope, $http, $stateParams) {
+angular.module('users').controller('SendMessageController', ['$scope', '$http', '$stateParams', 'SweetAlert',
+	function($scope, $http, $stateParams, SweetAlert) {
 		
 	$scope.userID = $stateParams.userID;
 
@@ -74,18 +74,20 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
                 .success(function(data, status, headers, config){ 
                   console.log('SUCESS');
                   console.log(data);
-                  console.log('Fuck Yeah!');
-				
-                  
+                  console.log('Fuck Yeah!');			
+
+				  SweetAlert.swal("Message Sent!", "", "success");                  
                 })
                 .error(function(data, status, headers, config){
                     console.log('ERROR');
                     console.log(data);
+					SweetAlert.swal("Message Not Sent!", "", "error"); 
             });
           })
           .error(function(data, status, headers, config){
               console.log('ERROR');
               console.log(data);
+		  	  SweetAlert.swal("Message Not Sent!", "", "error"); 
       });
      
     };
