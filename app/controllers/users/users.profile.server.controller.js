@@ -31,7 +31,8 @@ exports.update = function(req, res) {
 				return res.status(400).send({
 					message: errorHandler.getErrorMessage(err)
 				});
-			} else {
+			} else if(!req.noLogin){
+
 				req.login(user, function(err) {
 					if (err) {
 						res.status(400).send(err);
@@ -196,7 +197,7 @@ exports.addReceivedMessage = function(req, res, next){
 	console.log(message);
 
 
-
+	req.noLogin = true;
 	User.findById(req.profile._id).exec(function(err, user){
 		user.messages_received.push(message);
 		user.save(function(err) {
