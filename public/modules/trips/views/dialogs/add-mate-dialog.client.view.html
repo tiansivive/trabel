@@ -7,7 +7,7 @@
   </form>
   <ul>  
     <li ng-repeat="user in users" ng-click="addMate(user._id)">
-      <a href>{{user.displayName}}</a>
+      <a href>{{user.displayName}} <{{user.email}}></a>
     </li>
   </ul>
   <button class="btn btn-default sharp" ng-click="closeThisDialog(trip)">DONE</button>

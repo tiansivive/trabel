@@ -42,13 +42,16 @@
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
-			<li ui-route="/read/messages" ng-class="{active: $uiRoute}">
-				<a href="/#!/read/messages">Read Messages</a>
+			<li ui-route="/messages/read" ng-class="{active: $uiRoute}">
+				<a href="/#!/messages/inbox">
+				<i class="glyphicon glyphicon-envelope"></i> Messages
+				</a>
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="glyphicon glyphicon-user"></i>
 					<span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">

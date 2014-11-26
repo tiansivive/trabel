@@ -6,13 +6,17 @@ angular.module('users').config(['$stateProvider',
 		// Users state routing
 		$stateProvider.
 		state('read-messages', {
-			url: '/read/messages',
+			url: '/messages/inbox',
 			templateUrl: 'modules/users/views/read-messages.client.view.html'
 		}).
 		state('send-message', {
-			url: '/send/message/:userID',
+			url: '/message/new',
 			templateUrl: 'modules/users/views/send-message.client.view.html'
 		}).
+		state('send-message-to-user', {
+			url: '/message/new/:userID',
+			templateUrl: 'modules/users/views/send-message.client.view.html'
+		}).		
 		state('profile', {
 			url: '/settings/profile',
 			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
