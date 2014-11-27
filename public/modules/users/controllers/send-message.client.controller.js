@@ -9,9 +9,9 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
 		if ($scope.userID) {
 		  $http.get('/users/' + $stateParams.userID)
 			  .success(function(data, status, headers, config){ 
-				console.log('SUCESS');
-				console.log(data);
-				$scope.receiver = data;
+  				console.log('SUCESS');
+  				console.log(data);
+  				$scope.receiver = data;
 			  })
 			  .error(function(data, status, headers, config){
 				  console.log('ERROR');
@@ -50,13 +50,13 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
     $scope.sendMessage = function(){
 		
 		if ($scope.message.receiver)
-			var userInfo = $scope.message.receiver.split("<");
+			var userInfo = $scope.message.receiver.split('<');
 			var userName = userInfo[0];
 		
 			$scope.users.forEach(function(user) {
-				if (user.displayName == userName) {
+				if (user.displayName === userName) {
 					$stateParams.userID = user._id; 
-					console.log("user:"+user._id);
+					console.log('user:' + user._id);
 				}
 			});
 		
