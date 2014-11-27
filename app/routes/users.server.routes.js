@@ -27,6 +27,9 @@ module.exports = function(app) {
 	app.route('/users/add/message/sent/:userId')
 		.put(users.requiresLogin, users.addSentMessage, users.update);
 
+	app.route('/user/messages')
+		.get(users.getMessages);
+
 	// Setting up the users password api
 	app.route('/users/password').post(users.changePassword);
 	app.route('/auth/forgot').post(users.forgot);

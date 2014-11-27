@@ -233,3 +233,21 @@ exports.addSentMessage = function(req, res, next){
 		});
 	});
 };
+
+
+exports.getMessages = function(req, res){
+
+	User.findById(req.user._id)
+			.populate('messages_sent.sender messages_sent.receiver messages_received.sender messages_received.receiver',
+								 'displayName')
+			.exec(function(err, user){
+
+				if(err){
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				}else{
+					res.jsonp(user);
+				}
+			});
+};
