@@ -1,0 +1,28 @@
+<section data-ng-controller="ViewProfileController" data-ng-init="findUser()" ng-show="user">
+<h3 class="col-md-12 text-center">{{user.displayName}}'s profile</h3><br>
+	<div class="col-xs-6 text-right"> <img src="http://www.laranjasnews.com/wp-content/uploads/2013/06/facebook-no-image1.gif" style="width:500px;height:250px"></div>
+	<div class="col-xs-6">
+		<div ng-show="user.phoneNumber">
+			<h4> Phone Number</h4>
+			{{user.phoneNumber}}
+		</div>
+		<div ng-show="user.country && user.city">
+			<h4 ng-init="noDisplay=true"> Location </h4>
+			{{user.city}}, {{user.country}}
+		</div>
+		<div ng-show="user.country && !user.city">
+			<h4> Location </h4>
+			{{user.country}}
+		</div>
+		<div ng-show="user.city && !user.country">
+			<h4> Location </h4>
+			{{user.city}}
+		</div>
+		<div><br>
+			<a class="btn btn-primary" href="/#!/message/new/{{user._id}}">
+					<i class="glyphicon glyphicon-envelope"></i>
+					Send Message
+			</a>
+		</div>
+	</div>
+</section>

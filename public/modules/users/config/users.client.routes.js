@@ -5,6 +5,10 @@ angular.module('users').config(['$stateProvider',
 	function($stateProvider) {
 		// Users state routing
 		$stateProvider.
+		state('view-profile', {
+			url: '/profile/:userID',
+			templateUrl: 'modules/users/views/view-profile.client.view.html'
+		}).
 		state('read-messages', {
 			url: '/messages/inbox',
 			templateUrl: 'modules/users/views/read-messages.client.view.html'
