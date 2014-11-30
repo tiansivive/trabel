@@ -9,6 +9,23 @@ $scope.findUser = function(){
   				console.log('SUCESS');
   				console.log(data);
   				$scope.user = data;
+			  	$scope.picture;
+			  
+			  	var found = 0;
+			  	
+			  	for(var key in $scope.user.additionalProvidersData){
+					var provider = $scope.user.additionalProvidersData[key];
+					
+					if (provider.picture) {
+						$scope.picture = provider.picture;
+						found = 1;
+						break;
+				  }
+				}
+			  
+			  	if (found == 0) {
+					$scope.picture = "/modules/users/img/default-photo.png";	
+				}
 			  })
 			  .error(function(data, status, headers, config){
 				  console.log('ERROR');
