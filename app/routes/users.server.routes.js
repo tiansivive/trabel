@@ -29,7 +29,10 @@ module.exports = function(app) {
 
 	app.route('/user/messages')
 		.get(users.getMessages);
-
+	
+	app.route('/user/message/delete/:msgID')
+		.put(users.requiresLogin, users.deleteReceivedMessage, users.update);
+	
 	// Setting up the users password api
 	app.route('/users/password').post(users.changePassword);
 	app.route('/auth/forgot').post(users.forgot);
@@ -73,4 +76,5 @@ module.exports = function(app) {
 
 	// Finish by binding the user middleware
 	app.param('userId', users.userByID);
+	app.param('msgID', users.messageByID);
 };

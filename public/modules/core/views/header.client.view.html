@@ -24,11 +24,11 @@
 			</li>
 		</ul>
 
-		<form class="navbar-form pull-right" role="search">
+		<form class="navbar-form pull-right" role="search" ng-submit="search()">
       <div class="form-group">
       	<div class="input-group">
-				  <input type="text" class="form-control" placeholder="Search" ng-model="searchInput">
-				  <span class="input-group-addon glyphicon glyphicon-search" ng-click="search()"></span>
+				  <input type="text" class="form-control" placeholder="Search Trips" ng-model="searchInput">
+				  <span class="input-group-addon glyphicon glyphicon-search" ng-click="search()" style="cursor: pointer"></span>
 				</div>
       </div>
     </form>

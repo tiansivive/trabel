@@ -234,6 +234,39 @@ exports.addSentMessage = function(req, res, next){
 	});
 };
 
+exports.messageByID = function(req, res, next, ID) {
+	
+	var index, msg; 
+	
+	for (index in req.user.messages_received) {
+		msg = req.user.messages_received[index];
+		
+		if (msg._id === ID) {
+			break;
+		}
+	}	
+	
+	console.log(ID);
+	req.middleware = {index: index};
+	next();
+}
+
+exports.deleteReceivedMessage = function(req, res, next) {
+
+	User.findById(req.user._id).exec(function(err, user){
+			user.messages_received.splice(req.middleware.index, 1);
+			user.save(function(err) {
+				if (err) {
+					return res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				}else{
+					req.user = user;
+					next();
+				}
+			});
+		});
+}
 
 exports.getMessages = function(req, res){
 

@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('users').controller('InboxController', ['$scope', 'Authentication', '$http',
-	function($scope, Authentication, $http) {
+angular.module('users').controller('InboxController', ['$scope', 'Authentication', '$http', '$location',
+	function($scope, Authentication, $http, $location) {
 		
     $scope.authentication = Authentication;
+		
     $scope.find = function(){
 
       $http.get('/user/messages')
@@ -20,6 +21,25 @@ angular.module('users').controller('InboxController', ['$scope', 'Authentication
             console.log(data);
           });
       
-    };
-	}
-]);
+    };	
+
+	$scope.reply = function (userID) {
+		var path = "/message/new/" + userID;
+  		$location.path(path);
+	};
+
+	$scope.delete = function (msgID) {
+		var path = "/user/message/delete/" + msgID;
+	
+		$http.put(path, "")
+			.success(function(data, status, headers, config){ 
+			console.log('SUCCESS');
+			console.log(data);
+			$scope.messages_received = data.messages_received;
+			})
+			.error(function(data, status, headers, config){
+            console.log('ERROR');
+            console.log(data);
+        });
+	};
+}]);
