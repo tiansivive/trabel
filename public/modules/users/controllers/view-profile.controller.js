@@ -11,21 +11,11 @@ $scope.findUser = function(){
   				$scope.user = data;
 			  	$scope.picture;
 			  
-			  	var found = 0;
-			  	
-			  	for(var key in $scope.user.additionalProvidersData){
-					var provider = $scope.user.additionalProvidersData[key];
-					
-					if (provider.picture) {
-						$scope.picture = provider.picture;
-						found = 1;
-						break;
-				  }
-				}
-			  
-			  	if (found == 0) {
+			  	if (user.picture)
+					$scope.picture = user.picture;
+			  	else
 					$scope.picture = "/modules/users/img/default-photo.png";	
-				}
+				
 			  })
 			  .error(function(data, status, headers, config){
 				  console.log('ERROR');
