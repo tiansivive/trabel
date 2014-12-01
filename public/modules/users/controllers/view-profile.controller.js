@@ -11,7 +11,7 @@ $scope.findUser = function(){
   				$scope.user = data;
 			  	$scope.picture;
 			  
-			  	if (user.picture)
+			  	if ($scope.user.picture)
 					$scope.picture = user.picture;
 			  	else
 					$scope.picture = "/modules/users/img/default-photo.png";	
