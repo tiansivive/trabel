@@ -24,7 +24,8 @@
     "ngDialog": "~0.3.2",
     "restangular": "~1.4.0",
     "disqus-here": "~0.0.3",
-    "angularjs-country-select": "*"
+    "angularjs-country-select": "*",
+    "angular-timeline": "~0.1.3"
   },
   "resolutions": {
     "angular": "~1.x"

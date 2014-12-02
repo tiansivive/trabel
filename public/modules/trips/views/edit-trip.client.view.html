@@ -17,6 +17,14 @@
         <span>Add a tripmate</span>
       </a>
     </div>
+    <div class="trip_dates">
+      <p>Starts on 
+        <span onaftersave="trip.$update()" editable-bsdate="trip.startDate" e-datepicker-popup="dd-MMMM-yyyy">{{ (trip.startDate | date:"dd/MM/yyyy") || 'empty' }}
+        </span></p>
+      <p>Ends on 
+        <span onaftersave="trip.$update()" editable-bsdate="trip.endDate" e-datepicker-popup="dd-MMMM-yyyy">{{ (trip.endDate | date:"dd/MM/yyyy") || 'empty' }}
+        </span></p>
+    </div>
   </div>
   <script type="text/ng-template" id="searchbox.tpl.html">
     <div class="form-group">
@@ -48,6 +56,10 @@
         </a>
       </p>
     </div>
+
+   <div timeline="data" 
+     timeline-options="options"
+     timeline-selection="selection"></div> 
 	<div class="pull-left">
 		<a class="btn btn-primary" data-ng-click="returnToTripView()" tooltip="Back to Trip View">
 			<i class="glyphicon glyphicon-arrow-left"></i>
