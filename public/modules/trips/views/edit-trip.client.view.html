@@ -39,6 +39,17 @@
           <a href ng-click="centerMap(trip.markers[$index])">
             <span>{{marker.place_name}}</span>
           </a>
+          <p>From 
+            <span onaftersave="trip.$update()" 
+                  editable-bsdate="marker.start" 
+                  e-datepicker-popup="dd-MMMM-yyyy">{{ (marker.start | date:"dd/MM/yyyy") || 'empty' }}
+            </span>
+            to 
+            <span onaftersave="trip.$update()" 
+                  editable-bsdate="marker.end" 
+                  e-datepicker-popup="dd-MMMM-yyyy">{{ (marker.end | date:"dd/MM/yyyy") || 'empty' }}
+            </span>
+          </p>
           <a href ng-click="deleteMarker($index)" ng-class="{disabled: isLoading}">
             <span class="markerdelete glyphicon glyphicon-remove"></span>
           </a>

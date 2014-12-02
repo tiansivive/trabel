@@ -32,6 +32,7 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 
 
+
 		// Create new Trip
 		$scope.create = function() {
 			// Create new Trip object
@@ -151,6 +152,8 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 				var marker = {
 					place_name: place.name,
 					place_id: place.place_id,
+					start: Date.now(),
+					end: Date.now(),
 					location: {
 						latitude: place.geometry.location.lat(),
 						longitude: place.geometry.location.lng()
