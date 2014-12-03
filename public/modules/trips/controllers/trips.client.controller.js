@@ -142,6 +142,16 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 
 		};
 
+		$scope.cloneTrip = function(){
+			var url = '/trips/' + $scope.trip._id + '/clone';
+			$http.post(url, '').success(
+				function(data, status, headers, config){
+					$location.path('trips/'+data._id);
+			}).error(
+				function(data, status, headers, config){
+					console.log('ERROR:', data.message);
+			});
+		};
 
 		gmap.then(function(maps) {
 

@@ -21,7 +21,7 @@ var mongoose = require('mongoose'),
 exports.create = function(req, res) {
 	var trip = new Trip(req.body);
 	trip.user = req.user;
-	
+
 	trip.save(function(err) {
 		if (err) {
 			return res.status(400).send({
@@ -86,7 +86,7 @@ exports.list = function(req, res) {
 		[
 			{'user': req.user._id},
 			{'privacy': 1},
-			{'members.user': req.user._id} 
+			{'members.user': req.user._id}
 		]}).sort('-created').populate('user', 'displayName').exec(function(err, trips) {
 			if (err) {
 				return res.status(400).send({
@@ -118,10 +118,10 @@ exports.search = function(req, res){
 					res.status(400).send({
 						message: errorHandler.getErrorMessage(err)
 					});
-				}else{			    
+				}else{
 				  res.json(trips);
-				} 
-			});   
+				}
+			});
 };
 
 /**
@@ -224,12 +224,31 @@ exports.declineInvitation = function(req, res){
 
 };
 
+exports.clone = function(req, res){
+	var newTrip = {
+		markers: req.trip.markers,
+		name: 'Copy of '+req.trip.name
+	};
+	var trip = new Trip(newTrip);
+	trip.user = req.user;
+
+	trip.save(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(trip);
+		}
+	});
+};
+
 
 /**
  * Trip middleware
  */
-exports.tripByID = function(req, res, next, id) { 
-	
+exports.tripByID = function(req, res, next, id) {
+
 	console.log('STEP - tripByID');
 	Trip.findById(id).populate('user members.user', 'displayName').exec(function(err, trip) {
 		if (err) return next(err);
@@ -240,7 +259,7 @@ exports.tripByID = function(req, res, next, id) {
 	});
 };
 
-exports.userByID = function(req, res, next, id) { 
+exports.userByID = function(req, res, next, id) {
 	console.log('STEP - userByID');
 
 	User.findById(id).exec(function(err, usr){
@@ -250,7 +269,7 @@ exports.userByID = function(req, res, next, id) {
 };
 
 exports.addTripMate = function(req, res){
-	
+
 	console.log('STEP - addTripMate');
 	var member = {
 		user: req.resolvedUser._id,
@@ -272,7 +291,7 @@ exports.addTripMate = function(req, res){
 		}
 	});
 
-	
+
 };
 
 exports.removeMate =  function(req, res, next){
@@ -309,14 +328,13 @@ exports.hasAuthorization = function(req, res, next) {
 			console.log(req.user.id);
 			if(member.user.id === req.user.id){
 				authorized = true;
-			} 
+			}
 		});
 
-		if(!authorized){ 
+		if(!authorized){
 			console.log('not authorized');
 			return res.status(403).send('User is not authorized');
 		}
 	}
 	next();
 };
-

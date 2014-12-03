@@ -17,21 +17,28 @@
 		</p>
 	</div>
 
-	<div class="pull-right" data-ng-show="hasPermission()">
-		<a class="btn btn-primary" data-ng-click="leaveTrip();" data-ng-show="isTripMember()" tooltip="Leave this trip">
-			<i class="glyphicon glyphicon-remove"></i>
-		</a>
-		<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit" tooltip="Edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();" tooltip="Delete">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
-	<div class="pull-right" data-ng-hide="hasPermission()">
-		<a class="btn btn-primary" data-ng-click="requestToJoin();" tooltip="Request to join trip">
-			<i class="glyphicon glyphicon-upload"></i>
-		</a>
+	<div class="pull-right">
+		<span data-ng-show="hasPermission()">
+			<a class="btn btn-primary" data-ng-click="leaveTrip();" data-ng-show="isTripMember()" tooltip="Leave this trip">
+				<i class="glyphicon glyphicon-remove"></i>
+			</a>
+			<a class="btn btn-primary" href="/#!/trips/{{trip._id}}/edit" tooltip="Edit">
+				<i class="glyphicon glyphicon-edit"></i>
+			</a>
+			<a class="btn btn-primary" data-ng-click="remove();" tooltip="Delete">
+				<i class="glyphicon glyphicon-trash"></i>
+			</a>
+		</span>
+		<span data-ng-show="hasPermission()===false">
+			<a class="btn btn-primary" data-ng-click="requestToJoin();" tooltip="Request to join trip">
+				<i class="glyphicon glyphicon-upload"></i>
+			</a>
+		</span>
+		<span>
+			<a class="btn btn-primary" data-ng-click="cloneTrip();" tooltip="Clone this trip">
+				<i class="glyphicon glyphicon-file"></i>
+			</a>
+		</span>
 	</div>
 
 	<small>

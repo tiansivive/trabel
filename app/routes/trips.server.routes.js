@@ -10,7 +10,7 @@ module.exports = function(app) {
 		.post(users.requiresLogin, trips.create);
 
 	app.route('/trips/search')
-		.post(trips.search);	
+		.post(trips.search);
 
 	app.route('/trips/:tripId')
 		.get(trips.read)
@@ -21,6 +21,8 @@ module.exports = function(app) {
 		.put(users.requiresLogin, trips.hasAuthorization, trips.removeMate, trips.update);
 	app.route('/trips/:tripId/request/join')
 		.post(users.requiresLogin, trips.requestJoin);
+	app.route('/trips/:tripId/clone/')
+		.post(users.requiresLogin, trips.clone);
 	app.route('/trips/:tripId/invite/mate/:userId')
 		.post(users.requiresLogin, trips.hasAuthorization, trips.inviteMate);
 
@@ -33,5 +35,3 @@ module.exports = function(app) {
 	app.param('tripId', trips.tripByID);
 
 };
-
-
