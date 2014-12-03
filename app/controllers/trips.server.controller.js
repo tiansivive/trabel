@@ -110,6 +110,7 @@ exports.search = function(req, res){
 	//var ownerName = new RegExp(req.body.owner.name, 'i');
 	//var ownerEmail = new RegExp(req.body.owner.email, 'i');
 
+	var users_temp;
 	console.log('querying DB'); //TODO general search that finds users and trips by name, email or members based on 'pattern regex'
 	Trip.find({'name' : {$regex : regex}})
 			.populate('user members.user', 'displayName email')
@@ -119,9 +120,28 @@ exports.search = function(req, res){
 						message: errorHandler.getErrorMessage(err)
 					});
 				}else{			    
-				  res.json(trips);
+					if (typeof users_temp != 'undefined')
+						var result = users_temp.concat(trips);
+					else
+						var result = trips;
+					
+					res.json(result);
+					//console.log("result:", result);
 				} 
 			});   
+	
+	User.find({'displayName' : {$regex : regex}})
+			.populate('user', 'displayName')
+			.exec(function(err, users){
+				if(err){
+					res.status(400).send({
+						message: errorHandler.getErrorMessage(err)
+					});
+				}else{		
+					users_temp = users;
+					console.log("users feito");				
+				} 
+			}); 
 };
 
 /**

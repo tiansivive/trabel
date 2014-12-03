@@ -24,12 +24,12 @@ angular.module('users').controller('InboxController', ['$scope', 'Authentication
     };	
 
 	$scope.reply = function (userID) {
-		var path = "/message/new/" + userID;
+		var path = '/message/new/' + userID;
   		$location.path(path);
 	};
 
 	$scope.delete = function (msgID) {
-		var path = "/user/message/delete/" + msgID;
+		var path = '/user/message/delete/' + msgID;
 	
 		$http.put(path, "")
 			.success(function(data, status, headers, config){ 
