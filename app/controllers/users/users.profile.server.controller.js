@@ -58,7 +58,7 @@ exports.me = function(req, res) {
 
 
 /*
- * Find one user 
+ * Find one user
  */
 exports.findUser = function(req, res){
 	res.jsonp(req.profile);
@@ -184,7 +184,7 @@ function messageBuilder(req){
 	message.receiver = req.profile._id;
 	message.sender = req.user._id;
 	message.date = Date.now();
-	message.read = false; 
+	message.read = false;
 
 	return message;
 
@@ -235,21 +235,21 @@ exports.addSentMessage = function(req, res, next){
 };
 
 exports.messageByID = function(req, res, next, ID) {
-	
-	var index, msg; 
-	
+
+	var index, msg;
+
 	for (index in req.user.messages_received) {
 		msg = req.user.messages_received[index];
-		
+
 		if (msg._id === ID) {
 			break;
 		}
-	}	
-	
+	}
+
 	console.log(ID);
 	req.middleware = {index: index};
 	next();
-}
+};
 
 exports.deleteReceivedMessage = function(req, res, next) {
 
@@ -266,7 +266,7 @@ exports.deleteReceivedMessage = function(req, res, next) {
 				}
 			});
 		});
-}
+};
 
 exports.getMessages = function(req, res){
 

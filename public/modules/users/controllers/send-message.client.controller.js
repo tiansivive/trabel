@@ -2,13 +2,13 @@
 
 angular.module('users').controller('SendMessageController', ['$scope', '$http', '$stateParams', 'SweetAlert',
 	function($scope, $http, $stateParams, SweetAlert) {
-		
+
 	$scope.userID = $stateParams.userID;
 
     $scope.findOne = function(){
 		if ($scope.userID) {
 		  $http.get('/users/' + $stateParams.userID)
-			  .success(function(data, status, headers, config){ 
+			  .success(function(data, status, headers, config){
   				console.log('SUCESS');
   				console.log(data);
   				$scope.receiver = data;
@@ -19,7 +19,7 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
 			  });
 		}
 	};
-		
+
 	function sendRequest(str){
       console.log('Sending request');
 
@@ -29,7 +29,7 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
         members: [],
       };
       $http.post('/users/list', requestData)
-           .success(function(data, status, headers, config){      
+           .success(function(data, status, headers, config){
               $scope.users = data;
 		  console.log(data);
            })
@@ -48,18 +48,17 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
     });
 
     $scope.sendMessage = function(){
-		
+
 		if ($scope.message.receiver)
-			var userInfo = $scope.message.receiver.split('<');
-			var userName = userInfo[0];
-		
+			var userInfo = $scope.message.receiver.split('<'), userName = userInfo[0];
+
 			$scope.users.forEach(function(user) {
 				if (user.displayName === userName) {
-					$stateParams.userID = user._id; 
+					$stateParams.userID = user._id;
 					console.log('user:' + user._id);
 				}
 			});
-		
+
       var requestData = {
         subject: $scope.message.subject,
         content: $scope.message.content,
@@ -67,29 +66,29 @@ angular.module('users').controller('SendMessageController', ['$scope', '$http', 
 
       console.log($stateParams.userID);
       $http.put('/users/add/message/received/' + $stateParams.userID, requestData)
-          .success(function(data, status, headers, config){ 
+          .success(function(data, status, headers, config){
             console.log('SUCESS');
             console.log(data);
             $http.put('/users/add/message/sent/' + $stateParams.userID, requestData) //make it more semantic, the ID in the URL is not the sender's, but rather, the receiver's
-                .success(function(data, status, headers, config){ 
+                .success(function(data, status, headers, config){
                   console.log('SUCESS');
                   console.log(data);
-                  console.log('Fuck Yeah!');			
+                  console.log('Fuck Yeah!');
 
-				  SweetAlert.swal("Message Sent!", "", "success");                  
+				  SweetAlert.swal('Message Sent!', '', 'success');
                 })
                 .error(function(data, status, headers, config){
                     console.log('ERROR');
                     console.log(data);
-					SweetAlert.swal("Message Not Sent!", "", "error"); 
+					SweetAlert.swal('Message Not Sent!', '', 'error');
             });
           })
           .error(function(data, status, headers, config){
               console.log('ERROR');
               console.log(data);
-		  	  SweetAlert.swal("Message Not Sent!", "", "error"); 
+		  	  SweetAlert.swal('Message Not Sent!', '', 'error');
       });
-     
+
     };
 	}
 ]);
