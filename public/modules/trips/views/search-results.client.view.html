@@ -1,8 +1,10 @@
 <section data-ng-controller="TripSearchResultsController">
-	 <div class="page-header">
-        <h1>Trip Search Results</h1>
+	 <div class="page-header" data-ng-init="arrangeResults()">
+        <h1>Search Results</h1>
     </div>
-    <div class="list-group">
+	
+	<h3> Trips </h3>
+    <div class="list-group">		
         <a data-ng-repeat="trip in trips" data-ng-href="#!/trips/{{trip._id}}" class="list-group-item">
           <small class="list-group-item-text">
             <span data-ng-bind="trip.name"></span><br>
@@ -14,4 +16,17 @@
     <div class="alert alert-warning text-center" data-ng-hide="trips.length">
       No Trips found!
     </div>
+
+	<br><h3> Users </h3>
+	<div class="list-group ">		
+        <a data-ng-repeat="user in users" data-ng-href="#!/profile/{{user._id}}" class="list-group-item">
+          <small class="list-group-item-text">
+            <span data-ng-bind="user.displayName"></span>            
+          </small>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="users.length">
+      No Users found!
+    </div>
+	
 </section>
