@@ -22,6 +22,7 @@ module.exports = function() {
 			var providerData = profile._json;
 			providerData.accessToken = accessToken;
 			providerData.refreshToken = refreshToken;
+			providerData.picture = 'https://graph.facebook.com/'+profile.id+'/picture?type=large';
 
 			// Create the user OAuth profile
 			var providerUserProfile = {

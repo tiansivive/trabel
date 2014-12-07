@@ -39,7 +39,11 @@
 			<label for="picture">Profile Picture</label><br>
 			<img ng-show="{{user.picture}}" src={{user.picture}} style="max-width: 500px"><br>
 			<input type="text" id="picture" name="picture" class="form-control" data-ng-model="user.picture" placeholder="Picture URL" tooltip="Picture URL" tooltip-placement="bottom">
-		</div>		
+			<div class="use-provider-pictures">
+				<a style="margin-right:5px;" ng-repeat="provider in providers" class="btn btn-social-icon btn-{{provider['name']}}" ng-click="user.picture = provider['picture']" tooltip="Use {{provider['name']}} picture" tooltip-placement="bottom">
+			    <i class="fa fa-{{provider['name']}}"></i>
+			  </a>
+			</div>
 		</fieldset>
 		</form>
 	</div>
