@@ -14,7 +14,10 @@ module.exports = {
 		lib: {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+
+				//'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+				'public/css/style_v2.css',
+
 				'public/lib/famous-angular/dist/famous-angular.css',
 				'public/lib/angular-xeditable/dist/css/xeditable.css',
 				'public/lib/slippry/dist/slippry.min.css',

@@ -1,73 +1,103 @@
-<div class="container" data-ng-controller="HeaderController">
-	<div class="navbar-header">
-		<button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a href="/#!/" class="navbar-brand">Trabel</a>
-	</div>
-	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
-		<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">
-			<li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" class="{{item.menuItemClass}}" ng-class="{active: ($uiRoute)}" dropdown="item.menuItemType === 'dropdown'">
-				<a ng-switch-when="dropdown" class="dropdown-toggle">
-					<span data-ng-bind="item.title"></span>
-					<b class="caret"></b>
-				</a>
-				<ul ng-switch-when="dropdown" class="dropdown-menu">
-					<li data-ng-repeat="subitem in item.items | orderBy: 'position'" data-ng-if="subitem.shouldRender(authentication.user);" ui-route="{{subitem.uiRoute}}" ng-class="{active: $uiRoute}">
-						<a href="/#!/{{subitem.link}}" data-ng-bind="subitem.title"></a>
-					</li>
-				</ul>
-				<a ng-switch-default href="/#!/{{item.link}}" data-ng-bind="item.title"></a>
-			</li>
-		</ul>
+<div class="container-fluid expanded-panel" data-ng-controller="HeaderController">
+    <div class="row">
+        <div id="logo" class="col-xs-12 col-sm-2">
+            <a href="/#!/">Trabel</a>
+        </div>
+        <div id="top-panel" class="col-xs-12 col-sm-10">
+            <div class="row">
+                <div class="col-xs-8 col-sm-4">
+                    <form role="search" ng-submit="search()">
+                        <div id="search">
+                            <input type="text" placeholder="Search Trips and Users" ng-model="searchInput">
+                            <i class="fa fa-search" ng-click="search()"></i>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-4 col-sm-8 top-panel-right">
 
-		<form class="navbar-form pull-right" role="search" ng-submit="search()">
-      <div class="form-group">
-      	<div class="input-group">
-				  <input type="text" class="form-control" placeholder="Search Trips and Users" ng-model="searchInput">
-				  <span class="input-group-addon glyphicon glyphicon-search" ng-click="search()" style="cursor: pointer"></span>
-				</div>
-      </div>
-    </form>
-		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
-			<li ui-route="/signup" ng-class="{active: $uiRoute}">
-				<a href="/#!/signup">Sign Up</a>
-			</li>
-			<li class="divider-vertical"></li>
-			<li ui-route="/signin" ng-class="{active: $uiRoute}">
-				<a href="/#!/signin">Sign In</a>
-			</li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right" data-ng-show="authentication.user">
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<i class="glyphicon glyphicon-user"></i>
-					<span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu">
-					<li>
-						<a href="/#!/settings/profile">Edit Profile</a>
-					</li>
-					<li>
-						<a href="/#!/settings/accounts">Manage Social Accounts</a>
-					</li>
-					<li data-ng-show="authentication.user.provider === 'local'">
-						<a href="/#!/settings/password">Change Password</a>
-					</li>
-					<li class="divider"></li>
-					<li>
-						<a href="/auth/signout">Signout</a>
-					</li>
-				</ul>
-			</li>
-			<li ui-route="/messages/read" ng-class="{active: $uiRoute}">
-				<a href="/#!/messages/inbox">
-				<i class="glyphicon glyphicon-envelope"></i> Messages
-				</a>
-			</li>
-		</ul>
-	</nav>
+                    <ul class="nav navbar-nav pull-right panel-menu">
+                        <li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" class="{{item.menuItemClass}}" ng-class="{active: ($uiRoute)}" dropdown="item.menuItemType === 'dropdown'"  data-ng-show="authentication.user">
+                            <a ng-switch-when="dropdown" class="dropdown-toggle">
+                                <span data-ng-bind="item.title"></span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul ng-switch-when="dropdown" class="dropdown-menu">
+                                <li data-ng-repeat="subitem in item.items | orderBy: 'position'" data-ng-if="subitem.shouldRender(authentication.user);" ui-route="{{subitem.uiRoute}}" ng-class="{active: $uiRoute}">
+                                    <a href="/#!/{{subitem.link}}" data-ng-bind="subitem.title"></a>
+                                </li>
+                            </ul>
+                            <a ng-switch-default href="/#!/{{item.link}}" data-ng-bind="item.title"></a>
+                        </li>
+
+                        <li class="dropdown" data-ng-show="authentication.user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span data-ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/#!/settings/profile">Edit Profile</a>
+                                </li>
+                                <li>
+                                    <a href="/#!/settings/accounts">Manage Social Accounts</a>
+                                </li>
+                                <li data-ng-show="authentication.user.provider === 'local'">
+                                    <a href="/#!/settings/password">Change Password</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="/auth/signout">Signout</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li ui-route="/messages/read" ng-class="{active: $uiRoute}" class="hidden-xs"
+                            data-ng-show="authentication.user">
+                            <a href="/#!/messages/inbox">
+                                <i class="glyphicon glyphicon-envelope"></i> Messages
+                            </a>
+                        </li>
+
+                        <li ui-route="/signup" ng-class="{active: $uiRoute}" data-ng-hide="authentication.user">
+                            <a href="/#!/signup">Sign Up</a>
+                        </li>
+                        <li class="divider-vertical" data-ng-hide="authentication.user"></li>
+                        <li ui-route="/signin" ng-class="{active: $uiRoute}" data-ng-hide="authentication.user">
+                            <a href="/#!/signin">Sign In</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+        <ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">
+            <li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" class="{{item.menuItemClass}}" ng-class="{active: ($uiRoute)}" dropdown="item.menuItemType === 'dropdown'">
+                <a ng-switch-when="dropdown" class="dropdown-toggle">
+                    <span data-ng-bind="item.title"></span>
+                    <b class="caret"></b>
+                </a>
+                <ul ng-switch-when="dropdown" class="dropdown-menu">
+                    <li data-ng-repeat="subitem in item.items | orderBy: 'position'" data-ng-if="subitem.shouldRender(authentication.user);" ui-route="{{subitem.uiRoute}}" ng-class="{active: $uiRoute}">
+                        <a href="/#!/{{subitem.link}}" data-ng-bind="subitem.title"></a>
+                    </li>
+                </ul>
+                <a ng-switch-default href="/#!/{{item.link}}" data-ng-bind="item.title"></a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">
+            <li ui-route="/signup" ng-class="{active: $uiRoute}">
+                <a href="/#!/signup">Sign Up</a>
+            </li>
+            <li class="divider-vertical"></li>
+            <li ui-route="/signin" ng-class="{active: $uiRoute}">
+                <a href="/#!/signin">Sign In</a>
+            </li>
+        </ul>
+
+    </nav>-->
 </div>
