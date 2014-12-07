@@ -153,6 +153,11 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			});
 		};
 
+		$scope.disqus = {
+			tripID: $stateParams.tripId,
+			url: $location.absUrl()
+		};
+
 		gmap.then(function(maps) {
 
 			$scope.searchbox.events.places_changed = function(box, eventName, args){
@@ -260,11 +265,6 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 						$scope.centerMap(model);
 					}
 				}
-			};
-
-			$scope.disqus = {
-				tripID: $stateParams.tripId,
-				url: $location.absUrl()
 			};
 
 			$scope.init = function() {
