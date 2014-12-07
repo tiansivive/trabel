@@ -316,6 +316,10 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 				return permission;
 			};
 
+			$scope.isOwner = function() {
+				return $scope.authentication.user._id === $scope.trip.user._id;
+			};
+
 			$scope.isTripMember = function(){
 				var isMember = false;
 				$scope.trip.members.forEach(function(member){
