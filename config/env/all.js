@@ -24,7 +24,8 @@ module.exports = {
 				'public/lib/ngAnimate/css/ng-animation.css',
 				'public/lib/sweetalert/lib/sweet-alert.css',
 				'public/lib/ngDialog/css/ngDialog.css',
-				'public/lib/ngDialog/css/ngDialog-theme-plain.css'
+				'public/lib/ngDialog/css/ngDialog-theme-plain.css',
+				'public/lib/bootstrap-social/bootstrap-social.css'
 			],
 			js: [
 				'public/lib/lodash/dist/lodash.underscore.js',

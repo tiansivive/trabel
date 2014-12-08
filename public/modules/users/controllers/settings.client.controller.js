@@ -7,7 +7,7 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 		// If user is not signed in then redirect back home
 		if (!$scope.user) $location.path('/');
 
-		// Check if there are additional accounts 
+		// Check if there are additional accounts
 		$scope.hasConnectedAdditionalSocialAccounts = function(provider) {
 			for (var i in $scope.user.additionalProvidersData) {
 				return true;
@@ -43,7 +43,7 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 			if (isValid){
 				$scope.success = $scope.error = null;
 				var user = new Users($scope.user);
-	
+
 				user.$update(function(response) {
 					$scope.success = true;
 					Authentication.user = response;
@@ -67,5 +67,27 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 				$scope.error = response.message;
 			});
 		};
+
+		function getProvidersPictureList() {
+			var providers = [];
+			if($scope.user.providerData)
+				providers.push(getPicture($scope.user.providerData));
+			for(var providerData in $scope.user.additionalProvidersData) {
+				providers.push(getPicture(providerData));
+			}
+			return providers;
+		}
+
+		function getPicture(provider) {
+			var picture = $scope.user.additionalProvidersData[provider].picture;
+			if(picture!==undefined) {
+				if(provider==='google')
+					return {'name': 'google-plus', 'picture': picture};
+				else
+					return {'name': provider, 'picture': picture};
+			}
+		}
+
+		$scope.providers = getProvidersPictureList();
 	}
 ]);
