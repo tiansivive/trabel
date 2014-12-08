@@ -48,11 +48,11 @@
 
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar"></header>
-	<section class="content">
-		<section class="container">
+	<div id="main" class="container-fluid" style="min-height: 895px;">
+		<div class="row">
 			{% block content %}{% endblock %}
-		</section>
-	</section>
+		</div>
+	</div>
 
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
