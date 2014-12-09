@@ -6,7 +6,7 @@
                 <a href>
                     <span class="hidden-xs" >{{marker.place_name}}</span>
                     <span  ng-click="deleteMarker($index)" ng-class="{disabled: isLoading}" class="markerdelete glyphicon glyphicon-remove"></span>
-                   
+
                 </a>
             </li>
 
@@ -23,9 +23,9 @@
         <div class="row">
             <div id="breadcrumb" class="col-xs-12" style="margin-bottom: 0px;">
                 <ol class="breadcrumb pull-left">
-                    <li><a class="editable" onaftersave="trip.$update()" editable-text="trip.name" tooltip="Click to change name">{{trip.name}}</a></li>
+                    <li><a class="editable" ng-class="{disabled: isLoading}" onaftersave="trip.$update()" editable-text="trip.name" tooltip="Click to change name" tooltip-placement="right">{{trip.name}}</a></li>
                 </ol>
-                <div id="social" class="pull-right" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}" tooltip="Click to change Privacy" tooltip-placement="right">
+                <div id="social" class="pull-right privacyToggle" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}" tooltip="Click to change Privacy" tooltip-placement="left">
                     <a ng-switch-when="1">Public Trip</a>
                     <a ng-switch-when="0">Private Trip</a>
 
@@ -102,10 +102,10 @@
       </a>
     </div>
     <div class="trip_dates">
-      <p>Starts on 
+      <p>Starts on
         <span onaftersave="trip.$update()" editable-bsdate="trip.startDate" e-datepicker-popup="dd-MMMM-yyyy">{{ (trip.startDate | date:"dd/MM/yyyy") || 'empty' }}
         </span></p>
-      <p>Ends on 
+      <p>Ends on
         <span onaftersave="trip.$update()" editable-bsdate="trip.endDate" e-datepicker-popup="dd-MMMM-yyyy">{{ (trip.endDate | date:"dd/MM/yyyy") || 'empty' }}
         </span></p>
     </div>
@@ -126,14 +126,14 @@
           <a href ng-click="centerMap(trip.markers[$index])">
             <span>{{marker.place_name}}</span>
           </a>
-          <p>From 
-            <span onaftersave="trip.$update()" 
-                  editable-bsdate="marker.start" 
+          <p>From
+            <span onaftersave="trip.$update()"
+                  editable-bsdate="marker.start"
                   e-datepicker-popup="dd-MMMM-yyyy">{{ (marker.start | date:"dd/MM/yyyy") || 'empty' }}
             </span>
-            to 
-            <span onaftersave="trip.$update()" 
-                  editable-bsdate="marker.end" 
+            to
+            <span onaftersave="trip.$update()"
+                  editable-bsdate="marker.end"
                   e-datepicker-popup="dd-MMMM-yyyy">{{ (marker.end | date:"dd/MM/yyyy") || 'empty' }}
             </span>
           </p>
@@ -160,8 +160,8 @@
 			<i class="glyphicon glyphicon-arrow-left"></i>
 		</a>
 	</div>
-   <div timeline="timeline_data" 
+   <div timeline="timeline_data"
      timeline-options="timeline_options"
-     timeline-selection="timeline_selection"></div> 
+     timeline-selection="timeline_selection"></div>
   </div>
 </section> -->

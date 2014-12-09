@@ -71,20 +71,23 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 		function getProvidersPictureList() {
 			var providers = [];
 			if($scope.user.providerData)
-				providers.push(getPicture($scope.user.providerData));
-			for(var providerData in $scope.user.additionalProvidersData) {
-				providers.push(getPicture(providerData));
+				providers.push(getPicture($scope.user.provider,$scope.user.providerData));
+			if($scope.user.additionalProvidersData) {
+				for(var providerName in $scope.user.additionalProvidersData) {
+					var providerData = $scope.user.additionalProvidersData[providerName];
+					providers.push(getPicture(providerName,providerData));
+				}
 			}
 			return providers;
 		}
 
-		function getPicture(provider) {
-			var picture = $scope.user.additionalProvidersData[provider].picture;
+		function getPicture(providerName, providerData) {
+			var picture = providerData.picture;
 			if(picture!==undefined) {
-				if(provider==='google')
+				if(providerName==='google')
 					return {'name': 'google-plus', 'picture': picture};
 				else
-					return {'name': provider, 'picture': picture};
+					return {'name': providerName, 'picture': picture};
 			}
 		}
 
