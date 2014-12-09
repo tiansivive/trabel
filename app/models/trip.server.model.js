@@ -51,6 +51,15 @@ var TripSchema = new Schema({
 	},
 	markers: {
 		type: Array
+	},
+
+	startDate: {
+		type: Date,
+		default: Date.now
+	},
+	endDate: {
+		type: Date,
+		default: Date.now //create some function that adds say 10 years to current date
 	}
 });
 

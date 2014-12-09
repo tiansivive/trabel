@@ -100,6 +100,14 @@
         <span>Add a tripmate</span>
       </a>
     </div>
+    <div class="trip_dates">
+      <p>Starts on 
+        <span onaftersave="trip.$update()" editable-bsdate="trip.startDate" e-datepicker-popup="dd-MMMM-yyyy">{{ (trip.startDate | date:"dd/MM/yyyy") || 'empty' }}
+        </span></p>
+      <p>Ends on 
+        <span onaftersave="trip.$update()" editable-bsdate="trip.endDate" e-datepicker-popup="dd-MMMM-yyyy">{{ (trip.endDate | date:"dd/MM/yyyy") || 'empty' }}
+        </span></p>
+    </div>
   </div>
   <script type="text/ng-template" id="searchbox.tpl.html">
     <div class="form-group">
@@ -107,7 +115,34 @@
     </div>
   </script>
   <div class="trip-container">
+<<<<<<< HEAD
 
+=======
+    <div class="col-md-3 markers-list">
+      <h2 ng-show="trip.markers.length===0" class="marker-placeholder text-muted">No markers yet</h2>
+      <div ui-sortable="sortableOptions" ng-model="trip.markers">
+        <div class="markeritem" ng-repeat="marker in trip.markers">
+          <a href ng-click="centerMap(trip.markers[$index])">
+            <span>{{marker.place_name}}</span>
+          </a>
+          <p>From 
+            <span onaftersave="trip.$update()" 
+                  editable-bsdate="marker.start" 
+                  e-datepicker-popup="dd-MMMM-yyyy">{{ (marker.start | date:"dd/MM/yyyy") || 'empty' }}
+            </span>
+            to 
+            <span onaftersave="trip.$update()" 
+                  editable-bsdate="marker.end" 
+                  e-datepicker-popup="dd-MMMM-yyyy">{{ (marker.end | date:"dd/MM/yyyy") || 'empty' }}
+            </span>
+          </p>
+          <a href ng-click="deleteMarker($index)" ng-class="{disabled: isLoading}">
+            <span class="markerdelete glyphicon glyphicon-remove"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+>>>>>>> US008
     <div class="col-md-9">
       <ui-gmap-google-map center="map.center" zoom="map.zoom" events="map.events" control="map.object">
         <ui-gmap-search-box template="searchbox.template" position="searchbox.position" events="searchbox.events"/>
@@ -124,5 +159,8 @@
 			<i class="glyphicon glyphicon-arrow-left"></i>
 		</a>
 	</div>
+   <div timeline="timeline_data" 
+     timeline-options="timeline_options"
+     timeline-selection="timeline_selection"></div> 
   </div>
 </section> -->

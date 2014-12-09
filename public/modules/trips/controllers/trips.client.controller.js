@@ -29,6 +29,25 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			events: {}
 		};
 
+		$scope.timeline_selection = undefined;
+		$scope.timeline_data = [];
+		$scope.timeline_options = {
+		  'width':  '100%',
+		  'editable': true,
+		  'minHeight': '50px'
+		};
+
+
+		function addCurrentMarkersToTimeline(){
+			$scope.trip.markers.forEach(function(marker){
+				var tl_data = {
+					'start': marker.start,
+					'end': marker.end,
+					'content': marker.place_name
+				};
+				$scope.timeline_data.push(tl_data);
+			});
+		}
 
 
 
@@ -166,6 +185,8 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 				var marker = {
 					place_name: place.name,
 					place_id: place.place_id,
+					start: Date.now(),
+					end: Date.now(),
 					location: {
 						latitude: place.geometry.location.lat(),
 						longitude: place.geometry.location.lng()
@@ -190,6 +211,7 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 					$scope.path.setPath($scope.lineCoords);
 					$scope.trip.markers.push(marker);
 					$scope.centerMap(marker);
+					addCurrentMarkersToTimeline(); //better way maybe?
 					$scope.updateTrip();
 				}
 			};
@@ -268,6 +290,12 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
 			};
 
 			$scope.init = function() {
+
+				addCurrentMarkersToTimeline();
+				$scope.timeline_options.start = $scope.trip.startDate;
+				$scope.timeline_options.end = $scope.trip.endDate;
+				console.log($scope.timeline_options);		
+
 				var map = $scope.map.object.getGMap();
 				$scope.bounds = new maps.LatLngBounds();
 				$scope.lineCoords = [];

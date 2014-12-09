@@ -25,7 +25,8 @@ module.exports = {
 				'public/lib/sweetalert/lib/sweet-alert.css',
 				'public/lib/ngDialog/css/ngDialog.css',
 				'public/lib/ngDialog/css/ngDialog-theme-plain.css',
-				'public/lib/bootstrap-social/bootstrap-social.css'
+				'public/lib/bootstrap-social/bootstrap-social.css',
+				'public/lib/angular-timeline/links_timeline/timeline.css'
 			],
 			js: [
 				'public/lib/lodash/dist/lodash.underscore.js',
@@ -54,7 +55,8 @@ module.exports = {
 				'public/lib/angular-sweetalert/SweetAlert.js',
 				'public/lib/ngDialog/js/ngDialog.js',
 				'public/lib/disqus-here/src/disqus-here.js',
-				'public/lib/angularjs-country-select/angular.country-select.js'
+				'public/lib/angularjs-country-select/angular.country-select.js',
+				'public/lib/angular-timeline/links_timeline/timeline.js'
 				//'public/lib/angular-foundation/mm-foundation-tpls-VERSION.js',
 
 
