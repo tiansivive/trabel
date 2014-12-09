@@ -13,6 +13,7 @@ module.exports = {
 	assets: {
 		lib: {
 			css: [
+                'http://fonts.googleapis.com/css?family=Righteous',
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 
 				//'public/lib/bootstrap/dist/css/bootstrap-theme.css',
