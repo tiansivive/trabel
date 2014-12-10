@@ -8,3 +8,4 @@ app/tests/coverage/
 .bower-*/
 .idea/
 meanjs/public/lib/
+.brackets.json
