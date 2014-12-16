@@ -1,0 +1,68 @@
+<!--<script>
+$(document).ready(function() {
+		//$('.hide').hide();
+
+		$('.slide').click(function(e){
+		//	alert("fdxxxx");
+			console.log("aqui",$(this).next('hide'));
+			$(this).next('div').slideToggle();
+			e.preventDefault();
+		});
+	});
+</script>-->
+
+<div data-ng-controller="InboxController" data-ng-init="find()">
+
+    <div id="content" class="col-xs-12 col-sm-12">
+
+        <div class="preloader" style="display: none;">
+            <img src="img/devoops_getdata.gif" class="devoops-getdata" alt="preloader">
+        </div>
+        <div id="ajax-content">
+            <div class="row">
+                <div id="breadcrumb" class="col-xs-12">
+                    <ol class="breadcrumb pull-left">
+                        <li><a>Inbox</a></li>
+                    </ol>
+                    <div id="social" class="pull-right">
+                        <a href="/#!/message/new">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            Send New Message
+                        </a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group">
+                <a data-ng-repeat="message in messages_received" class="list-group-item">
+                    <small class="list-group-item-text">
+                        Sent by
+                        <span data-ng-bind="message.sender.displayName"></span>
+                        on
+                        <span data-ng-bind="message.date"></span>
+
+                    </small>
+                    <p class="pull-right" style="cursor: pointer">
+                        <button class="btn btn-xs btn-primary" tooltip="Reply"
+                                ng-click="reply(message.sender._id)">
+                            <span class="glyphicon glyphicon-share-alt"></span>
+                        </button>
+                        <button class="btn btn-xs btn-primary" tooltip="Delete"
+                                ng-click="delete(message._id)">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </p>
+                    <h4 class="list-group-item-heading" data-ng-bind="message.subject"></h4>
+
+                    <p data-ng-bind="message.content"></p>
+                </a>
+            </div>
+            <div class="alert alert-warning text-center" data-ng-hide="messages_received.length">
+                No Messages!
+            </div>
+
+
+        </div>
+    </div>
+</div>

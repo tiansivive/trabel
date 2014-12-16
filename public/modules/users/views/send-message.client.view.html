@@ -1,0 +1,55 @@
+<div data-ng-controller="SendMessageController" data-ng-init="findOne()">
+    <div id="content" class="col-xs-12 col-sm-12">
+
+        <div class="preloader" style="display: none;">
+            <img src="img/devoops_getdata.gif" class="devoops-getdata" alt="preloader">
+        </div>
+        <div id="ajax-content">
+            <div class="row">
+                <div id="breadcrumb" class="col-xs-12">
+                    <ol class="breadcrumb pull-left">
+                        <li><a>Send a message</a></li>
+                    </ol>
+                    <div id="social" class="pull-right">
+
+
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="well">
+                <form name="sendMessageForm" data-ng-submit="sendMessage()" class="sendMessage"
+                      autocomplete="off">
+
+                    <div class="form-group" ng-hide="userID">
+                        <label for="receiver">To </label>
+                        <input type="text" list="receiver" name="receiver" class="form-control"
+                               data-ng-model="message.receiver" placeholder="Name">
+                        <datalist id="receiver">
+                            <option ng-repeat="user in users" value="{{user.displayName}}<{{user.email}}>">
+                        </datalist>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control"
+                               data-ng-model="message.subject"
+                               placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea rows="5" type="text" name="content" class="form-control"
+                                  data-ng-model="message.content" placeholder="Your message"> </textarea>
+                    </div>
+                    <div class="text-center form-group">
+                        <button type="submit" class="btn btn-large btn-primary">Send Message</button>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

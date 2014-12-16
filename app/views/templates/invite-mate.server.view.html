@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  </head>
+
+  <body>
+    <p>Dear {{invitedUser}}</p>
+    <br>
+    <p> You have been invited by {{tripOwner}} to join the trip {{tripName}}!</p>
+    <div>
+      <a href="{{acceptURL}}" style="height: 20px;
+                               width: 150px;
+                               background-color: rgba(0,0,0,0);
+                               border-style: solid;
+                               border-width: 2px;
+                               border-color: #1eb9c1;
+                               float: right">ACCEPT</a>
+
+      <a href="{{declineURL}}" style="height: 20px;
+                               width: 150px;
+                               background-color: rgba(0,0,0,0);
+                               border-style: solid;
+                               border-width: 2px;
+                               border-color: #1eb9c1;
+                               float: left">DECLINE</a>
+    </div>
+    <br>
+    <br>
+    <p>The {{appName}} Support Team</p>
+  </body>
+</html>

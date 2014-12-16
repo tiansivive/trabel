@@ -1,0 +1,64 @@
+.markers-list {
+  max-height:100%;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+
+.disabled {
+  pointer-events: none;
+  color: gray;
+}
+
+.privacyToggle {
+  cursor:pointer;
+}
+
+.form-control.searchbox {
+  margin-top:5px;
+  width: 50%;
+}
+
+h1.editable {
+  display:inline-block;
+  border:none;
+  color:black;
+}
+
+h1.editable:hover {
+  border-bottom: 1px dashed #428BCA;
+}
+
+.marker-placeholder {
+  text-align: center;
+}
+
+.markeritem {
+  border-bottom: 1px solid #EEE;
+  margin-bottom: 1em;
+}
+
+.markerdelete {
+  float:right;
+}
+
+/* md */
+@media (min-width: 992px) {
+    .trip-container {
+      height:400px;
+    }
+}
+
+/* smaller than md */
+@media (max-width: 991px) {
+    .trip-container {
+      height:auto;
+    }
+}
+
+.btn-primary {
+	margin-bottom: 10px;
+}
+
+div.tooltip {
+  z-index:9999;
+}
