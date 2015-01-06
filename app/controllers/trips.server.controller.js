@@ -19,18 +19,32 @@ var mongoose = require('mongoose'),
  * Create a Trip
  */
 exports.create = function(req, res) {
-  var trip = new Trip(req.body);
-  trip.user = req.user;
 
-  trip.save(function(err) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(trip);
-    }
-  });
+	var trip = new Trip(req.body);
+	trip.user = req.user;
+
+
+
+	trip.save(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: errorHandler.getErrorMessage(err)
+			});
+		} else {
+			res.jsonp(trip);
+		}
+	});
+
+	console.log('Initializing socketio');
+	var socketio = req.app.get('socketio');
+	var tripSocket = socketio.of('/' + trip._id);
+	tripSocket.on('connection', function(socket){
+		
+		socket.on('sendUpdate', function(data){
+			socket.broadcast.emit('gotUpdate', {});
+		});
+	});
+	
 };
 
 /**
@@ -135,7 +149,8 @@ exports.search = function(req, res) {
   Trip.find({
       'name': {
         $regex: regex
-      }
+      },
+      'privacy': 1
     })
     .populate('user members.user', 'displayName email')
     .exec(function(err, trips) {

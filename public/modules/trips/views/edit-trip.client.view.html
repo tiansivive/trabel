@@ -1,4 +1,4 @@
-<div data-ng-controller="TripsController" data-ng-init="findOne()">
+<div data-ng-controller="TripsController" data-ng-init="findOne(true)">
   <div id="sidebar-left" class="col-xs-12 col-sm-2">
     <p ng-hide="trip.markers.length"></p>
     <ul class="nav main-menu" ui-sortable="sortableOptions" ng-model="trip.markers">
@@ -26,9 +26,6 @@
   </div>
 
   <div id="content" class="col-xs-12 col-sm-10">
-    <div class="preloader" style="display: none;">
-      <img src="img/devoops_getdata.gif" class="devoops-getdata" alt="preloader">
-    </div>
     <div id="ajax-content">
       <div class="row">
         <div id="breadcrumb" class="col-xs-12" style="margin-bottom: 0px;">
@@ -36,12 +33,11 @@
             <li><a class="editable" ng-class="{disabled: isLoading}" onaftersave="trip.$update()" editable-text="trip.name" tooltip="Click to change name" tooltip-placement="right">{{trip.name}}</a>
             </li>
           </ol>
-          <div id="social" class="pull-right privacyToggle" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}" tooltip="Click to change Privacy" tooltip-placement="left">
-            <a ng-switch-when="1">Public Trip</a>
-            <a ng-switch-when="0">Private Trip</a>
-
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-facebook"></i></a>
+          <div class="breadcrumb-right">
+            <div class="privacyToggle pull-right" ng-switch on="trip.privacy" ng-click="togglePrivacy()" ng-class="{disabled: isLoading}" tooltip="Click to change Privacy" tooltip-placement="left">
+              <a ng-switch-when="1">Public Trip</a>
+              <a ng-switch-when="0">Private Trip</a>
+            </div>
           </div>
         </div>
       </div>
@@ -98,7 +94,7 @@
       </script>
       <div>
         <div class="pull-left">
-          <a class="btn btn-primary" data-ng-click="returnToTripView()" tooltip="Back to Trip View">
+          <a class="btn btn-primary" data-ng-click="returnToTripView()" tooltip="Back to Trip View" tooltip-placement="right">
             <i class="glyphicon glyphicon-arrow-left"></i>
           </a>
         </div>

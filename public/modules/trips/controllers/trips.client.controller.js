@@ -1,21 +1,20 @@
 'use strict';
 
 // Trips controller
+angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'uiGmapGoogleMapApi', 'ngDialog', '$http', 'SweetAlert', 'Socket',
+	function($scope, $stateParams, $location, Authentication, Trips, gmap, ngDialog, $http, SweetAlert, Socket) {
+		$scope.user = Authentication.user;
+		$scope.authentication = Authentication;
 
-angular.module('trips').controller('TripsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Trips', 'uiGmapGoogleMapApi', 'ngDialog', '$http', 'SweetAlert',
-  function($scope, $stateParams, $location, Authentication, Trips, gmap, ngDialog, $http, SweetAlert) {
-    $scope.user = Authentication.user;
-    $scope.authentication = Authentication;
-
-    $scope.map = {
-      //TODO: Center map on trip markers
-      center: {
-        latitude: 20,
-        longitude: 0
-      },
-      zoom: 2,
-      events: {
-        /*click: function(maps, eventName, args){
+		$scope.map = {
+			//TODO: Center map on trip markers
+			center: {
+				latitude: 20,
+				longitude: 0
+			},
+			zoom: 2,
+			events: {
+				/*click: function(maps, eventName, args){
 					console.log('CLICKED ON:', args[0].latLng);
 				},
 				center_changed: function(maps, eventName, args){
@@ -30,28 +29,6 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
       position: 'top-left',
       events: {}
     };
-
-    $scope.timeline_selection = undefined;
-    $scope.timeline_data = [];
-    $scope.timeline_options = {
-      'width': '100%',
-      'editable': true,
-      'minHeight': '50px'
-    };
-
-
-    function addCurrentMarkersToTimeline() {
-      $scope.trip.markers.forEach(function(marker) {
-        var tl_data = {
-          'start': marker.start,
-          'end': marker.end,
-          'content': marker.place_name
-        };
-        $scope.timeline_data.push(tl_data);
-      });
-    }
-
-
 
     // Create new Trip
     $scope.create = function() {
@@ -121,13 +98,26 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
     };
 
     // Find existing Trip
-    $scope.findOne = function() {
+    $scope.findOne = function(editMode) {
       $scope.trip = Trips.get({
         tripId: $stateParams.tripId
       }, function(data) { //this runs after trip is loaded
         //fix error when running tests
         if (typeof $scope.init === 'function') {
           $scope.init();
+          if(editMode){ //Deal with socket connection
+	
+						$scope.socket = Socket.factory($stateParams.tripId); //opens socket connection 
+						
+
+						$scope.socket.on('gotUpdate', function(data){
+						
+							$scope.findOne(false);
+						});
+					
+
+						
+					}
         }
       });
     };
@@ -143,12 +133,6 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
         controller: 'AddMateController',
         scope: $scope,
         className: 'ngdialog-theme-plain'
-      });
-
-      dialog.closePromise.then(function(data) {
-        console.log(data.id + ' has been dismissed.');
-        console.log(data.value);
-        $scope.trip = data.value;
       });
     };
 
@@ -207,8 +191,6 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
         var marker = {
           place_name: place.name,
           place_id: place.place_id,
-          start: Date.now(),
-          end: Date.now(),
           location: {
             latitude: place.geometry.location.lat(),
             longitude: place.geometry.location.lng()
@@ -248,7 +230,6 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
           $scope.path.setPath($scope.lineCoords);
           $scope.trip.markers.push(marker);
           $scope.centerMap(marker);
-          addCurrentMarkersToTimeline(); //better way maybe?
           $scope.updateTrip();
         }
       };
@@ -305,7 +286,10 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
           $scope.isLoading = false;
           $scope.sortableOptions.disabled = false;
           $scope.POIsortableOptions.disabled = false;
+          $scope.socket.emit('sendUpdate', {});
         });
+
+
       };
 
       $scope.sortableOptions = {
@@ -393,35 +377,40 @@ angular.module('trips').controller('TripsController', ['$scope', '$stateParams',
       };
 
       $scope.init = function() {
-
         if ($scope.trip.usersThatLiked.indexOf($scope.user._id) === -1)
           $scope.alreadyLiked = false;
         else
           $scope.alreadyLiked = true;
 
-        addCurrentMarkersToTimeline();
-        $scope.timeline_options.start = $scope.trip.startDate;
-        $scope.timeline_options.end = $scope.trip.endDate;
-        console.log($scope.timeline_options);
-
         var map = $scope.map.object.getGMap();
         $scope.bounds = new maps.LatLngBounds();
         $scope.lineCoords = [];
-        for (var i = 0; i < $scope.trip.markers.length; i++) {
-          var marker = $scope.trip.markers[i];
-          var latlng = new maps.LatLng(
-            marker.location.latitude,
-            marker.location.longitude
-          );
-          $scope.lineCoords.push(latlng);
-          if (marker.viewport)
-            $scope.bounds.union(makeViewport(marker.viewport));
-          else
-            $scope.bounds.extend(latlng);
+        if($scope.trip.markers.length === 0) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            map.setCenter({
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            });
+            map.setZoom(17);
+          });
         }
-        $scope.path.setPath($scope.lineCoords);
-        $scope.path.setMap(map);
-        map.fitBounds($scope.bounds);
+        else {
+          for (var i = 0; i < $scope.trip.markers.length; i++) {
+            var marker = $scope.trip.markers[i];
+            var latlng = new maps.LatLng(
+              marker.location.latitude,
+              marker.location.longitude
+            );
+            $scope.lineCoords.push(latlng);
+            if (marker.viewport)
+              $scope.bounds.union(makeViewport(marker.viewport));
+            else
+              $scope.bounds.extend(latlng);
+          }
+          $scope.path.setPath($scope.lineCoords);
+          $scope.path.setMap(map);
+          map.fitBounds($scope.bounds);
+        }
       };
 
       $scope.resetMap = function() {
